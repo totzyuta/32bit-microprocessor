@@ -1,0 +1,12 @@
+module fulladder {
+  input a, b, cin;
+  output sum, cout;
+  instrin do;
+
+  instruct do par {
+    // 1が立っているものが二つあれば必ず繰り上げが起こる
+    cout = (a & b) | (a & cin) | (b & cin); 
+    // 単純にすべての1ビット目が1になるパターンを列挙してるだけ
+    sum = (^a & b & ^cin) | (a & ^b & ^cin) | (^a & ^b & cin) | (a & b & cin);
+  }
+}
