@@ -1,0 +1,14 @@
+# (add4.sec)
+# SECONDS script for add4 simulation
+#
+
+sflread add4.sfl	# SFLファイルの読込み
+autoinstall add4	# モジュール add4 のインストール
+
+speak add4.result	# 結果の出力先
+
+set do 1; hold do
+rpt_add B "%4t %b %b %b %b %b\n" a b cin sum cout
+set a 0000; set b 0000; set cin 0; 
+hold a; hold b; hold cin
+# (以下は，./add4.rb gensec により自動生成したスクリプト)

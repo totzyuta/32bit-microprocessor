@@ -1,0 +1,14 @@
+/* (fulladder.sfl) */
+
+module fulladder {
+    input a, b, cin;
+    output sum, cout;
+    instrin do;
+
+    instruct do par {
+        cout = (a & b) | (a & cin) | (b & cin);
+        sum = (^a & b & ^cin) | (a & ^b & ^cin) | (^a & ^b & cin) | 
+	      (a & b & cin);
+    }
+}
+/* End of file (fulladder.sfl) */
