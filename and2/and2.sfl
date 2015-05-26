@@ -1,0 +1,8 @@
+/* and2.sfl */
+module and2 {
+  input a, b;
+  output c;
+  instrin do;
+
+  instruct do c = a & b;
+}

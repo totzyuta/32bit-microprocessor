@@ -1,7 +1,7 @@
 /* (add4_v2.sfl) */
 %i "fulladder.h"
 
-module add4_v2 {
+module add4 {
     input a<4>, b<4>, cin;
     output sum<4>, cout;
     instrin do;

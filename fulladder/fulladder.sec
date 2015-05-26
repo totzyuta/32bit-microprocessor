@@ -1,0 +1,18 @@
+# (fulladder.sec)
+#
+sflread fulladder.sfl		# SFL記述ファイルの読込み
+autoinstall fulladder		# モジュールのインストール
+
+rpt_add A "t=%t | a=%b b=%b cin=%b | sum=%b cout=%b\n" a b cin sum cout
+set do 1; set a 0; set b 0; set cin 0
+hold do; hold a; hold b; hold cin; 
+forward +1
+set a 1; set b 0; set cin 0; forward +1
+set a 0; set b 1; set cin 0; forward +1
+set a 1; set b 1; set cin 0; forward +1
+set a 0; set b 0; set cin 1; forward +1
+set a 1; set b 0; set cin 1; forward +1
+set a 0; set b 1; set cin 1; forward +1
+set a 1; set b 1; set cin 1; forward +1
+
+# End of file (fulladder.sec)
