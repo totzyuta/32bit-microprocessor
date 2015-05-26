@@ -2,25 +2,27 @@
 %i "add4.h"
 
 module ud_count4 {
-    input   down;       /* up/down */
-    output  out<4>;     /* sum output (4bit width) */
-    output  cout;       /* carry out, 1 if out = 0b1111 & down = 0 */
-    output  bout;       /* borrow out, 1 if out = 0b0000 & down = 1 */
-    instrin do;         /* control input terminal */
+  input   down;       /* 0:up/1:down */
+  output  out<4>;     /* sum output (4bit width) */
+  output  cout;       /* carry out, 1 if out = 0b1111 & down = 0 else 0*/
+  output  bout;       /* borrow out, 1 if out = 0b0000 & down = 1 else 0*/
+  instrin do;         /* control input terminal */
 
-    reg_wr reg4<4>;      /* 4 bit register */
-    add4   adder;
+  reg_wr reg4<4>;      /* 4 bit register */
+  add4   adder;
 
-    instruct do par {
-        alt {
-            (down == 0b1): 
-		reg4 := /* ... */;
-            else:        
-	        reg4 := /* ... */;
-        }
-        out = reg4;
-	cout = /* ... */;
-	bout = /* ... */;
+  instruct do par {
+    // altは優先順位のある条件分岐を行う
+    alt {
+      (down == 0b1): 
+        reg4 := out /* -1 */;
+      else:        
+        reg4 := out /* +1 */;
     }
+
+    out = reg4;
+    cout = out<0> & out<1> & out<2> & out<3> & ^down;
+    cout = ^out<0> & ^out<1> & ^out<2> & ^out<3> & down;
+  }
 }
 /* End of file (ud_count4.sfl) */
