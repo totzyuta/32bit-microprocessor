@@ -4,6 +4,7 @@
 
 sflread add32.sfl	# SFLファイルの読込み
 sflread add4.sfl	# 必要に応じてサブモジュールのSFL記述を読み込む
+sflread fulladder.sfl	# 必要に応じてサブモジュールのSFL記述を読み込む
 autoinstall add32	# モジュール add32 のインストール
 
 speak add32.result	# 結果の出力先
