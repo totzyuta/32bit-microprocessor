@@ -1,0 +1,15 @@
+# (add32.sec)
+# SECONDS script for add32 simulation
+#
+
+sflread add32.sfl	# SFLファイルの読込み
+sflread add4.sfl	# 必要に応じてサブモジュールのSFL記述を読み込む
+autoinstall add32	# モジュール add32 のインストール
+
+speak add32.result	# 結果の出力先
+
+set do 1; hold do
+rpt_add B "%4t %b %b %b %b %b\n" a b cin sum cout
+set a X00000000; set b X00000000; set cin 0; 
+hold a; hold b; hold cin
+# (以下は，./add32.rb gensec により自動生成したスクリプト)

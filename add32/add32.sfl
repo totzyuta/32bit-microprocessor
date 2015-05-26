@@ -1,0 +1,28 @@
+/* (add32.sfl) */
+
+// TODO: moduleの用意
+%i "add4.h"
+
+module add32 {
+  input a<32>;
+  input b<32>;
+  input cin;      /* carry in */
+  output sum<32>;
+  output cout;    /* carry out */
+  instrin do;
+
+  add4 ad4a, ad4b, ad4c, ad4d; 
+
+  instruct do par {
+    // inputを引数にとってadd4モジュールを実行する
+    // add4aは.を使ってoutputを受け取ることができる
+    add4a.do(a<3:0>,   b<3:0>,  cin);
+    add4b.do(a<7:4>,   b<7:4>,  add4a.cout);
+    add4c.do(a<11:8>,  b<11:8>, add4b.cout);
+    add4d.do(a<15:12>, b<15:11>,add4c.out);
+
+    sum = add4a.sum
+  }
+} /* module add32 */
+
+/* end of file (add32.sfl) */
