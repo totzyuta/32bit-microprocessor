@@ -21,7 +21,7 @@ SECONDS> autoinstall program
 
 - レポート機能の設定
 
-``
+```
 SECONDS> rpt_add <key> <format> {<facility>}
 ```
 
