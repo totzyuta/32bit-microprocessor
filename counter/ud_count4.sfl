@@ -15,9 +15,10 @@ module ud_count4 {
     // altは優先順位のある条件分岐を行う
     alt {
       (down == 0b1): 
-        reg4 := out /* -1 */;
+        // DEBUG: Currently Unavailable for debugging
+        reg4 := out + 1;
       else:        
-        reg4 := out /* +1 */;
+        reg4 := out + 1;
     }
 
     out = reg4;
