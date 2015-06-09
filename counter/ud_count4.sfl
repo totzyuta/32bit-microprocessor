@@ -8,22 +8,23 @@ module ud_count4 {
   output  bout;       /* borrow out, 1 if out = 0b0000 & down = 1 else 0*/
   instrin do;         /* control input terminal */
 
-  reg_wr reg4<4>;      /* 4 bit register */
-  add4   adder;
+  reg_wr  reg4<4>;      /* 4 bit register */
+  add4    adder;
 
   instruct do par {
-    // altは優先順位のある条件分岐を行う
+    /* altは優先順位のある条件分岐を行う */
     alt {
-      (down == 0b1): 
-        // DEBUG: Currently Unavailable for debugging
-        reg4 := out + 1;
-      else:        
-        reg4 := out + 1;
+      (down == 0b1):
+        reg4 := adder.do(0b1111, out, 0b0).sum;
+      else:
+        reg4 := adder.do(0b0001, out, 0b0).sum;
     }
 
     out = reg4;
-    cout = out<0> & out<1> & out<2> & out<3> & ^down;
-    cout = ^out<0> & ^out<1> & ^out<2> & ^out<3> & down;
+    /* cout = out<0> & out<1> & out<2> & out<3> & ^down; */
+    /* cout = ^out<0> & ^out<1> & ^out<2> & ^out<3> & down; */
+    cout = (out == 0b1111) & ^down;
+    bout = (out == 0b0000) & down;
   }
 }
 /* End of file (ud_count4.sfl) */
