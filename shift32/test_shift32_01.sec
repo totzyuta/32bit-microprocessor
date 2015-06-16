@@ -1,0 +1,271 @@
+# (test_shift32_01.sec)
+#
+# version 1.0 - 2011/07/05
+#
+
+sflread shift32.sfl	# SFLファイルの読込み
+autoinstall shift32	# モジュール shift32 のインストール
+
+#speak shift32.result	# 結果の出力先(指定する場合，コメントを外す) 
+
+print "[simulation result (shift32)]\n"
+print "                  script version 1.0 (2011/07/05)\n"
+#print "------+-----------------------------+------------\n"
+#print "      |              input          |   output\n"
+#print "      |                         sss |  \n"
+#print "      |                         lrr |  \n"
+#print " time |     in         shamt    lla |    out     \n"
+#print "------+-----------------------------+------------\n"
+#     " tttt | 0xXXXXXXXX     0xXX     xxx | 0xXXXXXXXX
+#     "      | (dddddddddddd) (dd)         |  (ddddddddddd) \n"
+rpt_add A " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" \
+    in shamt sll srl sra out
+rpt_add B "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set in X11112222
+set shamt D0; set sll 1; set srl 0; set sra 0;
+hold in; hold shamt; hold sll; hold srl; hold sra
+
+print "==== sll - shift left logical ====\n"
+print "------+-----------------------------+------------\n"
+print "      |              input          |   output\n"
+print "      |                         sss |  \n"
+print "      |                         lrr |  \n"
+print " time |     in         shamt    lla |    out     \n"
+print "------+-----------------------------+------------\n"
+set in X11112222; set sll 1; set srl 0; set sra 0;
+set shamt D0; 
+print " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" in shamt sll srl sra out
+print "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set shamt D1;
+print " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" in shamt sll srl sra out
+print "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set shamt D2; 
+print " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" in shamt sll srl sra out
+print "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set shamt D3;
+print " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" in shamt sll srl sra out
+print "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set shamt D4; 
+print " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" in shamt sll srl sra out
+print "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set shamt D5;
+print " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" in shamt sll srl sra out
+print "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set shamt D6; forward +1
+set shamt D7; forward +1
+set shamt D8; forward +1
+set shamt D9; forward +1
+set shamt D10; forward +1
+set shamt D11; forward +1
+set shamt D12; forward +1
+set shamt D13; forward +1
+set shamt D14; forward +1
+set shamt D15; forward +1
+set shamt D16; forward +1
+set shamt D17; forward +1
+set shamt D18; forward +1
+set shamt D19; forward +1
+set shamt D20; forward +1
+set shamt D21; forward +1
+set shamt D22; forward +1
+set shamt D23; forward +1
+set shamt D24; forward +1
+set shamt D25; forward +1
+set shamt D26; forward +1
+set shamt D27; forward +1
+set shamt D28; forward +1
+set shamt D29; forward +1
+set shamt D30; forward +1
+set shamt D31; forward +1
+
+print "==== srl - shift right logical ====\n"
+print "------+-----------------------------+------------\n"
+print "      |              input          |   output\n"
+print "      |                         sss |  \n"
+print "      |                         lrr |  \n"
+print " time |     in         shamt    lla |    out     \n"
+print "------+-----------------------------+------------\n"
+
+set in X88884444; set sll 0; set srl 1; set sra 0;
+set shamt D0; 
+print " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" in shamt sll srl sra out
+print "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set shamt D1;
+print " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" in shamt sll srl sra out
+print "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set shamt D2;
+print " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" in shamt sll srl sra out
+print "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set shamt D3;
+print " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" in shamt sll srl sra out
+print "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set shamt D4;
+print " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" in shamt sll srl sra out
+print "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set shamt D5;
+print " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" in shamt sll srl sra out
+print "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set shamt D6; forward +1
+set shamt D7; forward +1
+set shamt D8; forward +1
+set shamt D9; forward +1
+set shamt D10; forward +1
+set shamt D11; forward +1
+set shamt D12; forward +1
+set shamt D13; forward +1
+set shamt D14; forward +1
+set shamt D15; forward +1
+set shamt D16; forward +1
+set shamt D17; forward +1
+set shamt D18; forward +1
+set shamt D19; forward +1
+set shamt D20; forward +1
+set shamt D21; forward +1
+set shamt D22; forward +1
+set shamt D23; forward +1
+set shamt D24; forward +1
+set shamt D25; forward +1
+set shamt D26; forward +1
+set shamt D27; forward +1
+set shamt D28; forward +1
+set shamt D29; forward +1
+set shamt D30; forward +1
+set shamt D31; forward +1
+
+
+print "==== sra - shift right arithmetic (1) ====\n"
+print "------+-----------------------------+------------\n"
+print "      |              input          |   output\n"
+print "      |                         sss |  \n"
+print "      |                         lrr |  \n"
+print " time |     in         shamt    lla |    out     \n"
+print "------+-----------------------------+------------\n"
+
+set in X88884444; set sll 0; set srl 0; set sra 1;
+set shamt D0; 
+print " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" in shamt sll srl sra out
+print "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set shamt D1;
+print " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" in shamt sll srl sra out
+print "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set shamt D2;
+print " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" in shamt sll srl sra out
+print "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set shamt D3;
+print " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" in shamt sll srl sra out
+print "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set shamt D4;
+print " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" in shamt sll srl sra out
+print "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set shamt D5; 
+print " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" in shamt sll srl sra out
+print "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set shamt D6; forward +1
+set shamt D7; forward +1
+set shamt D8; forward +1
+set shamt D9; forward +1
+set shamt D10; forward +1
+set shamt D11; forward +1
+set shamt D12; forward +1
+set shamt D13; forward +1
+set shamt D14; forward +1
+set shamt D15; forward +1
+set shamt D16; forward +1
+set shamt D17; forward +1
+set shamt D18; forward +1
+set shamt D19; forward +1
+set shamt D20; forward +1
+set shamt D21; forward +1
+set shamt D22; forward +1
+set shamt D23; forward +1
+set shamt D24; forward +1
+set shamt D25; forward +1
+set shamt D26; forward +1
+set shamt D27; forward +1
+set shamt D28; forward +1
+set shamt D29; forward +1
+set shamt D30; forward +1
+set shamt D31; forward +1
+
+
+print "==== sra - shift right arithmetic (2) ====\n"
+print "------+-----------------------------+------------\n"
+print "      |              input          |   output\n"
+print "      |                         sss |  \n"
+print "      |                         lrr |  \n"
+print " time |     in         shamt    lla |    out     \n"
+print "------+-----------------------------+------------\n"
+
+set in X44448888; set sll 0; set srl 0; set sra 1;
+set shamt D0; 
+print " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" in shamt sll srl sra out
+print "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set shamt D1;
+print " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" in shamt sll srl sra out
+print "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set shamt D2;
+print " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" in shamt sll srl sra out
+print "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set shamt D3;
+print " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" in shamt sll srl sra out
+print "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set shamt D4;
+print " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" in shamt sll srl sra out
+print "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set shamt D5; 
+print " %4t | 0x%x     0x%x     %1b%1b%1b | 0x%x\n" in shamt sll srl sra out
+print "      | (%12d) (%2d)         | (%12d)\n" in shamt out
+
+set shamt D6; forward +1
+set shamt D7; forward +1
+set shamt D8; forward +1
+set shamt D9; forward +1
+set shamt D10; forward +1
+set shamt D11; forward +1
+set shamt D12; forward +1
+set shamt D13; forward +1
+set shamt D14; forward +1
+set shamt D15; forward +1
+set shamt D16; forward +1
+set shamt D17; forward +1
+set shamt D18; forward +1
+set shamt D19; forward +1
+set shamt D20; forward +1
+set shamt D21; forward +1
+set shamt D22; forward +1
+set shamt D23; forward +1
+set shamt D24; forward +1
+set shamt D25; forward +1
+set shamt D26; forward +1
+set shamt D27; forward +1
+set shamt D28; forward +1
+set shamt D29; forward +1
+set shamt D30; forward +1
+set shamt D31; forward +1
+
+
+# EOF
