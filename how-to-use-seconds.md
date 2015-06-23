@@ -11,6 +11,12 @@ $ seconds
 SECONDS> sflread program.sfl
 ```
 
+secスクリプトがある場合は以下のように読み込みを行う。
+
+```
+SECONDS> sflread program.sfl < script.sec
+```
+
 
 - モジュールの自動インストール
 
