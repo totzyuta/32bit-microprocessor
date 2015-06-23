@@ -1,0 +1,189 @@
+# seconds script (test_memunit_01.sec)
+#   version 1.1 (2015/06/15)
+#
+sflread mem64KB.cir
+sflread memunit.sfl
+autoinstall memunit
+
+# clear memory
+memclr /imem/cell 0 100 Xff
+
+# initialize memory (text segment)
+memset /imem/cell X0000 X00 X01 X02 X03 X04 X05 X06 X07
+memset /imem/cell X0008 X08 X09 X0a X0b X0c X0d X0e X0f
+
+# initialize memory (data segment)
+memset /dmem/cell X0000 X10 X11 X12 X13 X14 X15 X16 X17
+memset /dmem/cell X0008 X18 X19 X1a X1b X1c X1d X1e X1f
+
+# initialize memory (stack segment)
+memset /smem/cell Xfff0 Xf0 Xf1 Xf2 Xf3 Xf4 Xf5 Xf6 Xf7
+memset /smem/cell Xfff8 Xf8 Xf9 Xfa Xfb Xfc Xfd Xfe Xff
+
+# memory dump
+memdump.sec
+
+print "---\n"
+print " t  inst_addr inst_out data_addr data_loc data_in  data_out       control\n"
+print "ttt xxxxxxxx  xxxxxxxx xxxxxxxx   (bbbb)  xxxxxxxx xxxxxxxx  ir dr dw ibe dbe\n"
+rpt_add P0 "%3t %8x  %8x %8x    %4b   %8x %8x  %1b  %1b  %1b  %1b   %1b\n" \
+	/inst_addr /inst_out /data_addr /data_loc /data_in /data_out /inst_read /data_read /data_write /inst_bus_error /data_bus_error
+rpt_on
+set /inst_addr X00000000; hold inst_addr
+set /data_addr X00000000; hold data_addr
+set /data_loc 0b0000; hold data_loc
+set /inst_read 0; hold inst_read
+set /data_in X00000000; hold data_in
+set /data_read 0; hold data_read
+set /data_write 0; hold data_write
+
+# inst_read
+set /inst_read 1
+set /inst_addr X00000000
+forward +1
+
+set /inst_addr X00000004
+forward +1
+
+set /inst_addr X00000008
+forward +1
+
+set /inst_addr X0000000c
+forward +1
+
+set /inst_addr X0000000f
+forward +1
+
+set /inst_addr X01000004
+forward +1
+
+set /inst_read 0
+
+# data_read
+set /data_read 1
+set /data_addr X10000000
+forward +1
+
+set /data_addr X10000004
+forward +1
+
+set /data_addr X10000008
+forward +1
+
+set /data_addr X1000000c
+forward +1
+
+set /data_addr X1000000e
+forward +1
+
+set /data_addr X20000000
+forward +1
+
+set /data_addr X7ffffff0
+forward +1
+
+set /data_addr X7ffffff4
+forward +1
+
+set /data_addr X7ffffff8
+forward +1
+
+set /data_addr X7ffffffc
+forward +1
+
+set /data_addr X7ffffffd
+forward +1
+
+set /data_addr Xfffffff0
+forward +1
+
+# 
+
+set /inst_read 1
+
+set /inst_addr X00000000
+set /data_addr X10000000
+forward +1
+
+set /inst_addr X00000004
+set /data_addr X10000008
+forward +1
+
+set /inst_addr X00000008
+set /data_addr X20000000
+forward +1
+
+set /inst_addr X0000000c
+set /data_addr X7ffffff4
+forward +1
+
+set /inst_addr X0000000f
+set /data_addr X7ffffffc
+forward +1
+
+set /inst_addr X01000004
+set /data_addr X80000000
+forward +1
+
+#
+set /inst_read 0
+set /data_read 0
+
+# data_write
+set /data_write 1
+set /data_addr X10000000
+set /data_in X12345678
+set /data_loc 0111
+forward +1
+
+set /data_addr X1000000c
+set /data_in X89abcdef
+set /data_loc 1111
+forward +1
+
+set /data_addr X7ffffff0
+set /data_in X11223344
+set /data_loc 1011
+forward +1
+
+set /data_addr X7ffffffc
+set /data_in Xccddeeff
+set /data_loc 0000
+forward +1
+
+set /data_addr Xffffffff
+set /data_in X00000000
+set /data_loc 1111
+forward +1
+
+set /data_write 0
+set /data_read 1
+set /data_addr X10000000
+forward +1
+
+set /data_addr X10000008
+forward +1
+
+set /data_addr X1000000c
+forward +1
+
+set /data_addr X7fffffff
+forward +1
+
+set /data_addr X7ffffff8
+forward +1
+
+set /data_addr X7ffffff0
+forward +1
+
+set /data_addr Xffff0000
+forward +1
+
+#
+
+print "---\n"
+
+# memory dump
+memdump.sec
+
+# End of file (test_memunit_01.sec)

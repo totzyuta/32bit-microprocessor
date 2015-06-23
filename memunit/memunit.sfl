@@ -1,0 +1,56 @@
+/* memory unit (memunit.sfl) */
+
+%i "mem64KB.h"
+
+module memunit {
+    input    inst_addr<32>;
+    output   inst_out<32>;
+
+    input    data_addr<32>;
+    input    data_loc<4>;
+    input    data_in<32>;
+    output   data_out<32>;
+
+    instrin  inst_read, data_read, data_write;
+    instrout inst_bus_error, data_bus_error;
+
+    mem64KB imem; /* instruciton memory */
+    mem64KB dmem; /* data memory */
+    mem64KB smem; /* data memory (stack) */
+
+    instr_arg inst_bus_error();
+    instr_arg data_bus_error();
+
+    instruct inst_read any {
+      /* ... */ :
+        inst_out = imem.read(/* ... */).data_out;
+      else: par {
+        inst_out = 0x00000000;
+        inst_bus_error();
+      }
+    }
+	
+    instruct data_read any {
+        /* ... */ :  /* data segment */
+	    data_out = dmem.read(/* ... */).data_out;
+        /* ... */ :  /* stack segment */
+	    data_out = /* ... */
+      else: par {
+        data_out = 0xffffffff;
+        data_bus_error();
+      }
+    }
+
+    instruct data_write any {
+        /* ... */ :  /* data segment */
+	    dmem.write(data_addr<15:0>, data_loc, data_in);
+        /* ... */ :  /* stack segment */
+	    /* ... */  
+      else: par {
+        data_out = 0xffffffff;
+        data_bus_error();
+      }
+    }
+}
+
+/* End of file (memunit.sfl) */

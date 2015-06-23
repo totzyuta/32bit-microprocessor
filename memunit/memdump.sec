@@ -1,0 +1,29 @@
+# seconds script
+# (memdump.sec)
+#
+print "*** memory dump ***\n"
+print "          +0 +1 +2 +3 +4 +5 +6 +7 +8 +9 +a +b +c +d +e +f\n"
+print "00000000: %x %x %x %x %x %x %x %x " \
+/imem/cell@X0000  /imem/cell@X0001  /imem/cell@X0002  /imem/cell@X0003 \
+/imem/cell@X0004  /imem/cell@X0005  /imem/cell@X0006  /imem/cell@X0007
+print "%x %x %x %x %x %x %x %x\n" \
+/imem/cell@X0008  /imem/cell@X0009  /imem/cell@X000a  /imem/cell@X000b \
+/imem/cell@X000c  /imem/cell@X000d  /imem/cell@X000e  /imem/cell@X000f
+
+# data segment
+print "10000000: %x %x %x %x %x %x %x %x " \
+/dmem/cell@X0000  /dmem/cell@X0001  /dmem/cell@X0002  /dmem/cell@X0003 \
+/dmem/cell@X0004  /dmem/cell@X0005  /dmem/cell@X0006  /dmem/cell@X0007
+print "%x %x %x %x %x %x %x %x\n" \
+/dmem/cell@X0008  /dmem/cell@X0009  /dmem/cell@X000a  /dmem/cell@X000b \
+/dmem/cell@X000c  /dmem/cell@X000d  /dmem/cell@X000e  /dmem/cell@X000f
+
+# stack segment
+print "7ffffff0: %x %x %x %x %x %x %x %x " \
+/smem/cell@Xfff0  /smem/cell@Xfff1  /smem/cell@Xfff2  /smem/cell@Xfff3 \
+/smem/cell@Xfff4  /smem/cell@Xfff5  /smem/cell@Xfff6  /smem/cell@Xfff7
+print "%x %x %x %x %x %x %x %x\n" \
+/smem/cell@Xfff8  /smem/cell@Xfff9  /smem/cell@Xfffa  /smem/cell@Xfffb \
+/smem/cell@Xfffc  /smem/cell@Xfffd  /smem/cell@Xfffe  /smem/cell@Xffff
+
+# End of file (memdump.sec)
