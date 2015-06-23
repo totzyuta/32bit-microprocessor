@@ -17,6 +17,14 @@ secスクリプトがある場合は以下のように読み込みを行う。
 SECONDS> sflread program.sfl < script.sec
 ```
 
+ファイルとして出力して、サンプルの出力ファイルと差分を確かめるには、以下のようにする。
+
+
+```
+SECONDS> sflread program.sfl < script.sec > program.result
+$ diff program.result sample.result
+```
+
 
 - モジュールの自動インストール
 
