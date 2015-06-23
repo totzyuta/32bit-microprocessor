@@ -1,0 +1,45 @@
+/* (reg32x8.sfl) */
+
+/* bit width of each registers */
+%d WIDTH 32
+%d ADDR_WIDTH 3
+
+/* constant value definitions */
+%d CST_0 0b000
+%d CST_1 0b001
+%d CST_2 0b010
+%d CST_3 0b011
+%d CST_4 0b100
+%d CST_5 0b101
+%d CST_6 0b110
+%d CST_7 0b111
+
+module reg32x8 {
+    input   in<WIDTH>;    
+    input   in_addr<ADDR_WIDTH>;
+    input   a_addr<ADDR_WIDTH>;
+    input   b_addr<ADDR_WIDTH>;
+    output  a<WIDTH>;
+    output  b<WIDTH>;
+    instrin read_a, read_b, write;
+
+    reg_wr reg0<WIDTH>, ...
+    reg_wr reg4<WIDTH>, ...
+
+    instruct read_a any {
+        a_addr == CST_0: a = reg0;
+	...
+    }
+
+    instruct read_b any {
+        b_addr == CST_0: b = reg0;
+	...
+    }
+
+    instruct write any {
+        in_addr == CST_0: reg0 := in;
+	...
+    }
+}
+
+/* End of file (reg32x8.sfl) */

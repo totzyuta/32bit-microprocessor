@@ -1,0 +1,282 @@
+# seconds script (test_reg32x32_01.sec)
+#   version 1.1 (2015/06/15)
+#
+sflread reg32x8.sfl
+sflread reg32x32.sfl
+autoinstall reg32x32
+
+#rpt_add P0 "in=0x%x in_addr=0b%5b a_addr=0b%5b b_addr=0b%5b | read_a=%b read_b=%b write=%b | a=0x%x b = 0x%x\n" in in_addr a_addr b_addr read_a read_b write a b
+rpt_add P0 "0x%x 0b%5b 0b%5b 0b%5b | %b %b    %b   | 0x%8x 0x%8x\n" in in_addr a_addr b_addr read_a read_b write a b
+rpt_on
+
+print "    in     in_addr a_addr  b_addr  | read write | a          b\n"
+#      0xXXXXXXXX 0bXXXXX 0bXXXXX 0bXXXXX | X X    X   | 0xXXXXXXXX 0xXXXXXXXX 
+
+set in X12345678; hold in
+set write 1; hold write
+set read_a 1; hold read_a
+set read_b 1; hold read_b
+set in_addr 1; hold in_addr
+set a_addr 0; hold a_addr
+set b_addr 1; hold b_addr
+forward +1
+set in X23456789
+set in_addr X2
+set a_addr X1
+set b_addr X2
+forward +1
+set in Xffff0003
+set in_addr X3
+set read_a 0
+forward +1
+set in Xf0f00004
+set in_addr X4
+set read_b 0
+forward +1
+print "=== write test ===\n"
+print "    in     in_addr a_addr  b_addr  | read write | a          b\n"
+set in Xf0f00000; set in_addr D0; set write 1; forward +1
+set in Xf1f01001; set in_addr D1; set write 1; forward +1
+set in Xf0f02002; set in_addr D2; set write 1; forward +1
+set in Xf1f03003; set in_addr D3; set write 1; forward +1
+set in Xf0f04004; set in_addr D4; set write 1; forward +1
+set in Xf1f05005; set in_addr D5; set write 1; forward +1
+set in Xf0f06006; set in_addr D6; set write 1; forward +1
+set in Xf1f07007; set in_addr D7; set write 1; forward +1
+set in Xf0f08008; set in_addr D8; set write 1; forward +1
+set in Xf1f09009; set in_addr D9; set write 1; forward +1
+set in Xf0f1000a; set in_addr D10; set write 1; forward +1
+set in Xf1f1100b; set in_addr D11; set write 1; forward +1
+set in Xf0f1200c; set in_addr D12; set write 1; forward +1
+set in Xf1f1300d; set in_addr D13; set write 1; forward +1
+set in Xf0f1400e; set in_addr D14; set write 1; forward +1
+set in Xf1f1500f; set in_addr D15; set write 1; forward +1
+set in Xf0f16010; set in_addr D16; set write 1; forward +1
+set in Xf1f17011; set in_addr D17; set write 1; forward +1
+set in Xf0f18012; set in_addr D18; set write 1; forward +1
+set in Xf1f19013; set in_addr D19; set write 1; forward +1
+set in Xf0f20014; set in_addr D20; set write 1; forward +1
+set in Xf1f21015; set in_addr D21; set write 1; forward +1
+set in Xf0f22016; set in_addr D22; set write 1; forward +1
+set in Xf1f23017; set in_addr D23; set write 1; forward +1
+set in Xf0f24018; set in_addr D24; set write 1; forward +1
+set in Xf1f25019; set in_addr D25; set write 1; forward +1
+set in Xf0f2601a; set in_addr D26; set write 1; forward +1
+set in Xf1f2701b; set in_addr D27; set write 1; forward +1
+set in Xf0f2801c; set in_addr D28; set write 1; forward +1
+set in Xf1f2901d; set in_addr D29; set write 1; forward +1
+set in Xf0f3001e; set in_addr D30; set write 1; forward +1
+set in Xf1f3101f; set in_addr D31; set write 1; forward +1
+print "=== read test (port a) ===\n"
+print "    in     in_addr a_addr  b_addr  | read write | a          b\n"
+set write 0;
+set a_addr D0; set read_a 1; forward +1
+set a_addr D1; set read_a 1; forward +1
+set a_addr D2; set read_a 1; forward +1
+set a_addr D3; set read_a 1; forward +1
+set a_addr D4; set read_a 1; forward +1
+set a_addr D5; set read_a 1; forward +1
+set a_addr D6; set read_a 1; forward +1
+set a_addr D7; set read_a 1; forward +1
+set a_addr D8; set read_a 1; forward +1
+set a_addr D9; set read_a 1; forward +1
+set a_addr D10; set read_a 1; forward +1
+set a_addr D11; set read_a 1; forward +1
+set a_addr D12; set read_a 1; forward +1
+set a_addr D13; set read_a 1; forward +1
+set a_addr D14; set read_a 1; forward +1
+set a_addr D15; set read_a 1; forward +1
+set a_addr D16; set read_a 1; forward +1
+set a_addr D17; set read_a 1; forward +1
+set a_addr D18; set read_a 1; forward +1
+set a_addr D19; set read_a 1; forward +1
+set a_addr D20; set read_a 1; forward +1
+set a_addr D21; set read_a 1; forward +1
+set a_addr D22; set read_a 1; forward +1
+set a_addr D23; set read_a 1; forward +1
+set a_addr D24; set read_a 1; forward +1
+set a_addr D25; set read_a 1; forward +1
+set a_addr D26; set read_a 1; forward +1
+set a_addr D27; set read_a 1; forward +1
+set a_addr D28; set read_a 1; forward +1
+set a_addr D29; set read_a 1; forward +1
+set a_addr D30; set read_a 1; forward +1
+set a_addr D31; set read_a 1; forward +1
+print "=== read test (port b) ===\n"
+print "    in     in_addr a_addr  b_addr  | read write | a          b\n"
+set write 0; set read_a 0; 
+set b_addr D0; set read_b 1; forward +1
+set b_addr D1; set read_b 1; forward +1
+set b_addr D2; set read_b 1; forward +1
+set b_addr D3; set read_b 1; forward +1
+set b_addr D4; set read_b 1; forward +1
+set b_addr D5; set read_b 1; forward +1
+set b_addr D6; set read_b 1; forward +1
+set b_addr D7; set read_b 1; forward +1
+set b_addr D8; set read_b 1; forward +1
+set b_addr D9; set read_b 1; forward +1
+set b_addr D10; set read_b 1; forward +1
+set b_addr D11; set read_b 1; forward +1
+set b_addr D12; set read_b 1; forward +1
+set b_addr D13; set read_b 1; forward +1
+set b_addr D14; set read_b 1; forward +1
+set b_addr D15; set read_b 1; forward +1
+set b_addr D16; set read_b 1; forward +1
+set b_addr D17; set read_b 1; forward +1
+set b_addr D18; set read_b 1; forward +1
+set b_addr D19; set read_b 1; forward +1
+set b_addr D20; set read_b 1; forward +1
+set b_addr D21; set read_b 1; forward +1
+set b_addr D22; set read_b 1; forward +1
+set b_addr D23; set read_b 1; forward +1
+set b_addr D24; set read_b 1; forward +1
+set b_addr D25; set read_b 1; forward +1
+set b_addr D26; set read_b 1; forward +1
+set b_addr D27; set read_b 1; forward +1
+set b_addr D28; set read_b 1; forward +1
+set b_addr D29; set read_b 1; forward +1
+set b_addr D30; set read_b 1; forward +1
+set b_addr D31; set read_b 1; forward +1
+print "=== read test (port a and b) ===\n"
+print "    in     in_addr a_addr  b_addr  | read write | a          b\n"
+set write 0; set read_a 1; set read_b 1
+set a_addr D0; set b_addr D0; forward +1
+set a_addr D1; set b_addr D1; forward +1
+set a_addr D2; set b_addr D2; forward +1
+set a_addr D3; set b_addr D3; forward +1
+set a_addr D4; set b_addr D4; forward +1
+set a_addr D5; set a_addr D5; forward +1
+set a_addr D6; set b_addr D6; forward +1
+set a_addr D7; set b_addr D7; forward +1
+set a_addr D8; set b_addr D8; forward +1
+set a_addr D9; set b_addr D9; forward +1
+set a_addr D10; set b_addr D10; forward +1
+set a_addr D11; set b_addr D11; forward +1
+set a_addr D12; set b_addr D12; forward +1
+set a_addr D13; set b_addr D13; forward +1
+set a_addr D14; set b_addr D14; forward +1
+set a_addr D15; set b_addr D15; forward +1
+set a_addr D16; set b_addr D16; forward +1
+set a_addr D17; set b_addr D17; forward +1
+set a_addr D18; set b_addr D18; forward +1
+set a_addr D19; set b_addr D19; forward +1
+set a_addr D20; set b_addr D20; forward +1
+set a_addr D21; set b_addr D21; forward +1
+set a_addr D22; set b_addr D22; forward +1
+set a_addr D23; set b_addr D23; forward +1
+set a_addr D24; set b_addr D24; forward +1
+set a_addr D25; set b_addr D25; forward +1
+set a_addr D26; set b_addr D26; forward +1
+set a_addr D27; set b_addr D27; forward +1
+set a_addr D28; set b_addr D28; forward +1
+set a_addr D29; set b_addr D29; forward +1
+set a_addr D30; set b_addr D30; forward +1
+set a_addr D31; set b_addr D31; forward +1
+print "=== read test (port a and b) ===\n"
+print "    in     in_addr a_addr  b_addr  | read write | a          b\n"
+set write 0; set read_a 1; set read_b 1
+set a_addr D0; set b_addr D1; forward +1
+set a_addr D1; set b_addr D2; forward +1
+set a_addr D2; set b_addr D3; forward +1
+set a_addr D3; set b_addr D4; forward +1
+set a_addr D4; set b_addr D5; forward +1
+set a_addr D5; set b_addr D6; forward +1
+set a_addr D6; set b_addr D7; forward +1
+set a_addr D7; set b_addr D8; forward +1
+set a_addr D8; set b_addr D9; forward +1
+set a_addr D9; set b_addr D10; forward +1
+set a_addr D10; set b_addr D11; forward +1
+set a_addr D11; set b_addr D12; forward +1
+set a_addr D12; set b_addr D13; forward +1
+set a_addr D13; set b_addr D14; forward +1
+set a_addr D14; set b_addr D15; forward +1
+set a_addr D15; set b_addr D16; forward +1
+set a_addr D16; set b_addr D17; forward +1
+set a_addr D17; set b_addr D18; forward +1
+set a_addr D18; set b_addr D19; forward +1
+set a_addr D19; set b_addr D20; forward +1
+set a_addr D20; set b_addr D21; forward +1
+set a_addr D21; set b_addr D22; forward +1
+set a_addr D22; set b_addr D23; forward +1
+set a_addr D23; set b_addr D24; forward +1
+set a_addr D24; set b_addr D25; forward +1
+set a_addr D25; set b_addr D26; forward +1
+set a_addr D26; set b_addr D27; forward +1
+set a_addr D27; set b_addr D28; forward +1
+set a_addr D28; set b_addr D29; forward +1
+set a_addr D29; set b_addr D30; forward +1
+set a_addr D30; set b_addr D31; forward +1
+set a_addr D31; set b_addr D0; forward +1
+print "=== read test (port a and b) ===\n"
+print "    in     in_addr a_addr  b_addr  | read write | a          b\n"
+set write 0; set read_a 1; set read_b 1
+set a_addr D0; set b_addr D11; forward +1
+set a_addr D1; set b_addr D12; forward +1
+set a_addr D2; set b_addr D13; forward +1
+set a_addr D3; set b_addr D14; forward +1
+set a_addr D4; set b_addr D15; forward +1
+set a_addr D5; set b_addr D16; forward +1
+set a_addr D6; set b_addr D17; forward +1
+set a_addr D7; set b_addr D18; forward +1
+set a_addr D8; set b_addr D19; forward +1
+set a_addr D9; set b_addr D20; forward +1
+set a_addr D10; set b_addr D21; forward +1
+set a_addr D11; set b_addr D22; forward +1
+set a_addr D12; set b_addr D23; forward +1
+set a_addr D13; set b_addr D24; forward +1
+set a_addr D14; set b_addr D25; forward +1
+set a_addr D15; set b_addr D26; forward +1
+set a_addr D16; set b_addr D27; forward +1
+set a_addr D17; set b_addr D28; forward +1
+set a_addr D18; set b_addr D29; forward +1
+set a_addr D19; set b_addr D30; forward +1
+set a_addr D20; set b_addr D31; forward +1
+set a_addr D21; set b_addr D0; forward +1
+set a_addr D22; set b_addr D1; forward +1
+set a_addr D23; set b_addr D2; forward +1
+set a_addr D24; set b_addr D3; forward +1
+set a_addr D25; set b_addr D4; forward +1
+set a_addr D26; set b_addr D5; forward +1
+set a_addr D27; set b_addr D6; forward +1
+set a_addr D28; set b_addr D7; forward +1
+set a_addr D29; set b_addr D8; forward +1
+set a_addr D30; set b_addr D9; forward +1
+set a_addr D31; set b_addr D10; forward +1
+print "=== read/write test ===\n"
+print "    in     in_addr a_addr  b_addr  | read write | a          b\n"
+set write 1; set read_a 1; set read_b 1
+set in Xabcd0000; set in_addr D0;set a_addr D0; set b_addr D1; forward +1
+set in Xabcd0001; set in_addr D1;set a_addr D1; set b_addr D2; forward +1
+set in Xabcd0002; set in_addr D2;set a_addr D2; set b_addr D3; forward +1
+set in Xabcd0003; set in_addr D3;set a_addr D3; set b_addr D4; forward +1
+set in Xabcd0004; set in_addr D4;set a_addr D4; set b_addr D5; forward +1
+set in Xabcd0005; set in_addr D5;set a_addr D5; set b_addr D6; forward +1
+set in Xabcd0006; set in_addr D6;set a_addr D6; set b_addr D7; forward +1
+set in Xabcd0007; set in_addr D7;set a_addr D7; set b_addr D8; forward +1
+set in Xabcd0008; set in_addr D8;set a_addr D8; set b_addr D9; forward +1
+set in Xabcd0009; set in_addr D9;set a_addr D9; set b_addr D10; forward +1
+set in Xabcd0010; set in_addr D10;set a_addr D10; set b_addr D11; forward +1
+set in Xabcd0011; set in_addr D11;set a_addr D11; set b_addr D12; forward +1
+set in Xabcd0012; set in_addr D12;set a_addr D12; set b_addr D13; forward +1
+set in Xabcd0013; set in_addr D13;set a_addr D13; set b_addr D14; forward +1
+set in Xabcd0014; set in_addr D14;set a_addr D14; set b_addr D15; forward +1
+set in Xabcd0015; set in_addr D15;set a_addr D15; set b_addr D16; forward +1
+set in Xabcd0016; set in_addr D16;set a_addr D16; set b_addr D17; forward +1
+set in Xabcd0017; set in_addr D17;set a_addr D17; set b_addr D18; forward +1
+set in Xabcd0018; set in_addr D18;set a_addr D18; set b_addr D19; forward +1
+set in Xabcd0019; set in_addr D19;set a_addr D19; set b_addr D20; forward +1
+set in Xabcd0020; set in_addr D20;set a_addr D20; set b_addr D21; forward +1
+set in Xabcd0021; set in_addr D21;set a_addr D21; set b_addr D22; forward +1
+set in Xabcd0022; set in_addr D22;set a_addr D22; set b_addr D23; forward +1
+set in Xabcd0023; set in_addr D23;set a_addr D23; set b_addr D24; forward +1
+set in Xabcd0024; set in_addr D24;set a_addr D24; set b_addr D25; forward +1
+set in Xabcd0025; set in_addr D25;set a_addr D25; set b_addr D26; forward +1
+set in Xabcd0026; set in_addr D26;set a_addr D26; set b_addr D27; forward +1
+set in Xabcd0027; set in_addr D27;set a_addr D27; set b_addr D28; forward +1
+set in Xabcd0028; set in_addr D28;set a_addr D28; set b_addr D29; forward +1
+set in Xabcd0029; set in_addr D29;set a_addr D29; set b_addr D30; forward +1
+set in Xabcd0030; set in_addr D30;set a_addr D30; set b_addr D31; forward +1
+set in Xabcd0031; set in_addr D31;set a_addr D31; set b_addr D0; forward +1
+
+# End of file (test_reg32x32_01.sec)
+
