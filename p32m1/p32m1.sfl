@@ -144,14 +144,16 @@ module p32m1 {
       ^set_cause:      cause := 0x0; /* stores exception code (factor that causes the exception) */
     }
 
+    /* reset asserts -> create a new job */
     instruct reset generate start.start_task();
 
     stage start {
       any {
-        reset: finish;
+        reset: finish; /* reset asserts -> finish the job */
         else: par {
           pc := INITIAL_PC;  /* set initial program counter */
-          relay IF.ifetch();
+          relay IF.ifetch(); /* reset negate -> initialize PC and transfer the job to IF state */
+          /* processor starts with a sign of reset: 0->1->0 */
         }
       }
     } /* stage start */
@@ -161,8 +163,8 @@ module p32m1 {
      */
     stage IF {
       par {
-        ir := .................. /* TODO: read instruction */
-        pc := ................................... /* TODO: pc <- pc + 4 */ 
+        ir := i_read(pc).i_data /* TODO: read instruction */
+        pc := pc_add.do(pc, 0x00000004, 0b0).sum; /* TODO: pc <- pc + 4 */ 
 
         any {
           reset: finish;
@@ -183,6 +185,7 @@ module p32m1 {
 
         w_addr = 0b00000;
 
+        /* Read data from register file */
         regsfile.read_a(a_addr);
         regsfile.read_b(b_addr);
 
@@ -198,7 +201,7 @@ module p32m1 {
             ex_funct := FUNCT;
             /* shift operations */
             any {
-              ir<2>: /* sllv, srlv, srav */
+              ir<2>: /* sllv, srlv, srav */ /* ここのir<2>は何を表しているのか */
                 shamt := ............ /* TODO */
               else: /* sll, srl, sra */
                 shamt := ......  /* TODO: shamt */
