@@ -1,0 +1,63 @@
+/* (reg32x8.sfl) */
+
+/* bit width of each registers */
+%d WIDTH 32
+%d ADDR_WIDTH 3
+
+/* constant value definitions */
+%d CST_0 0b000
+%d CST_1 0b001
+%d CST_2 0b010
+%d CST_3 0b011
+%d CST_4 0b100
+%d CST_5 0b101
+%d CST_6 0b110
+%d CST_7 0b111
+
+module reg32x8 {
+    input   in<WIDTH>;    
+    input   in_addr<ADDR_WIDTH>;
+    input   a_addr<ADDR_WIDTH>;
+    input   b_addr<ADDR_WIDTH>;
+    output  a<WIDTH>;
+    output  b<WIDTH>;
+    instrin read_a, read_b, write;
+
+    reg_wr reg0<WIDTH>, reg1<WIDTH>, reg2<WIDTH>, reg3<WIDTH>;
+    reg_wr reg4<WIDTH>, reg5<WIDTH>, reg6<WIDTH>, reg7<WIDTH>;
+
+    instruct read_a any {
+        a_addr == CST_0: a = reg0;
+        a_addr == CST_1: a = reg1;
+        a_addr == CST_2: a = reg2;
+        a_addr == CST_3: a = reg3;
+        a_addr == CST_4: a = reg4;
+        a_addr == CST_5: a = reg5;
+        a_addr == CST_6: a = reg6;
+        a_addr == CST_7: a = reg7;
+    }
+
+    instruct read_b any {
+        b_addr == CST_0: b = reg0;
+        b_addr == CST_1: b = reg1;
+        b_addr == CST_2: b = reg2;
+        b_addr == CST_3: b = reg3;
+        b_addr == CST_4: b = reg4;
+        b_addr == CST_5: b = reg5;
+        b_addr == CST_6: b = reg6;
+        b_addr == CST_7: b = reg7;
+    }
+
+    instruct write any {
+        in_addr == CST_0: reg0 := in;
+        in_addr == CST_1: reg1 := in;
+        in_addr == CST_2: reg2 := in;
+        in_addr == CST_3: reg3 := in;
+        in_addr == CST_4: reg4 := in;
+        in_addr == CST_5: reg5 := in;
+        in_addr == CST_6: reg6 := in;
+        in_addr == CST_7: reg7 := in;
+    }
+}
+
+/* End of file (reg32x8.sfl) */

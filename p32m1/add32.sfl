@@ -1,0 +1,37 @@
+/* (add32.sfl) */
+
+%i "add4.h"
+
+module add32 {
+  input a<32>;
+  input b<32>;
+  input cin;      /* carry in */
+  output sum<32>;
+  output cout;    /* carry out */
+  instrin do;
+
+  /* 32ビットの数値の加算をするには */
+  /* 4ビット*8回の加算が必要 */
+  add4 add4a, add4b, add4c, add4d, add4e, add4f, add4g, add4h; 
+
+  instruct do par {
+    /* それぞれ下から4ビットずつ順番に足していく */
+    /* 次の4ビット加算器では前の4ビット加算器の繰り上がりを用いる */
+    /* inputを引数にとってadd4モジュールを実行する */
+    /* 例えばadd4aは今後.を使ってoutputを受け取ることができる */
+    add4a.do(a<3:0>,   b<3:0>,  cin);
+    add4b.do(a<7:4>,   b<7:4>,  add4a.cout);
+    add4c.do(a<11:8>,  b<11:8>, add4b.cout);
+    add4d.do(a<15:12>, b<15:12>,add4c.cout);
+    add4e.do(a<19:16>, b<19:16>,add4d.cout);
+    add4f.do(a<23:20>, b<23:20>,add4e.cout);
+    add4g.do(a<27:24>, b<27:24>,add4f.cout);
+    add4h.do(a<31:28>, b<31:28>,add4g.cout);
+
+    /* `||`で連結できる(?) */
+    sum = add4h.sum || add4g.sum || add4f.sum || add4e.sum || add4d.sum || add4c.sum || add4b.sum || add4a.sum;
+    cout = add4h.cout;
+  }
+} /* module add32 */
+
+/* end of file (add32.sfl) */

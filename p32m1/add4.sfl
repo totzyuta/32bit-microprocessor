@@ -1,0 +1,21 @@
+/* (add4_v2.sfl) */
+%i "fulladder.h"
+
+module add4 {
+    input a<4>, b<4>, cin;
+    output sum<4>, cout;
+    instrin do;
+
+    fulladder fa0, fa1, fa2, fa3;
+
+    instruct do par {
+        fa0.do(a<0>, b<0>, cin);
+        fa1.do(a<1>, b<1>, fa0.cout);
+        fa2.do(a<2>, b<2>, fa1.cout);
+        fa3.do(a<3>, b<3>, fa2.cout);
+
+        sum = fa3.sum || fa2.sum || fa1.sum || fa0.sum;
+        cout = fa3.cout;
+    }
+}
+/* End of file (add4_v2.sfl) */

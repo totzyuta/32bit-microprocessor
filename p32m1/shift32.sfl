@@ -1,0 +1,68 @@
+/* 32-bit shifter (shift32.sfl) */
+
+%i "shift32.h"
+
+module shift32 {
+    input in<32>, shamt<5>;
+    output out<32>;
+    instrin sll; /* shift left logical */
+    instrin srl; /* shift right logical */
+    instrin sra; /* shift right arithmetic */
+
+    instrself   n_1, n_2, n_4, n_8, n16;
+    instrself   sl_1, sl_2, sl_4, sl_8, sl16;
+    instrself   sr_1, sr_2, sr_4, sr_8, sr16;
+
+    sel_v       o1<32>, o2<32>, o4<32>, o8<32>;
+    sel_v       s;
+
+    instruct sll par {
+      alt {  shamt<0>: sl_1(); else: n_1(); } 
+      alt {  shamt<1>: sl_2(); else: n_2(); }
+      alt {  shamt<2>: sl_4(); else: n_4(); }
+      alt {  shamt<3>: sl_8(); else: n_8(); }
+      alt {  shamt<4>: sl16(); else: n16(); }
+    }
+
+    instruct srl par {
+      s = 0b0;
+      alt {  shamt<0>: sr_1(); else: n_1(); }
+      alt {  shamt<1>: sr_2(); else: n_2(); }
+      alt {  shamt<2>: sr_4(); else: n_4(); }
+      alt {  shamt<3>: sr_8(); else: n_8(); }
+      alt {  shamt<4>: sr16(); else: n16(); }
+    }
+
+    instruct sra par {
+      s = in<31>; /* sign bit */
+      alt {  shamt<0>: sr_1(); else: n_1(); }
+      alt {  shamt<1>: sr_2(); else: n_2(); }
+      alt {  shamt<2>: sr_4(); else: n_4(); }
+      alt {  shamt<3>: sr_8(); else: n_8(); }
+      alt {  shamt<4>: sr16(); else: n16(); }
+    }
+
+    /* no shift */
+    instruct n_1  o1  = in;
+    instruct n_2  o2  = o1;
+    instruct n_4  o4  = o2;
+    instruct n_8  o8  = o4;
+    instruct n16  out = o8;
+
+    /* shift left */
+    instruct sl_1 o1  = in<30:0> || 0b0;
+    instruct sl_2 o2  = o1<29:0> || 0b00;
+    instruct sl_4 o4  = o2<27:0> || 4 # 0b0;
+    instruct sl_8 o8  = o4<23:0> || 8 # 0b0;
+    instruct sl16 out = o8<15:0> || 16 # 0b0;
+
+    /* shift right */
+    instruct sr_1 o1  = s || in<31:1>;
+    instruct sr_2 o2  = s || s || o1<31:2>;
+    instruct sr_4 o4  = 4 # s || o2<31:4>;
+    instruct sr_8 o8  = 8 # s || o4<31:8>;
+    instruct sr16 out = 16 # s || o8<31:16>;
+
+}
+
+/* End of file (shift32.sfl) */
