@@ -1,0 +1,517 @@
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== add4.sfl
+
+Module: add4 definition start.
+All facilities of module: add4 defined.
+Instructs arguments and stages tasks of module: add4 defined.
+Instructs behavior of module: add4 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== add32.sfl
+==REF== ./add4.h
+** include ./add4.h. **
+Submod_class: add4 defined.
+
+Module: add32 definition start.
+Submod_class: add4 defined.
+All facilities of module: add32 defined.
+Instructs arguments and stages tasks of module: add32 defined.
+Instructs behavior of module: add32 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== shift32.sfl
+==REF== ./shift32.h
+** include ./shift32.h. **
+Submod_class: shift32 defined.
+
+Module: shift32 definition start.
+Submod_class: shift32 defined.
+All facilities of module: shift32 defined.
+Instructs arguments and stages tasks of module: shift32 defined.
+Instructs behavior of module: shift32 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== alu32.sfl
+==REF== ./add32.h
+** include ./add32.h. **
+Submod_class: add32 defined.
+
+Module: alu32 definition start.
+Submod_class: add32 defined.
+All facilities of module: alu32 defined.
+Instructs arguments and stages tasks of module: alu32 defined.
+Instructs behavior of module: alu32 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== reg32x8.sfl
+
+Module: reg32x8 definition start.
+All facilities of module: reg32x8 defined.
+Instructs arguments and stages tasks of module: reg32x8 defined.
+Instructs behavior of module: reg32x8 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== reg32x32.sfl
+==REF== ./reg32x8.h
+** include ./reg32x8.h. **
+Submod_class: reg32x8 defined.
+
+Module: reg32x32 definition start.
+Submod_class: reg32x8 defined.
+All facilities of module: reg32x32 defined.
+Instructs arguments and stages tasks of module: reg32x32 defined.
+Instructs behavior of module: reg32x32 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== p32m1.sfl
+==REF== ./add32.h
+** include ./add32.h. **
+==REF== ./alu32.h
+** include ./alu32.h. **
+Submod_class: add32 defined.
+==REF== ./shift32.h
+** include ./shift32.h. **
+Submod_class: alu32 defined.
+==REF== ./reg32x32.h
+** include ./reg32x32.h. **
+Submod_class: shift32 defined.
+==REF== ./opcode.def
+** include ./opcode.def. **
+==REF== ./exception.def
+** include ./exception.def. **
+==REF== ./inst.def
+** include ./inst.def. **
+==REF== ./inst_m1.def
+** include ./inst_m1.def. **
+Submod_class: reg32x32 defined.
+
+Module: p32m1 definition start.
+Submod_class: add32 defined.
+Submod_class: alu32 defined.
+Submod_class: shift32 defined.
+Submod_class: reg32x32 defined.
+==REF== ./p32decode_sel.def
+** include ./p32decode_sel.def. **
+All facilities of module: p32m1 defined.
+Instructs arguments and stages tasks of module: p32m1 defined.
+Instructs behavior of module: p32m1 defined.
+Behavior of stage: start defined.
+Behavior of stage: IF defined.
+==REF== ./p32id.def
+** include ./p32id.def. **
+Behavior of stage: ID defined.
+==REF== ./p32ex.def
+** include ./p32ex.def. **
+Behavior of stage: EX defined.
+Behavior of stage: MEM defined.
+Behavior of stage: WB defined.
+!! local stack 0%(p: 1%) used, global stack 2%(p: 2%) used, trail stack 0%(p: 1%) used !!
+!! gc free 82308 words !!
+!! local stack 0%(t: 1%) used, global stack 0%(t: 2%) used, trail stack 0%(t: 1%) used !!
+sfl area 99% remained.
+atom area 69% remained.
+!! local stack 1% used, global stack 2% used, trail stack 1% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== mem64KB.cir
+
+Module: mem64KB definition start.
+All facilities of module: mem64KB defined.
+Instructs arguments and stages tasks of module: mem64KB defined.
+Instructs behavior of module: mem64KB defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== memunit.sfl
+==REF== ./mem64KB.h
+** include ./mem64KB.h. **
+Submod_class: mem64KB defined.
+
+Module: memunit definition start.
+Submod_class: mem64KB defined.
+All facilities of module: memunit defined.
+Instructs arguments and stages tasks of module: memunit defined.
+Instructs behavior of module: memunit defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== top_p32m1.sfl
+==REF== ./p32m1.h
+** include ./p32m1.h. **
+==REF== ./memunit.h
+** include ./memunit.h. **
+Submod_class: p32m1 defined.
+Submod_class: memunit defined.
+
+Module: top_p32m1 definition start.
+Submod_class: p32m1 defined.
+Submod_class: memunit defined.
+All facilities of module: top_p32m1 defined.
+Instructs arguments and stages tasks of module: top_p32m1 defined.
+Instructs behavior of module: top_p32m1 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+---
+        PC       IR    i  i_data   d_addr  read       write 
+1    00000000 00000000                                           -   
+2    00000000 00000000 1 3c1c1000                                -   
+3    00000004 3c1c1000                                           -   
+4    00000004 3c1c1000                                           -   
+5    00000004 3c1c1000                                           -   
+6    00000004 3c1c1000                                           -   
+7    00000004 3c1c1000 1 379c8000                                -   
+8    00000008 379c8000                                           -   
+9    00000008 379c8000                                           -   
+10   00000008 379c8000                                           -   
+11   00000008 379c8000                                           -   
+12   00000008 379c8000 1 3c1d7fff                                -   
+13   0000000c 3c1d7fff                                           -   
+14   0000000c 3c1d7fff                                           -   
+15   0000000c 3c1d7fff                                           -   
+16   0000000c 3c1d7fff                                           -   
+17   0000000c 3c1d7fff 1 37bdfffc                                -   
+18   00000010 37bdfffc                                           -   
+19   00000010 37bdfffc                                           -   
+20   00000010 37bdfffc                                           -   
+21   00000010 37bdfffc                                           -   
+22   00000010 37bdfffc 1 00000000                                -   
+23   00000014 00000000                                           -   
+24   00000014 00000000                                           -   
+25   00000014 00000000                                           -   
+26   00000014 00000000                                           -   
+27   00000014 00000000 1 0c000400                                -   
+28   00000018 0c000400                                           -   
+29   00001000 0c000400                                           -   
+30   00001000 0c000400                                           -   
+31   00001000 0c000400                                           -   
+32   00001000 0c000400 1 3c081000                                -   
+33   00001004 3c081000                                           -   
+34   00001004 3c081000                                           -   
+35   00001004 3c081000                                           -   
+36   00001004 3c081000                                           -   
+37   00001004 3c081000 1 35084000                                -   
+38   00001008 35084000                                           -   
+39   00001008 35084000                                           -   
+40   00001008 35084000                                           -   
+41   00001008 35084000                                           -   
+42   00001008 35084000 1 8d090004                                -   
+43   0000100c 8d090004                                           -   
+44   0000100c 8d090004                                           -   
+45   0000100c 8d090004            10004004 1 0000000a            -   
+46   0000100c 8d090004                                           -   
+47   0000100c 8d090004 1 340a0000                                -   
+48   00001010 340a0000                                           -   
+49   00001010 340a0000                                           -   
+50   00001010 340a0000                                           -   
+51   00001010 340a0000                                           -   
+52   00001010 340a0000 1 11200005                                -   
+53   00001014 11200005                                           -   
+54   00001014 11200005                                           -   
+55   00001014 11200005                                           -   
+56   00001014 11200005                                           -   
+57   00001014 11200005 1 00000000                                -   
+58   00001018 00000000                                           -   
+59   00001018 00000000                                           -   
+60   00001018 00000000                                           -   
+61   00001018 00000000                                           -   
+62   00001018 00000000 1 01495020                                -   
+63   0000101c 01495020                                           -   
+64   0000101c 01495020                                           -   
+65   0000101c 01495020                                           -   
+66   0000101c 01495020                                           -   
+67   0000101c 01495020 1 2129ffff                                -   
+68   00001020 2129ffff                                           -   
+69   00001020 2129ffff                                           -   
+70   00001020 2129ffff                                           -   
+71   00001020 2129ffff                                           -   
+72   00001020 2129ffff 1 08000404                                -   
+73   00001024 08000404                                           -   
+74   00001010 08000404                                           -   
+75   00001010 08000404                                           -   
+76   00001010 08000404                                           -   
+77   00001010 08000404 1 11200005                                -   
+78   00001014 11200005                                           -   
+79   00001014 11200005                                           -   
+80   00001014 11200005                                           -   
+81   00001014 11200005                                           -   
+82   00001014 11200005 1 00000000                                -   
+83   00001018 00000000                                           -   
+84   00001018 00000000                                           -   
+85   00001018 00000000                                           -   
+86   00001018 00000000                                           -   
+87   00001018 00000000 1 01495020                                -   
+88   0000101c 01495020                                           -   
+89   0000101c 01495020                                           -   
+90   0000101c 01495020                                           -   
+91   0000101c 01495020                                           -   
+92   0000101c 01495020 1 2129ffff                                -   
+93   00001020 2129ffff                                           -   
+94   00001020 2129ffff                                           -   
+95   00001020 2129ffff                                           -   
+96   00001020 2129ffff                                           -   
+97   00001020 2129ffff 1 08000404                                -   
+98   00001024 08000404                                           -   
+99   00001010 08000404                                           -   
+100  00001010 08000404                                           -   
+101  00001010 08000404                                           -   
+102  00001010 08000404 1 11200005                                -   
+103  00001014 11200005                                           -   
+104  00001014 11200005                                           -   
+105  00001014 11200005                                           -   
+106  00001014 11200005                                           -   
+107  00001014 11200005 1 00000000                                -   
+108  00001018 00000000                                           -   
+109  00001018 00000000                                           -   
+110  00001018 00000000                                           -   
+111  00001018 00000000                                           -   
+112  00001018 00000000 1 01495020                                -   
+113  0000101c 01495020                                           -   
+114  0000101c 01495020                                           -   
+115  0000101c 01495020                                           -   
+116  0000101c 01495020                                           -   
+117  0000101c 01495020 1 2129ffff                                -   
+118  00001020 2129ffff                                           -   
+119  00001020 2129ffff                                           -   
+120  00001020 2129ffff                                           -   
+121  00001020 2129ffff                                           -   
+122  00001020 2129ffff 1 08000404                                -   
+123  00001024 08000404                                           -   
+124  00001010 08000404                                           -   
+125  00001010 08000404                                           -   
+126  00001010 08000404                                           -   
+127  00001010 08000404 1 11200005                                -   
+128  00001014 11200005                                           -   
+129  00001014 11200005                                           -   
+130  00001014 11200005                                           -   
+131  00001014 11200005                                           -   
+132  00001014 11200005 1 00000000                                -   
+133  00001018 00000000                                           -   
+134  00001018 00000000                                           -   
+135  00001018 00000000                                           -   
+136  00001018 00000000                                           -   
+137  00001018 00000000 1 01495020                                -   
+138  0000101c 01495020                                           -   
+139  0000101c 01495020                                           -   
+140  0000101c 01495020                                           -   
+141  0000101c 01495020                                           -   
+142  0000101c 01495020 1 2129ffff                                -   
+143  00001020 2129ffff                                           -   
+144  00001020 2129ffff                                           -   
+145  00001020 2129ffff                                           -   
+146  00001020 2129ffff                                           -   
+147  00001020 2129ffff 1 08000404                                -   
+148  00001024 08000404                                           -   
+149  00001010 08000404                                           -   
+150  00001010 08000404                                           -   
+151  00001010 08000404                                           -   
+152  00001010 08000404 1 11200005                                -   
+153  00001014 11200005                                           -   
+154  00001014 11200005                                           -   
+155  00001014 11200005                                           -   
+156  00001014 11200005                                           -   
+157  00001014 11200005 1 00000000                                -   
+158  00001018 00000000                                           -   
+159  00001018 00000000                                           -   
+160  00001018 00000000                                           -   
+161  00001018 00000000                                           -   
+162  00001018 00000000 1 01495020                                -   
+163  0000101c 01495020                                           -   
+164  0000101c 01495020                                           -   
+165  0000101c 01495020                                           -   
+166  0000101c 01495020                                           -   
+167  0000101c 01495020 1 2129ffff                                -   
+168  00001020 2129ffff                                           -   
+169  00001020 2129ffff                                           -   
+170  00001020 2129ffff                                           -   
+171  00001020 2129ffff                                           -   
+172  00001020 2129ffff 1 08000404                                -   
+173  00001024 08000404                                           -   
+174  00001010 08000404                                           -   
+175  00001010 08000404                                           -   
+176  00001010 08000404                                           -   
+177  00001010 08000404 1 11200005                                -   
+178  00001014 11200005                                           -   
+179  00001014 11200005                                           -   
+180  00001014 11200005                                           -   
+181  00001014 11200005                                           -   
+182  00001014 11200005 1 00000000                                -   
+183  00001018 00000000                                           -   
+184  00001018 00000000                                           -   
+185  00001018 00000000                                           -   
+186  00001018 00000000                                           -   
+187  00001018 00000000 1 01495020                                -   
+188  0000101c 01495020                                           -   
+189  0000101c 01495020                                           -   
+190  0000101c 01495020                                           -   
+191  0000101c 01495020                                           -   
+192  0000101c 01495020 1 2129ffff                                -   
+193  00001020 2129ffff                                           -   
+194  00001020 2129ffff                                           -   
+195  00001020 2129ffff                                           -   
+196  00001020 2129ffff                                           -   
+197  00001020 2129ffff 1 08000404                                -   
+198  00001024 08000404                                           -   
+199  00001010 08000404                                           -   
+200  00001010 08000404                                           -   
+201  00001010 08000404                                           -   
+202  00001010 08000404 1 11200005                                -   
+203  00001014 11200005                                           -   
+204  00001014 11200005                                           -   
+205  00001014 11200005                                           -   
+206  00001014 11200005                                           -   
+207  00001014 11200005 1 00000000                                -   
+208  00001018 00000000                                           -   
+209  00001018 00000000                                           -   
+210  00001018 00000000                                           -   
+211  00001018 00000000                                           -   
+212  00001018 00000000 1 01495020                                -   
+213  0000101c 01495020                                           -   
+214  0000101c 01495020                                           -   
+215  0000101c 01495020                                           -   
+216  0000101c 01495020                                           -   
+217  0000101c 01495020 1 2129ffff                                -   
+218  00001020 2129ffff                                           -   
+219  00001020 2129ffff                                           -   
+220  00001020 2129ffff                                           -   
+221  00001020 2129ffff                                           -   
+222  00001020 2129ffff 1 08000404                                -   
+223  00001024 08000404                                           -   
+224  00001010 08000404                                           -   
+225  00001010 08000404                                           -   
+226  00001010 08000404                                           -   
+227  00001010 08000404 1 11200005                                -   
+228  00001014 11200005                                           -   
+229  00001014 11200005                                           -   
+230  00001014 11200005                                           -   
+231  00001014 11200005                                           -   
+232  00001014 11200005 1 00000000                                -   
+233  00001018 00000000                                           -   
+234  00001018 00000000                                           -   
+235  00001018 00000000                                           -   
+236  00001018 00000000                                           -   
+237  00001018 00000000 1 01495020                                -   
+238  0000101c 01495020                                           -   
+239  0000101c 01495020                                           -   
+240  0000101c 01495020                                           -   
+241  0000101c 01495020                                           -   
+242  0000101c 01495020 1 2129ffff                                -   
+243  00001020 2129ffff                                           -   
+244  00001020 2129ffff                                           -   
+245  00001020 2129ffff                                           -   
+246  00001020 2129ffff                                           -   
+247  00001020 2129ffff 1 08000404                                -   
+248  00001024 08000404                                           -   
+249  00001010 08000404                                           -   
+250  00001010 08000404                                           -   
+251  00001010 08000404                                           -   
+252  00001010 08000404 1 11200005                                -   
+253  00001014 11200005                                           -   
+254  00001014 11200005                                           -   
+255  00001014 11200005                                           -   
+256  00001014 11200005                                           -   
+257  00001014 11200005 1 00000000                                -   
+258  00001018 00000000                                           -   
+259  00001018 00000000                                           -   
+260  00001018 00000000                                           -   
+261  00001018 00000000                                           -   
+262  00001018 00000000 1 01495020                                -   
+263  0000101c 01495020                                           -   
+264  0000101c 01495020                                           -   
+265  0000101c 01495020                                           -   
+266  0000101c 01495020                                           -   
+267  0000101c 01495020 1 2129ffff                                -   
+268  00001020 2129ffff                                           -   
+269  00001020 2129ffff                                           -   
+270  00001020 2129ffff                                           -   
+271  00001020 2129ffff                                           -   
+272  00001020 2129ffff 1 08000404                                -   
+273  00001024 08000404                                           -   
+274  00001010 08000404                                           -   
+275  00001010 08000404                                           -   
+276  00001010 08000404                                           -   
+277  00001010 08000404 1 11200005                                -   
+278  00001014 11200005                                           -   
+279  00001014 11200005                                           -   
+280  00001014 11200005                                           -   
+281  00001014 11200005                                           -   
+282  00001014 11200005 1 00000000                                -   
+283  00001018 00000000                                           -   
+284  00001018 00000000                                           -   
+285  00001018 00000000                                           -   
+286  00001018 00000000                                           -   
+287  00001018 00000000 1 01495020                                -   
+288  0000101c 01495020                                           -   
+289  0000101c 01495020                                           -   
+290  0000101c 01495020                                           -   
+291  0000101c 01495020                                           -   
+292  0000101c 01495020 1 2129ffff                                -   
+293  00001020 2129ffff                                           -   
+294  00001020 2129ffff                                           -   
+295  00001020 2129ffff                                           -   
+296  00001020 2129ffff                                           -   
+297  00001020 2129ffff 1 08000404                                -   
+298  00001024 08000404                                           -   
+299  00001010 08000404                                           -   
+300  00001010 08000404                                           -   
+301  00001010 08000404                                           -   
+302  00001010 08000404 1 11200005                                -   
+303  00001014 11200005                                           -   
+304  00001028 11200005                                           -   
+305  00001028 11200005                                           -   
+306  00001028 11200005                                           -   
+307  00001028 11200005 1 ad0a0000                                -   
+308  0000102c ad0a0000                                           -   
+309  0000102c ad0a0000                                           -   
+310  0000102c ad0a0000            10004000            1 00000037 -   
+311  0000102c ad0a0000                                           -   
+312  0000102c ad0a0000 1 03e00008                                -   
+313  00001030 03e00008                                           -   
+314  00000018 03e00008                                           -   
+315  00000018 03e00008                                           -   
+316  00000018 03e00008                                           -   
+317  00000018 03e00008 1 00000000                                -   
+318  0000001c 00000000                                           -   
+319  0000001c 00000000                                           -   
+320  0000001c 00000000                                           -   
+321  0000001c 00000000                                           -   
+322  0000001c 00000000 1 0000000c                                -   
+323  00000020 0000000c                                           -   
+324  80000080 0000000c                                           -   
+325  80000080 0000000c                                           -   
+326  80000080 0000000c                                           -   
+327  80000080 0000000c 1 00000000                                - 1 
+328  80000084 00000000                                           -   
+329  80000084 00000000                                           -   
+*** register file dump ***
+$zero    $at($1)  $v0($2)  $v1($3)  $a0($4)  $a1($5)  $a2($6)  $a3($7)
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+$t0($8)  $t1($9)  $t2($10) $t3($11) $t4($12) $t5($13) $t6($14) $t7($15)
+10004000 00000000 00000037 00000000 00000000 00000000 00000000 00000000
+$s0($16) $s1($17) $s2($18) $s3($19) $s4($20) $s5($21) $s6($22) $s7($23)
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+$t8($24) $t9($25) $k0($26) $k1($27) $gp($28) $sp($29) $fp($30) $ra($31)
+00000000 00000000 00000000 00000000 10008000 7ffffffc 00000000 00000018

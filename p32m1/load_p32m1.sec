@@ -1,0 +1,19 @@
+#
+# (load_p32m1.sec)
+#
+sflread add4.sfl
+sflread add32.sfl
+#sflread comp5.sfl
+sflread shift32.sfl
+sflread alu32.sfl
+sflread reg32x8.sfl
+sflread reg32x32.sfl
+sflread p32m1.sfl
+sflread mem64KB.cir
+sflread memunit.sfl
+#
+sflread top_p32m1.sfl
+
+autoinstall top_p32m1
+
+# End of file (load_p32m1.sec)
