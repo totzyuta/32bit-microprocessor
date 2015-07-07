@@ -178,7 +178,7 @@ module p32m1 {
    */
   stage ID {
     par {
-      %i "p32id.def"
+%i "p32id.def"
 
       a_addr = RS; /* rs field */
       b_addr = RT; /* rt field */
@@ -308,7 +308,7 @@ module p32m1 {
    */
   stage EX {
     par {
-      %i "p32ex.def"
+%i "p32ex.def"
 
       mem_op        := ex_op;
       mem_dest      := ex_dest;
