@@ -1,0 +1,45 @@
+/* (alu32.h) */
+
+%i "add32.h"
+
+module alu32 {
+    input a<32>, b<32>;
+    output out<32>;
+    output overflow;
+    output zero;
+    instrin op_add;
+    instrin op_sub;
+    instrin op_and;
+    instrin op_or;
+    instrin op_xor;
+    instrin op_nor;
+
+    add32 adder;
+
+    instruct op_add par {
+      
+      out = adder.do(a, b, 0b0).sum;
+      /* <31>で最上位ビットの値を確認してる */
+      /* 加算でオーバーフローが起こるのは、a(+)b(+)a+b(-),a(-)b(-)a+b(+) */
+      /* http://ist.ksc.kwansei.ac.jp/~ishiura/lc/note/n10.pdf */
+      overflow = (^a<31> & ^b<31> & out<31>) | (a<31> & b<31> & ^out<31>);
+
+      /* 演算子表参照 */
+      /* http://www-lab09.kuee.kyoto-u.ac.jp/parthenon/NTT/hajimete/3shou_12.htm */
+      zero = ^(/|out);
+    }
+
+    instruct op_sub par {
+      out = adder.do(a, ^b, 0b1).sum;
+      /* a(-)b(+)a-b(+),a(+)b(-)a-b(-) */
+      overflow = (^a<31> & b<31> & out<31>) | (a<31> & ^b<31> & ^out<31>);
+          
+      zero = ^(/|out);
+    }
+    instruct op_and out = a & b;
+    instruct op_or  out = a | b;
+    instruct op_xor out = a @ b;
+    instruct op_nor out = ^(a | b);
+} /* module alu32 */
+
+/* end of file (alu32.sfl) */
