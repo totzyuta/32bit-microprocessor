@@ -202,9 +202,9 @@ module p32m1 {
             /* shift operations */
             any {
               ir<2>: /* sllv, srlv, srav */ /* ここのir<2>は何を表しているのか */
-                shamt := ............ /* TODO */
+                shamt := a_data<4:0> /* TODO */
               else: /* sll, srl, sra */
-                shamt := ......  /* TODO: shamt */
+                shamt := SHAMT;  /* TODO: shamt */
             }
             any {
               (FUNCT == JR): par {
@@ -260,7 +260,7 @@ module p32m1 {
         } /* D_I_ZE (zero extend) */
         ID_LUI: par {
           ex_dest := RT;  /* rt */
-          a := 0x00000000;
+          A := 0x00000000;
           b := 0x0000 || IMMEDIATE; 
           /* b := IMMEDIATE || 0x0000; */
         }
@@ -271,7 +271,7 @@ module p32m1 {
           any {
             ((ID_BEQ & ^not_equal_a_data_and_b_data) |
              (ID_BNE & not_equal_a_data_and_b_data)): par {
-                 pc := ................................................. /* TODO */
+                 pc := pc_add.do(pc, 32 # (IMMEDIATE || 0b00), 0b0).sum; /* TODO: what's going on? */
              }
           }
         } /* ID_BR */
@@ -279,13 +279,13 @@ module p32m1 {
           ex_dest := 0b00000;
           a := a_data;
           b := pc_add.do(pc, 0x00000004, 0b0).sum;
-          pc := ............................ /* TODO */
+          pc := pc<31:28> || TARGET || 0b00; /* TODO: What's going on? What's TARGET...? */
         }
         (OPCODE == JAL): par {
           ex_dest := 0b11111; /* $ra ($31) */
           a := 0x00000000;
           b := pc;
-          pc := ............................ /* TODO */
+          pc := pc<31:28> || TARGET || 0b00; /* TODO: What's going on? */ /* pc: program counter. Initial value is 0x00000000 (INITIAL_PC) */
         }
       else: par { /* undefined instructions */
 		    pc := EXCEPTION_HANDLER;
@@ -294,115 +294,115 @@ module p32m1 {
 		    set_cause();
 		    cause := CAUSE_RI; /* reserved instruction exception */
 		    finish;
-		}
-	    }
-	    any {
-		reset: finish;
-		else: relay EX.exec();
-	    }
+      }
+    }
+    any {
+      reset: finish;
+      else: relay EX.exec();
+    }
 	} /* par */
-    } /* stage ID */
+} /* stage ID */
 
     /*
      *  EX - execution stage
      */
     stage EX {
-	par {
-%i "p32ex.def"
+      par {
+        %i "p32ex.def"
 
-	    mem_op        := ex_op;
-	    mem_dest      := ex_dest;
-	    mem_result    := ex_result;
-	    any {
-		EX_ALU: any {
-		    EX_ADD:  ex_result = alu.op_add(a, b).out;
-		    EX_ADDU: ex_result = ..................... /* TODO */
-		    EX_SUB:  ex_result = ..................... /* TODO */
-		    EX_SUBU: ex_result = ..................... /* TODO */
-		    EX_AND:  ex_result = ..................... /* TODO */
-		    EX_OR:   ex_result = ....................  /* TODO */
-		    EX_XOR:  ex_result = ..................... /* TODO */
-		    EX_NOR:  ex_result = ..................... /* TODO */
-		} /* E_ALU */
-		EX_SHIFT: any {
-		    EX_SLL: ex_result = shift.sll(b, shamt).out;
-		    EX_SRL: ex_result = ........................ /* TODO */
-		    EX_SRA: ex_result = ........................ /* TODO */
-		} /* E_SHIFT */
-		EX_LUI: ex_result = .................. /* TODO */
-		EX_SET: par {
-		    alu.op_sub(a, b);
-		    any {
-			EX_SLT: any {
-			    (..............):  /* -/+ */ /* TODO */
-				ex_result = 0x00000001;
-			    (..............):  /* +/- */ /* TODO */
-				ex_result = 0x00000000;
-			    else: /* +/+ or -/- */
-			        ex_result = .......................... /* TODO */
-			}
-			EX_SLTU: any {
-			    alu.out<31>: ex_result = 0x00000001;
-			    else:        ex_result = 0x00000000;
-			}
-		    }
-		} /* EX_SET */
-		EX_BJ:   ex_result = alu.op_add(a, b).out;
-		EX_LOAD: ex_result = alu.op_add(a, b).out;
-		EX_STORE: par {
-		    ex_result = alu.op_add(a, b).out;
-		    any {
-			EX_SB: any {
-			    /* alu.out<1:0> == 0b00 */
-			    (^alu.out<1> & ^alu.out<0>): par {
-				mem_mdr := ex_mdr<7:0> || 0x000000;
-				store_loc := 0b0001;
-			    }
-			    /* alu.out<1:0> == 0b01 */
-			    (^alu.out<1> & alu.out<0>): par {
-				mem_mdr := 0x00 || ex_mdr<7:0> || 0x0000;
-				store_loc := 0b0010;
-			    }
-			    /* alu.out<1:0> == 0b10 */
-			    (alu.out<1> & ^alu.out<0>): par {
-				mem_mdr := 0x0000 || ex_mdr<7:0> || 0x00;
-				store_loc := 0b0100;
-			    }
-			    /* alu.out<1:0> == 0b11 */
-			    (alu.out<1> & alu.out<0>): par {
-				mem_mdr := 0x000000 || ex_mdr<7:0>;;
-				store_loc := 0b1000;
-			    }
-			} /* E_SB */
-			EX_SW: par {
-			    mem_mdr := ex_mdr;
-			    store_loc := 0b1111;
-			}
-		    }
-		} /* EX_STORE */
-		else: ex_result = 0x12345678; /* dummy */
-	    }
-	    any {
-		reset: finish;
-		else: relay MEM.load_store();
-	    }
-	} /* par */
+        mem_op        := ex_op;
+        mem_dest      := ex_dest;
+        mem_result    := ex_result;
+        any {
+          EX_ALU: any {
+            EX_ADD:  ex_result = alu.op_add(a, b).out;
+            EX_ADDU: ex_result = alu.op_add(a, b).out; /* TODO */
+            EX_SUB:  ex_result = alu.op_sub(a, b).out; /* TODO */
+            EX_SUBU: ex_result = alu.op_sub(a, b).out; /* TODO */
+            EX_AND:  ex_result = alu.op_and(a, b).out; /* TODO */
+            EX_OR:   ex_result = alu.op_or(a, b).out; /* TODO */
+            EX_XOR:  ex_result = alu.op_xor(a, b).out; /* TODO */
+            EX_NOR:  ex_result = alu.op_nor(a, b).out; /* TODO */
+          } /* E_ALU */
+          EX_SHIFT: any {
+            EX_SLL: ex_result = shift.sll(b, shamt).out;
+            EX_SRL: ex_result = shift.srl(b, shamt).out; /* TODO: what's shamt? -> shift amount initialized at L205 */
+            EX_SRA: ex_result = shift.sra(b, shamt).out; /* TODO */
+          } /* E_SHIFT */
+          EX_LUI: ex_result = b<15:0> || 0x0000; /* TODO */
+          EX_SET: par {
+            alu.op_sub(a, b); /* ASK: What's done here...? */
+            any {
+              EX_SLT: any {
+                a<31> & ^b<31>:  /* -/+ */ /* TODO */
+                  ex_result = 0x00000001;
+                ^a<31> & b<31>:  /* +/- */ /* TODO */
+                  ex_result = 0x00000000;
+                else: /* +/+ or -/- */
+                  ex_result = 31#0b0 || alu.out<31>; /* TODO */
+              }
+              EX_SLTU: any {
+                alu.out<31>: ex_result = 0x00000001;
+                else:        ex_result = 0x00000000;
+              }
+            }
+          } /* EX_SET */
+          EX_BJ:   ex_result = alu.op_add(a, b).out;
+          EX_LOAD: ex_result = alu.op_add(a, b).out;
+          EX_STORE: par {
+            ex_result = alu.op_add(a, b).out;
+            any {
+              EX_SB: any {
+                /* alu.out<1:0> == 0b00 */
+                (^alu.out<1> & ^alu.out<0>): par {
+                  mem_mdr := ex_mdr<7:0> || 0x000000;
+                  store_loc := 0b0001;
+                }
+                /* alu.out<1:0> == 0b01 */
+                (^alu.out<1> & alu.out<0>): par {
+                  mem_mdr := 0x00 || ex_mdr<7:0> || 0x0000;
+                  store_loc := 0b0010;
+                }
+                /* alu.out<1:0> == 0b10 */
+                (alu.out<1> & ^alu.out<0>): par {
+                  mem_mdr := 0x0000 || ex_mdr<7:0> || 0x00;
+                  store_loc := 0b0100;
+                }
+                  /* alu.out<1:0> == 0b11 */
+                (alu.out<1> & alu.out<0>): par {
+                  mem_mdr := 0x000000 || ex_mdr<7:0>;;
+                  store_loc := 0b1000;
+                }
+              } /* E_SB */
+              EX_SW: par {
+                mem_mdr := ex_mdr;
+                store_loc := 0b1111;
+              }
+            }
+          } /* EX_STORE */
+          else: ex_result = 0x12345678; /* dummy */
+        }
+        any {
+          reset: finish;
+          else: relay MEM.load_store();
+        }
+      } /* par */
     } /* stage EX */
 
     /*
      *  MEM - memory stage
      */
     stage MEM {
-	par {
-	    wb_op := mem_op;
-	    wb_dest := mem_dest;
-	    wb_result := mem_result;
-	    any {
-		MEM_LOAD: par {
-		    d_read(mem_result); /* read data */
-		    /* data read from memory is in r_data */
-		    any {
-			MEM_LB: any {
+      par {
+        wb_op := mem_op;
+        wb_dest := mem_dest;
+        wb_result := mem_result;
+        any {
+          MEM_LOAD: par {
+            d_read(mem_result); /* read data */
+          /* data read from memory is in r_data */
+          any {
+        MEM_LB: any {
 			    (^mem_result<1> & ^mem_result<0>): /* 0b00 */
 				m_align = 32 # r_data<31:24>;
 			    (^mem_result<1> & mem_result<0>):  /* 0b01 */
