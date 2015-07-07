@@ -1,0 +1,36 @@
+/*
+ * (inst_m2.def)
+ *  version 1.1.0 (2009/07/07)
+ */
+
+/* 
+ *  MEM 
+ */
+%d MEM_SB     (MEM_OP == SB)
+%d MEM_SW     (MEM_OP == SW)
+%d MEM_LB     (MEM_OP == LB)
+%d MEM_LW     (MEM_OP == LW)
+%d MEM_LOAD   (MEM_LB | MEM_LW)
+%d MEM_STORE  (MEM_SB | MEM_SW)
+
+
+/* 
+ *  WB 
+ */
+%d WB_LB     (WB_OP == LB)
+%d WB_LW     (WB_OP == LW)
+%d WB_SB     (WB_OP == SB)
+%d WB_SW     (WB_OP == SW)
+/* 
+%d WB_MULT   (WB_OP == MULT)
+%d WB_MULTU  (WB_OP == MULTU)
+%d WB_DIV    (WB_OP == DIV)
+%d WB_DIVU   (WB_OP == DIVU)
+*/
+%d WB_LOAD   (WB_LB | WB_LW)
+%d WB_STORE  (WB_SB | WB_SW)
+/*
+%d WB_HILO   (WB_MULT | WB_MULTU | WB_DIV | WB_DIVU)
+*/
+
+/* (inst_m2.def) */

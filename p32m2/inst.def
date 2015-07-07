@@ -1,0 +1,17 @@
+/* instruction field */
+%d OPCODE    ir<31:26>
+%d RS        ir<25:21>
+%d RT        ir<20:16>
+%d RD        ir<15:11>
+%d SHAMT     ir<10:6>
+%d FUNCT     ir<5:0>
+%d IMMEDIATE ir<15:0>
+%d TARGET    ir<25:0>
+
+%d EX_OP     ex_op<5:0>
+%d EX_FUNCT  ex_funct<5:0>
+
+%d MEM_OP    mem_op<5:0>
+%d WB_OP     wb_op<5:0>
+
+/* End of file (inst.def) */

@@ -1,0 +1,44 @@
+/*
+ * (p32ex.def)
+ *   version 1.1.0 (2009/06/30)
+ */
+
+/*
+ *  EX 
+ */
+EX_BJ      = ((EX_OP == J) | (EX_OP == JAL) | (EX_OP == BEQ) | (EX_OP == BNE));
+EX_SPECIAL = (EX_OP == SPECIAL);
+EX_ADD     = ((EX_OP == ADDI) | (EX_SPECIAL & (EX_FUNCT == ADD)));
+EX_ADDU    = ((EX_OP == ADDIU) | (EX_SPECIAL & (EX_FUNCT == ADDU)));
+EX_SUB     = (EX_SPECIAL & (EX_FUNCT == SUB));
+EX_SUBU    = (EX_SPECIAL & (EX_FUNCT == SUBU));
+EX_AND     = ((EX_OP == ANDI) | (EX_SPECIAL & (EX_FUNCT == AND)));
+EX_OR      = ((EX_OP == ORI) | (EX_SPECIAL & (EX_FUNCT == OR)));
+EX_XOR     = ((EX_OP == XORI) | (EX_SPECIAL & (EX_FUNCT == XOR)));
+EX_NOR     = (EX_SPECIAL & (EX_FUNCT == NOR));
+EX_SLL     = (EX_SPECIAL & ((EX_FUNCT == SLL) | (EX_FUNCT == SLLV)));
+EX_SRL     = (EX_SPECIAL & ((EX_FUNCT == SRL) | (EX_FUNCT == SRLV)));
+EX_SRA     = (EX_SPECIAL & ((EX_FUNCT == SRA) | (EX_FUNCT == SRAV)));
+EX_LUI     = (EX_OP == LUI);
+EX_SLT     = ((EX_OP == SLTI) | (EX_SPECIAL & (EX_FUNCT == SLT))); /* 1.0.1 */
+EX_SLTU    = ((EX_OP == SLTIU) | (EX_SPECIAL & (EX_FUNCT == SLTU))); /* 1.0.1 */
+EX_SB      = (EX_OP == SB);
+EX_SW      = (EX_OP == SW);
+EX_LB      = (EX_OP == LB);
+EX_LW      = (EX_OP == LW);
+EX_MFHI    = (EX_SPECIAL & (EX_FUNCT == MFHI));  /* 1.1.0 */
+EX_MFLO    = (EX_SPECIAL & (EX_FUNCT == MFLO));  /* 1.1.0 */
+EX_MULT    = (EX_SPECIAL & (EX_FUNCT == MULT));  /* 1.1.0 */
+EX_MULTU   = (EX_SPECIAL & (EX_FUNCT == MULTU)); /* 1.1.0 */
+EX_DIV     = (EX_SPECIAL & (EX_FUNCT == DIV));   /* 1.1.0 */
+EX_DIVU    = (EX_SPECIAL & (EX_FUNCT == DIVU));  /* 1.1.0 */
+EX_LOAD    = (EX_LB | EX_LW);
+EX_STORE   = (EX_SB | EX_SW);
+EX_MOVE    = (EX_MFHI | EX_MFLO);
+EX_SET     = (EX_SLT | EX_SLTU);
+EX_SHIFT   = (EX_SLL | EX_SRL | EX_SRA);
+EX_ALU     = (EX_ADD | EX_ADDU | EX_SUB | EX_SUBU | EX_AND | EX_OR | EX_XOR | EX_NOR);
+EX_MULTIPLIER = (EX_MULT | EX_MULTU); /* 1.1.0 */
+EX_DIVIDER = (EX_DIV | EX_DIVU);      /* 1.1.0 */
+
+/* (p32ex.def) */

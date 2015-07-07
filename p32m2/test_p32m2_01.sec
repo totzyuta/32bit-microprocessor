@@ -1,0 +1,33 @@
+# load
+load_p32m2.sec
+
+# clear memory
+memclr /memunit/dmem/cell 0 Xffff Xaa
+memclr /memunit/imem/cell 0 X100 X00
+memclr /memunit/smem/cell 0 X100 X00
+
+# initialize memory
+sum.s.scr
+
+print "---\n"
+#      tttt xxxxxxxx xxxxxxxx b xxxxxxxx xxxxxxxx b xxxxxxxx b xxxxxxxx -
+print "        PC       IR    i  i_data   d_addr  read       write \n"
+rpt_add P0 "%4t %x %x %1b %8x %8x %1b %8x %1b %8x - %1b%1b\n" \
+  /cpu/pc /cpu/ir /cpu/i_read /cpu/i_data /cpu/d_addr \
+  /cpu/d_read /cpu/r_data \
+  /cpu/d_write /cpu/wr_data \
+  /memunit/inst_bus_error \
+  /memunit/data_bus_error
+# rpt_add P1 " result_e = %8x\n" /cpu/result_e
+
+# to entend Harmagedon
+stop +1100
+
+rpt_on
+set /cpu/reset 1
+forward +1055
+
+# print contents of register file
+regdump.sec
+
+# End (test_p32m2_01.sec)

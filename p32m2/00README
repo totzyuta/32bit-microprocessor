@@ -1,0 +1,30 @@
+情報工学実験 プロセッサ実験
+マイクロプロセッサp32の設計(3) 配布ファイル			(2015/06/29)
+【p32マルチサイクルバージョン(2) 】
+
+(配布ファイル一覧)
+00README			... このファイル
+Makefile.p32m2			... Makefile
+example1.s.scr			... 命令メモリ初期化用SECONDSスクリプト
+exception.def			... p32の例外コード定義ファイル
+inst.def			... p32の命令フィールド定義ファイル
+inst_m2.def			... p32の命令判別用の定義ファイル
+load_p32m2.sec			... SFL記述ロード用SECONDSスクリプト
+opcode.def			... p32の命令セットの定義ファイル
+p32m2decode_sel.def		... p32の内部制御端子の宣言ファイル
+p32ex.def			... p32の命令判別用の定義ファイル
+p32id.def			... p32の命令判別用の定義ファイル
+p32m2.h				... p32m2のSFL記述（ヘッダファイル）
+p32m2.sfl			... p32m2のSFL記述（本体，未完成版）
+regdump.sec			... レジスタファイルの内容表示用スクリプト
+sum.s.scr			... 命令メモリ初期化用SECONDSスクリプト
+test100.s.scr			... 命令メモリ初期化用SECONDSスクリプト
+test_p32m2_01.result.sample	... シミュレーション結果比較用
+test_p32m2_01.sec		... シミュレーション用SECONDSスクリプト
+test_p32m2_03.result.sample
+test_p32m2_03.sec
+test_p32m2_07.result.sample
+test_p32m2_07.sec
+top_p32m2.sfl			... トップモジュールのSFL記述
+
+---

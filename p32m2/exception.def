@@ -1,0 +1,16 @@
+/*
+ *  (exception.def)
+ *  version 1.0.1 (2008/06/24)
+ *
+ */
+
+/* exception cause code */
+%d CAUSE_INT 0x0    /* external interruption */
+%d CAUSE_IBE 0x6    /* bus error (instruction fetch) */
+%d CAUSE_DBE 0x7    /* bus error (data load/store) */
+%d CAUSE_SYS 0x8    /* systemcall exception */
+%d CAUSE_BP  0x9    /* break point exception */
+%d CAUSE_RI  0xa    /* reserved instruction exception */
+%d CAUSE_OVF 0xc    /* arithmetic overflow exception */ /* version 1.0.1 */
+
+/* End of file (exception.def) */
