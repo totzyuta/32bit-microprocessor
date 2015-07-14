@@ -205,7 +205,7 @@ module p32m2 {
           /* shift operations */
           any {
             ir<2>: /* sllv, srlv, srav */
-              shamt := a_data<4:0> /* shift amount of variable
+              shamt := a_data<4:0>; /* shift amount of variable
                  shift */
             else: /* sll, srl, sra */
               shamt := SHAMT;  /* shamt */
