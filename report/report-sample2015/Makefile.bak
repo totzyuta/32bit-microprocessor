@@ -1,0 +1,21 @@
+SRCS = report.tex
+
+all: report.pdf
+
+report.dvi: $(SRCS)
+	platex report.tex
+	platex report.tex
+
+report.pdf: report.dvi
+	dvipdfmx report.dvi
+
+clean:
+	rm -rf *~ *.aux *.log *.dvi report.ps
+
+distclean: clean.all
+
+clean.all:
+	rm -rf *~ *.aux *.log report.pdf a.pdf
+
+# End of file (Makefile)
+

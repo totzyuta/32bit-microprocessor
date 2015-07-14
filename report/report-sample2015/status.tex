@@ -1,0 +1,22 @@
+\begin{table}[htb]
+\caption{マイクロプロセッサp16の設計状況}
+\label{tab:マイクロプロセッサp16の設計状況}
+\begin{center}
+{\small
+\begin{tabular}{rll|l}
+\hline
+\hline
+\multicolumn{3}{c|}{モジュール} & 設計状況 \\
+\hline
+1. & 16ビット加算器       & \verb|add16|          & (0)未着手 \\
+2. & 16ビット実行ユニット & \verb|exec16|         & (1)設計中 \\
+3. & レジスタファイル     & \verb|reg16x8|        & (2)動作確認済み \\
+4. & 増加器               & \verb|inc16|          & (2)動作確認済み \\
+5. & メモリユニット       & \verb|memunit|        & (2)動作確認済み \\
+6. & p16トップモジュール  & \verb|p16|            & (3)設計完了 \\
+7. & p16制御ユニット      & \verb|p16_controller| & (3)設計完了 \\
+\hline
+\end{tabular}
+}
+\end{center}
+\end{table}
