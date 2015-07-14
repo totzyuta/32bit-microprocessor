@@ -1,0 +1,63 @@
+#
+# (Makefile.p32p1)
+#
+# USAGE:
+#  (to synthesize all module)
+#   make -f Makefile.p32p1
+#
+#  (to clean temporary files)
+#   make -f Makefile.p32p1 clean
+#
+
+# modify the following line as your module structure
+SUBMODULE=add4 add32 shift32 reg32x8 reg32x32 alu32 comp5
+TOPMODULE=p32p1
+
+all: synthe
+
+synthe:
+	@rm -f /tmp/.end_time /tmp/.start_time
+	@date > /tmp/.start_time
+	for f in $(SUBMODULE); do \
+	  auto $$f nld1 DEMO demo; \
+	done
+	auto $(TOPMODULE) nld1 DEMO demo
+	for f in $(SUBMODULE); do \
+	  cp $$f.1st/* $(TOPMODULE).1st; \
+	done
+	auto $(TOPMODULE) nld4 DEMO demo
+	@date > /tmp/.end_time
+	@/bin/echo -n "start time: "
+	@cat /tmp/.start_time
+	@/bin/echo -n "  end time: "
+	@cat /tmp/.end_time
+	@rm -f /tmp/.end_time /tmp/.start_time
+
+regs:
+	auto reg32x8 nld1 DEMO demo
+	auto reg32x32 nld1 DEMO demo
+	cp reg32x8.1st/* reg32x32.1st
+	auto reg32x32 nld2 DEMO demo
+
+alu:
+	auto add4 nld1 DEMO demo
+	auto add32 nld1 DEMO demo
+	auto alu32 nld1 DEMO demo
+	cp add4.1st/* add32.1st/* alu32.1st
+	auto alu32 nld4 DEMO demo
+
+add:
+	auto add4 nld1 DEMO demo
+	auto add32 nld1 DEMO demo
+	cp add4.1st/* add32.1st
+	auto add32 nld4 DEMO demo
+
+clean:
+	for f in $(SUBMODULE); do \
+	  auto $$f clean; \
+	done
+	auto $(TOPMODULE) clean
+	rm -f *.edif200
+
+# End of file (Makefile.p32p1)
+

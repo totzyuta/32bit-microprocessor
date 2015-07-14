@@ -1,0 +1,18 @@
+%i "p32p1.h"
+%i "memunit.h"
+
+module top_p32p1 {
+    p32p1 cpu;
+    memunit memunit;
+
+    instruct cpu.d_write
+	memunit.data_write(cpu.d_addr, cpu.w_loc, cpu.wr_data);
+
+    instruct cpu.d_read
+	cpu.r_data = memunit.data_read(cpu.d_addr).data_out;
+
+    instruct cpu.i_read
+	cpu.i_data = memunit.inst_read(cpu.i_addr).inst_out;
+}
+
+/* End of file (top_p32p1.sfl) */

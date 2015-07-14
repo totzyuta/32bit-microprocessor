@@ -1,0 +1,524 @@
+/*
+    32-bit RISC Microprocessor for Laboratory Work on Information Technology I
+    at Okayama University
+
+    5 stage pipeline edition
+    version 1.3 (2015/07/07)
+    (p32p1.sfl)
+*/
+
+%i "add32.h"
+%i "alu32.h"
+%i "shift32.h"
+%i "reg32x32.h"
+%i "comp5.h"
+
+%i "opcode.def"
+
+%d INITIAL_PC        0x00000000
+%d EXCEPTION_HANDLER 0x80000080
+
+/* exception cause code */
+%i "exception.def"
+
+/* instruction field */
+%i "inst.def"
+
+%i "inst_p1.def"
+
+module p32p1 {
+    output   i_addr<32>;  /* instruction address */
+    input    i_data<32>;  /* instruction data */
+    instrout i_read;      /* instruction read */
+
+    output   d_addr<32>;  /* data address */
+    input    r_data<32>;  /* read data */
+    output   wr_data<32>;  /* write data */
+    output   w_loc<4>;    /* write location */
+    instrout d_read;      /* data read */
+    instrout d_write;     /* data write */
+
+    instrin  reset;       /* reset */
+
+
+    /* register declarations
+     */
+
+    /* for exception handling */
+    reg_wr cause<4>;     /* Cause code register */
+    reg_wr epc<32>;      /* EPC - exception program counter */
+
+    /* IF */
+    reg_wr pc<32>;       /* PC - program counter */
+
+
+    /* IF/ID */
+    reg_wr ir<32>;       /* IR - instruction register */
+
+
+    /* ID/EX */
+    reg_wr a<32>;        /* data read from register file */
+    reg_wr b<32>;        /* data read from register file */
+    reg_wr ex_op<6>;     /* operation for EX stage */
+    reg_wr ex_funct<6>;  /* funct for EX stage */
+    reg_wr ex_dest<5>;
+    reg_wr shamt<5>;     /* shift amount */
+    reg_wr ex_mdr<32>;   /* MDR - memory data register */
+
+
+    /* EX/MEM */
+    reg_wr mem_op<6>;      /* operation for MEM stage */
+    reg_wr mem_dest<5>;
+    reg_wr mem_mdr<32>;    /* memory data register */
+    reg_wr mem_result<32>; 
+    reg_wr store_loc<4>;   /* store location */
+
+    /* MEM/WB */
+    reg_wr wb_mdr<32>;     /* memory data register */
+    reg_wr wb_op<6>;       /* operation for WB stage */
+    reg_wr wb_dest<5>; 
+    reg_wr wb_result<32>;
+
+
+    /* internal terminals declarations 
+     */
+    sel_v a_addr<5>;      /* address of register file output port 'a' */
+    sel_v b_addr<5>;      /* address of register file output port 'b' */
+    sel_v w_addr<5>;
+    sel_v wb_addr<5>;
+    sel_v a_data<32>;
+    sel_v b_data<32>;
+    sel_v w_data<32>;
+    sel_v wb_data<32>;
+    sel_v ex_result<32>;
+    sel_v m_align<32>;
+
+    sel not_equal_a_data_and_b_data; /* ((a_data != b_data) ? 1 : 0) */
+
+%i "p32p1decode_sel.def"
+
+    instrself set_pc;
+    instrself set_epc;
+    instrself set_cause;
+    instrself ex_flush;
+
+    /* internal module declarations 
+     */
+    add32     pc_add;   /* 32-bit adder for program counter update */
+    reg32x32  regsfile; /* register file */
+    alu32     alu;      /* 32-bit ALU */
+    shift32   shift;    /* 32-bit shifter */
+    comp5     cmp5a_e;  /* comparator used in forwarding unit */
+    comp5     cmp5a_m;
+    comp5     cmp5a_w;
+    comp5     cmp5b_e;
+    comp5     cmp5b_m;
+    comp5     cmp5b_w;
+
+    /* control terminal declarations
+     */
+    instr_arg i_read(i_addr);
+    instr_arg d_read(d_addr);
+    instr_arg d_write(d_addr, w_loc, wr_data);
+
+    /* stage and task declarations
+     */
+    stage_name start {
+	task start_task();
+    }
+    stage_name IF {
+	task ifetch();
+    }
+    stage_name ID {
+	task decode();
+    }
+    stage_name EX {
+	task exec();
+    }
+    stage_name MEM {
+	task load_store();
+    }
+    stage_name WB {
+	task writeback();
+    }
+
+    /* common actions
+     */
+    any {
+	^ID.decode:      ex_dest := 0b00000;
+	^EX.exec:        mem_dest := 0b00000;
+	^MEM.load_store: wb_dest := 0b00000;
+	^set_epc:        epc := 0x00000000;
+	^set_cause:      cause := 0x0;
+    }
+
+    instruct reset generate start.start_task();
+
+    stage start {
+	any {
+	    reset: finish;
+	    else: par {
+		pc := INITIAL_PC;  /* set initial program counter */
+		relay IF.ifetch();
+	    }
+	}
+    } /* stage start */
+
+    /*
+     *  IF - instruction fetch stage
+     */
+    stage IF {
+	par {
+	    ir := i_read(pc).i_data;
+	    any {
+		^set_pc: pc := ................................... /* pc <- pc + 4 */
+	    }
+	    any {
+		reset: finish;
+		else: par {
+		    relay ............ /* next stage task */
+		    generate IF.ifetch(); /* for pipeline execution */
+		}
+	    }
+	} /* par */
+    } /* stage IF */
+
+    /*
+     *  ID - instruction decode stage
+     */
+    stage ID {
+	par {
+%i "p32id.def"
+	    a_addr = RS; /* rs field */
+	    b_addr = RT; /* rt field */
+	    any {
+		WB.writeback: par {
+		    w_addr = wb_addr;
+		    w_data = wb_data;
+		    regsfile.write(w_addr, w_data);
+		}
+		else: par {
+		    w_addr = 0b00000;
+		    w_data = wb_result; /* dummy */
+		}
+	    }
+	    regsfile.read_a(a_addr);
+	    regsfile.read_b(b_addr);
+
+            not_equal_a_data_and_b_data = (/|(a_data @ b_data));
+
+	    /* data forwarding */
+	    any {
+		(.............): par { /* a_addr != 0 */
+		    /* compare a_addr and ex_dest */
+		    cmp5a_e.do(a_addr, ex_dest);
+		    /* compare a_addr and mem_dest */
+		    cmp5a_m.do(a_addr, mem_dest); 
+		    /* compare a_addr and wb_dest */
+		    cmp5a_w.do(a_addr, wb_dest);  
+		    alt {
+			/* (a_addr == ex_dest) && !EX_LOAD */
+			cmp5a_e.eq & ^EX_LOAD: a_data = ex_result;
+			/* a_addr == mem_dest */
+			..........: any {
+			    MEM_LOAD: a_data = m_align;
+			    else:     a_data = mem_result;
+			}
+			/* a_addr == wb_dest */
+			..........: a_data = wb_data;
+			else: a_data = regsfile.a; /* no data forwarding */
+		    }
+		} /* a_addr != 0 */
+		else: a_data = ........... /* no data forwarding */
+	    }
+	    any {
+		(.............): par { /* b_addr != 0 */
+		    /* compare b_addr and ex_dest */
+		    ............................
+		    /* compare b_addr and mem_dest */
+		    .............................
+		    /* compare b_addr and wb_dest */
+		    ............................
+		    alt {
+			/* (b_addr == ex_dest) && !EX_LOAD */
+			.....................: b_data = ex_result;
+			/* b_addr == mem_dest */
+			..........: any {
+			    MEM_LOAD: b_data = m_align;
+			    else:     b_data = mem_result;
+			}
+			/* b_addr == wb_dest */
+			..........: b_data = wb_data;
+			else: b_data = regsfile.b; /* no data forwarding */
+		    }
+		} /* b_addr != 0 */
+		else: b_data = ........... /* no data forwarding */
+	    }
+
+	    ex_op := OPCODE;
+
+	    any {
+		ID_SPECIAL: par {
+		    ex_funct := FUNCT;
+		    /* shift operations */
+		    any {
+			ir<2>: /* sllv, srlv, srav */
+			    shamt := a_data<4:0>; /* shift amount of variable
+						     shift */
+			else: /* sll, srl, sra */
+			    shamt := SHAMT;  /* shamt */
+		    }
+		    any {
+			(FUNCT == JR): par {
+			    ex_dest := 0b00000;
+			    a := a_data; 
+			    b := ..................................;
+			    set_pc();
+			    pc := a_data; /* gpr[rs] */
+			} /* FUNCT == JR */
+			(FUNCT == JALR): par {
+			    ex_dest := RD; /* rd */
+			    a := 0x00000000;
+			    b := pc_add.do(pc, 0x00000004, 0b0).sum;
+			    set_pc();
+			    pc := a_data; /* gpr[rs] */
+			} /* FUNCT == JALR */
+			(FUNCT == SYSCALL): par {
+			    ex_dest := 0b00000;
+			    a := 0x00000000;
+			    b := 0x00000000;
+			    set_pc();
+			    pc := EXCEPTION_HANDLER;
+			    set_epc();
+			    epc := pc;
+			    set_cause();
+			    cause := CAUSE_SYS;
+			    ex_flush();
+			    finish;
+			} /* FUNCT == SYSCALL */
+			else: par {
+			    ex_dest := RD;   /* rd */
+			    a := a_data;
+			    b := b_data;
+			}
+		    }
+		}
+		ID_LOAD: par {
+		    ex_dest := ... /* rt */
+		    a := ....... 
+		    b := ............... /* immediate */
+		} /* ID_LOAD */
+		ID_STORE: par {
+		    ex_dest := 0b00000;
+		    ex_mdr := .......     /* data to store */
+		    a := a_data;
+		    b := 32 # IMMEDIATE; /* immediate */
+		} /* D_STORE */
+		ID_I_SE: par {
+		    ex_dest := RT; /* rt */
+		    a := a_data;
+		    b := 32 # IMMEDIATE; /* immediate */
+		} /* ID_I_SE (sign extend) */
+		ID_I_ZE: par {
+		    ex_dest := RT; /* rt */
+		    a := a_data;
+		    b := 0x0000 || IMMEDIATE; /* immediate */
+		} /* D_I_ZE (zero extend) */
+		ID_LUI: par {
+		    ex_dest := RT;  /* rt */
+		    a := 0x00000000;
+		    b := 0x0000 || IMMEDIATE; 
+		}
+		ID_BR: par {
+		    ex_dest := 0b00000;
+		    a := a_data;
+		    b := 32 # IMMEDIATE; /* sign extended immediate value  */
+		    /* not_equal_a_data_and_b_data = (/|(a_data @ b_data)); */
+		    any {
+			((ID_BEQ & ^not_equal_a_data_and_b_data) |
+			 (ID_BNE & not_equal_a_data_and_b_data)) : par {
+			     set_pc();
+			     /* compute branch target address */
+			     pc := .................................................
+			 }
+		    }
+		} /* ID_BR */
+		(OPCODE == J): par {
+		    ex_dest := 0b00000;
+		    a := a_data;
+		    b := pc_add.do(pc, 0x00000004, 0b0).sum;
+		    set_pc();
+		    pc := ............................ /* jump target address */
+		}
+		(OPCODE == JAL): par {
+		    ex_dest := ........ /* $ra ($31) */
+		    a := 0x00000000;
+		    b := pc_add.do(pc, 0x00000004, 0b0).sum;
+		    set_pc();
+		    pc := ............................ /* jump target address */
+		}
+		else: par { /* undefined instructions */
+		    set_pc();
+		    pc := EXCEPTION_HANDLER;
+		    set_epc();
+		    epc := pc;
+		    set_cause();
+		    cause := CAUSE_RI; /* reserved instruction exception */
+		    ex_flush();
+		    finish;
+		}
+	    }
+	    any {
+		reset:     finish;
+		^ex_flush: relay EX.exec(); /* next stage task */
+		else:      finish;
+	    }
+	} /* par */
+    } /* stage ID */
+
+    /*
+     *  EX - execution stage
+     */
+    stage EX {
+	par {
+%i "p32p1_ex.def"
+	    mem_op := ex_op;
+	    mem_dest := ex_dest;
+	    mem_result := ex_result;
+	    any {
+		EX_ALU: any {
+		    EX_ADD:  ex_result = .....................
+		    EX_ADDU: ex_result = .....................
+		    EX_SUB:  ex_result = .....................
+		    EX_SUBU: ex_result = .....................
+		    EX_AND:  ex_result = .....................
+		    EX_OR:   ex_result = ....................
+		    EX_XOR:  ex_result = .....................
+		    EX_NOR:  ex_result = .....................
+		} /* E_ALU */
+		EX_SHIFT: any {
+		    EX_SLL: ex_result = ........................
+		    EX_SRL: ex_result = ........................
+		    EX_SRA: ex_result = shift.sra(b, shamt).out;
+		} /* E_SHIFT */
+		/* load upper immediate */
+		EX_LUI:     ex_result = ..................
+		EX_SET: par {
+		    alu.op_sub(a, b);
+		    any {
+			EX_SLT: any {
+			    (..............):  /* -/+ */
+				ex_result = 0x00000001;
+			    (..............):  /* +/- */
+				ex_result = 0x00000000;
+			    else: /* +/+ or -/- */
+			        ex_result = ..........................
+			}
+			EX_SLTU: any {
+			    alu.out<31>: ex_result = 0x00000001;
+			    else:        ex_result = 0x00000000;
+			}
+		    }
+		} /* EX_SET */
+		EX_BJ:   ex_result = alu.op_add(a, b).out;
+		EX_LOAD: ex_result = ..................... /* compute address */
+		EX_STORE: par {
+		    ex_result = alu.op_add(a, b).out; /* compute address */
+		    any {
+			EX_SB: any {
+			    /* alu.out<1:0> == 0b00 */
+			    (^alu.out<1> & ^alu.out<0>): par {
+				mem_mdr := ex_mdr<7:0> || 0x000000;
+				store_loc := 0b0001;
+			    }
+			    /* alu.out<1:0> == 0b01 */
+			    (^alu.out<1> & alu.out<0>): par {
+				mem_mdr := 0x00 || ex_mdr<7:0> || 0x0000;
+				store_loc := 0b0010;
+			    }
+			    /* alu.out<1:0> == 0b10 */
+			    (alu.out<1> & ^alu.out<0>): par {
+				mem_mdr := 0x0000 || ex_mdr<7:0> || 0x00;
+				store_loc := 0b0100;
+			    }
+			    /* alu.out<1:0> == 0b11 */
+			    (alu.out<1> & alu.out<0>): par {
+				mem_mdr := 0x000000 || ex_mdr<7:0>;;
+				store_loc := 0b1000;
+			    }
+			} /* E_SB */
+			EX_SW: par {
+			    mem_mdr := ex_mdr;
+			    store_loc := 0b1111;
+			}
+		    }
+		} /* EX_STORE */
+		else: ex_result = 0x12345678; /* dummy */
+	    }
+	    any {
+		reset: finish;
+		else:  relay ................. /* next stage task */
+	    }
+	} /* par */
+    } /* stage EX */
+
+    /*
+     *  MEM - memory stage
+     */
+    stage MEM {
+	par {
+	    wb_op := mem_op;
+	    wb_dest := mem_dest;
+	    wb_result := mem_result;
+	    any {
+		MEM_LOAD: par {
+		    d_read(mem_result); /* read data */
+		    /* data read from memory is in r_data */
+		    any {
+			MEM_LB: any {
+			    (^mem_result<1> & ^mem_result<0>): /* 0b00 */
+				m_align = 32 # r_data<31:24>;
+			    (^mem_result<1> & mem_result<0>):  /* 0b01 */
+				m_align = 32 # r_data<23:16>;
+			    (mem_result<1> & ^mem_result<0>):  /* 0b10 */
+				m_align = 32 # r_data<15:8>;
+			    (mem_result<1> & mem_result<0>):   /* 0b11 */
+				m_align = 32 # r_data<7:0>;
+			} /* M_LB */
+			MEM_LW: m_align = r_data;
+		    }
+		    wb_mdr := m_align; /* data read from memory */
+		} /* MEM_LOAD */
+		MEM_STORE: 
+		    d_write(mem_result, store_loc, mem_mdr); /* write data */
+	    }
+	    any {
+		reset: finish;
+		else:  relay ............... /* next stage task */
+	    }
+	} /* par */
+    } /* stage MEM */
+
+    /*
+     *  WB - writeback stage
+     */
+    stage WB {
+	par {
+	    wb_addr = ........
+	    any {
+		WB_LOAD: wb_data = .......
+		else:    wb_data = wb_result; /* dummy */
+	    }
+	    any {
+		^ID.decode: par {
+		    w_addr = wb_addr;
+		    w_data = wb_data;
+		    regsfile.write(w_addr, w_data);
+		}
+	    }
+	    finish;
+	} /* par */
+    } /* stage WB */
+} /* module p32p1 */
+
+/* End of file (p32p1.sfl) */

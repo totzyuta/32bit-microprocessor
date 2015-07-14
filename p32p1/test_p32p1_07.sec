@@ -1,0 +1,53 @@
+# load
+load_p32p1.sec
+
+# clear memory 
+memclr /memunit/dmem/cell 0 Xffff Xaa
+memclr /memunit/imem/cell 0 X100 X00
+memclr /memunit/smem/cell 0 X100 X00
+
+# initialize memory
+test100.s.scr
+
+print "---\n"
+#      ttttt xxxxxxxx xxxxxxxx b xxxxxxxx xxxxxxxx b xxxxxxxx b xxxxxxxx -
+print "         PC       IR    i  i_data   d_addr  read       write \n"
+rpt_add P0 "%5t %x %x %1b %8x %8x %1b %8x %1b %8x - %1b%1b\n" \
+  /cpu/pc /cpu/ir /cpu/i_read /cpu/i_data /cpu/d_addr \
+  /cpu/d_read /cpu/r_data \
+  /cpu/d_write /cpu/wr_data \
+  /memunit/inst_bus_error \
+  /memunit/data_bus_error
+# rpt_add P1 " result_e = %8x\n" /cpu/result_e
+
+# set Harmagedon
+stop +5550
+
+rpt_on
+set /cpu/reset 1
+forward +5532
+
+# print contents of register file
+regdump.sec
+
+# Stop at 0xfffffffc
+# 5527 instructions executed
+# PC           = 0xfffffffc (4294967292)
+# Hi           = 0x00000000 (0)
+# Lo           = 0x00000000 (0) (HiLo: 0x0000000000000000 (0))
+#                        General Purpose Registers
+#  zero(0)  at(1)    v0(2)    v1(3)    a0(4)    a1(5)    a2(6)    a3(7)   
+# 00000000 10000000 00000063 00000009 00000003 00000000 00000000 00000000 
+#  t0(8)    t1(9)    t2(10)   t3(11)   t4(12)   t5(13)   t6(14)   t7(15)  
+# 00000004 00000000 00000004 00000000 00000000 00000000 00000000 00000000 
+#  s0(16)   s1(17)   s2(18)   s3(19)   s4(20)   s5(21)   s6(22)   s7(23)  
+# 00000004 00000004 00000003 00000003 00000000 00000009 10004040 00000000 
+#  t8(24)   t9(25)   k0(26)   k1(27)   gp(28)   sp(29)   fp(30)   ra(31)  
+# 00000000 00000000 00000000 00000000 10008000 7ffffffc 00000000 0000001c 
+# *** multicycle statistics ***
+# *** total inst. count:         5527
+# *** total cycle count:        19937
+# ***               IPC:   0.277 (inst/cycle)
+# ***               CPI:   3.607 (cycle/inst)
+
+# End (test_p32p1_07.sec)

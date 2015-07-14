@@ -1,0 +1,48 @@
+/*
+ * (p32id.def) 
+ *  version 1.1.0 (2009/06/30)
+ */
+/*
+ * ID
+ */
+%d ID_FUNCT FUNCT
+ID_SPECIAL = (OPCODE == SPECIAL);
+ID_ADDI    = (OPCODE == ADDI);
+ID_ADD     = ((OPCODE == ADDI) | (ID_SPECIAL & (ID_FUNCT == ADD)));
+ID_ADDIU   = (OPCODE == ADDIU);
+ID_ADDU    = ((OPCODE == ADDIU) | (ID_SPECIAL & (ID_FUNCT == ADDU)));
+ID_SUB     = (ID_SPECIAL & (ID_FUNCT == SUB));
+ID_SUBU    = (ID_SPECIAL & (ID_FUNCT == SUBU));
+ID_ANDI    = (OPCODE == ANDI);
+ID_AND     = ((OPCODE == ANDI) | (ID_SPECIAL & (ID_FUNCT == AND)));
+ID_ORI     = (OPCODE == ORI);
+ID_OR      = ((OPCODE == ORI) | (ID_SPECIAL & (ID_FUNCT == OR)));
+ID_XORI    = (OPCODE == XORI);
+ID_XOR     = ((OPCODE == XORI) | (ID_SPECIAL & (ID_FUNCT == XOR)));
+ID_NOR     = (ID_SPECIAL & (ID_FUNCT == NOR));
+ID_LUI     = (OPCODE == LUI);
+ID_SLTI    = (OPCODE == SLTI);
+ID_SLTIU   = (OPCODE == SLTIU);
+ID_BEQ     = (OPCODE == BEQ);
+ID_BNE     = (OPCODE == BNE);
+ID_SB      = (OPCODE == SB);
+ID_SW      = (OPCODE == SW);
+ID_LB      = (OPCODE == LB);
+ID_LW      = (OPCODE == LW);
+ID_SYSCALL = (ID_SPECIAL & (ID_FUNCT == SYSCALL));
+ID_MFLO    = (ID_SPECIAL & (ID_FUNCT == MFLO));
+ID_MFHI    = (ID_SPECIAL & (ID_FUNCT == MFHI));
+
+ID_ALU    = (ID_ADD | ID_ADDU | ID_SUB | ID_SUBU | ID_AND | ID_OR | ID_XOR | ID_NOR);
+ID_BR     = (ID_BEQ | ID_BNE);
+ID_LOAD   = (ID_LB | ID_LW);
+ID_STORE  = (ID_SB | ID_SW);
+ID_MOVE   = (ID_MFHI | ID_MFLO);
+
+/* immediate value is sign extended */
+ID_I_SE   = (ID_ADDI | ID_ADDIU | ID_SLTI | ID_SLTIU);
+
+/* immediate value is zero extended */
+ID_I_ZE   = (ID_ANDI | ID_ORI | ID_XORI);
+
+/* (p32id.def) */

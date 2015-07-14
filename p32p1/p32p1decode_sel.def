@@ -1,0 +1,84 @@
+/* 
+ * (p32p1decode_sel.def)
+ *  version 1.1.0 (2009/07/07) 
+ */
+/* 
+ * ID 
+ */
+sel ID_SPECIAL;
+sel ID_FUNCT;
+sel ID_ADDI;
+sel ID_ADD;
+sel ID_ADDIU;
+sel ID_ADDU;
+sel ID_SUB;
+sel ID_SUBU;
+sel ID_ANDI;
+sel ID_AND;
+sel ID_ORI;
+sel ID_OR;
+sel ID_XORI;
+sel ID_XOR;
+sel ID_NOR;
+sel ID_LUI;
+sel ID_SLTI;
+sel ID_SLTIU;
+sel ID_BEQ;
+sel ID_BNE;
+sel ID_SB;
+sel ID_SW;
+sel ID_LB;
+sel ID_LW;
+sel ID_SYSCALL;
+sel_v ID_MFLO;
+sel_v ID_MFHI;
+
+sel ID_ALU;
+sel ID_BR;
+sel ID_LOAD;
+sel ID_STORE;
+sel_v ID_MOVE; /* move from hi/lo */
+sel ID_I_SE; /* sign extended */
+sel ID_I_ZE; /* zero extended */
+
+/*
+ * EX
+ */
+sel EX_BJ;
+sel EX_SPECIAL;
+sel EX_ADD;
+sel EX_ADDU;
+sel EX_SUB;
+sel EX_SUBU;
+sel EX_AND;
+sel EX_OR;
+sel EX_XOR;
+sel EX_NOR;
+sel EX_SLL;
+sel EX_SRL;
+sel EX_SRA;
+sel EX_LUI;
+sel EX_SLT;
+sel EX_SLTU;
+sel EX_SB;
+sel EX_SW;
+sel_v EX_MFHI;
+sel_v EX_MFLO;
+sel_v EX_MULT;
+sel_v EX_MULTU;
+sel_v EX_DIV;
+sel_v EX_DIVU;
+/*
+sel EX_LB;
+sel EX_LW;
+sel EX_LOAD;
+*/
+sel EX_STORE;
+sel EX_MOVE;
+sel EX_SET;
+sel EX_SHIFT;
+sel EX_ALU;
+sel EX_MULTIPLIER;
+sel EX_DIVIDER;
+
+/* (p32p1decode_sel.def) */
