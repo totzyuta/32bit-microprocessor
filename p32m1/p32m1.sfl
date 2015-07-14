@@ -201,9 +201,18 @@ module p32m1 {
           ex_funct := FUNCT;
           /* shift operations */
           any {
-            ir<2>: /* sllv, srlv, srav */ /* ここのir<2>は何を表しているのか */
+            /* irはレジスタから読み込まれたinstruction dataが入っている */
+            /* ASK: 3ビット目が何を表すのか？ */
+            ir<2>: /* sllv, srlv, srav */ 
+              /* a_dataはレジスタの32ビットの出力のひとつ */
+              /* 下位5ビットはfunct. a_data読み込み時L189のアドレスをたどるとRSという定数に辿り着く */
+              /* このRSはinst.hでir<25:21>と定義されている。これはr_s (シフト量)にあたるっぽい */
+              /* これら3つの命令では下位5ビットで指定される数だけ左にシフトするためこれらの処理が必要なのか */
               shamt := a_data<4:0>; /* TODO */
+              /* シフトするからa_dataのそれより上位ビットの値が関係なくなるから？ */
             else: /* sll, srl, sra */
+              /* SHAMTは<10:6>と定義されている */
+              /* ここはv系のシフト命令と違ってshift amountとして使われている */
               shamt := SHAMT;  /* TODO: shamt */
           }
           any {
