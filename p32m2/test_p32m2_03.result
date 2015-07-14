@@ -1,0 +1,174 @@
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== add4.sfl
+?get_token: can't open ./fulladder.h.
+            skip this line.
+
+Module: add4 definition start.
+All facilities of module: add4 defined.
+Instructs arguments and stages tasks of module: add4 defined.
+??? The facility name: fulladder (in operation) is not defined.
+Instructs behavior of module: add4 defined.
+[FILE=add4.sfl, LINE=9, COLUMN=18]
+TRNS(h. for help): prolog: syntax error at LINE=2, COLUMN=8
+: sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== add32.sfl
+==REF== ./add4.h
+** include ./add4.h. **
+Submod_class: add4 defined.
+
+Module: add32 definition start.
+Submod_class: add4 defined.
+All facilities of module: add32 defined.
+Instructs arguments and stages tasks of module: add32 defined.
+Instructs behavior of module: add32 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== shift32.sfl
+==REF== ./shift32.h
+** include ./shift32.h. **
+Submod_class: shift32 defined.
+
+Module: shift32 definition start.
+Submod_class: shift32 defined.
+All facilities of module: shift32 defined.
+Instructs arguments and stages tasks of module: shift32 defined.
+Instructs behavior of module: shift32 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== alu32.sfl
+==REF== ./add32.h
+** include ./add32.h. **
+Submod_class: add32 defined.
+
+Module: alu32 definition start.
+Submod_class: add32 defined.
+All facilities of module: alu32 defined.
+Instructs arguments and stages tasks of module: alu32 defined.
+Instructs behavior of module: alu32 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== reg32x8.sfl
+
+Module: reg32x8 definition start.
+All facilities of module: reg32x8 defined.
+Instructs arguments and stages tasks of module: reg32x8 defined.
+Instructs behavior of module: reg32x8 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== reg32x32.sfl
+==REF== ./reg32x8.h
+** include ./reg32x8.h. **
+Submod_class: reg32x8 defined.
+
+Module: reg32x32 definition start.
+Submod_class: reg32x8 defined.
+All facilities of module: reg32x32 defined.
+Instructs arguments and stages tasks of module: reg32x32 defined.
+Instructs behavior of module: reg32x32 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== p32m2.sfl
+==REF== ./add32.h
+** include ./add32.h. **
+==REF== ./alu32.h
+** include ./alu32.h. **
+Submod_class: add32 defined.
+==REF== ./shift32.h
+** include ./shift32.h. **
+Submod_class: alu32 defined.
+==REF== ./reg32x32.h
+** include ./reg32x32.h. **
+Submod_class: shift32 defined.
+==REF== ./opcode.def
+** include ./opcode.def. **
+==REF== ./exception.def
+** include ./exception.def. **
+==REF== ./inst.def
+** include ./inst.def. **
+==REF== ./inst_m2.def
+** include ./inst_m2.def. **
+Submod_class: reg32x32 defined.
+
+Module: p32m2 definition start.
+Submod_class: add32 defined.
+Submod_class: alu32 defined.
+Submod_class: shift32 defined.
+Submod_class: reg32x32 defined.
+==REF== ./p32m2decode_sel.def
+** include ./p32m2decode_sel.def. **
+All facilities of module: p32m2 defined.
+Instructs arguments and stages tasks of module: p32m2 defined.
+Instructs behavior of module: p32m2 defined.
+Behavior of stage: start defined.
+Behavior of stage: IF defined.
+==REF== ./p32id.def
+** include ./p32id.def. **
+[FILE=p32m2.sfl, LINE=210, COLUMN=17]
+TRNS(h. for help): sfl area 99% remained.
+atom area 69% remained.
+!! local stack 1% used, global stack 1% used, trail stack 1% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== mem64KB.cir
+
+Module: mem64KB definition start.
+All facilities of module: mem64KB defined.
+Instructs arguments and stages tasks of module: mem64KB defined.
+Instructs behavior of module: mem64KB defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== memunit.sfl
+==REF== ./mem64KB.h
+** include ./mem64KB.h. **
+Submod_class: mem64KB defined.
+
+Module: memunit definition start.
+Submod_class: mem64KB defined.
+All facilities of module: memunit defined.
+Instructs arguments and stages tasks of module: memunit defined.
+Instructs behavior of module: memunit defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== top_p32m2.sfl
+==REF== ./p32m2.h
+** include ./p32m2.h. **
+==REF== ./memunit.h
+** include ./memunit.h. **
+Submod_class: p32m2 defined.
+Submod_class: memunit defined.
+
+Module: top_p32m2 definition start.
+Submod_class: p32m2 defined.
+Submod_class: memunit defined.
+All facilities of module: top_p32m2 defined.
+Instructs arguments and stages tasks of module: top_p32m2 defined.
+Instructs behavior of module: top_p32m2 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!

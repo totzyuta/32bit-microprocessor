@@ -163,7 +163,7 @@ module p32m1 {
    */
   stage IF {
     par {
-      ir := i_read(pc).i_data /* TODO: read instruction */
+      ir := i_read(pc).i_data; /* TODO: read instruction */
       pc := pc_add.do(pc, 0x00000004, 0b0).sum; /* TODO: pc <- pc + 4 */ 
 
       any {
@@ -202,7 +202,7 @@ module p32m1 {
           /* shift operations */
           any {
             ir<2>: /* sllv, srlv, srav */ /* ここのir<2>は何を表しているのか */
-              shamt := a_data<4:0> /* TODO */
+              shamt := a_data<4:0>; /* TODO */
             else: /* sll, srl, sra */
               shamt := SHAMT;  /* TODO: shamt */
           }
@@ -260,7 +260,7 @@ module p32m1 {
       } /* D_I_ZE (zero extend) */
       ID_LUI: par {
         ex_dest := RT;  /* rt */
-        A := 0x00000000;
+        a := 0x00000000;
         b := 0x0000 || IMMEDIATE; 
         /* b := IMMEDIATE || 0x0000; */
       }

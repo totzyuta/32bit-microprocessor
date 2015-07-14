@@ -308,3 +308,6 @@ repository on the command line の手順に従って端末で作業すること�
 
 ----------------------------------------------------------------------------
 
+
+- ;忘れ
+- load_p32m1.secでfulladderを読み込み忘れていた (Makefile->test.sec->load.secの順番で調べた)

@@ -1,6 +1,7 @@
 #
 # (load_p32m1.sec)
 #
+sflread fulladder.sfl
 sflread add4.sfl
 sflread add32.sfl
 #sflread comp5.sfl

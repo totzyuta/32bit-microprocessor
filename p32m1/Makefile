@@ -18,7 +18,7 @@ all: test
 
 copy: copy_add32 copy_alu32 copy_shift32 copy_reg32x32 copy_memunit
 
-copy_add32: add32.sfl add32.h add4.sfl add4.h
+copy_add32: add32.sfl add32.h add4.sfl add4.h fulladder.sfl fulladder.h
 copy_alu32: alu32.sfl alu32.h
 copy_shift32: shift32.sfl shift32.h
 copy_reg32x32: reg32x32.sfl reg32x32.h reg32x8.sfl reg32x8.h
@@ -31,6 +31,10 @@ add32.h: $(ADD32_DIR)/add32.h
 add4.sfl: $(ADD4_DIR)/add4.sfl
 	cp $< .
 add4.h: $(ADD4_DIR)/add4.h
+	cp $< .
+fulladder.sfl: $(ADD4_DIR)/fulladder.sfl
+	cp $< .
+fulladder.h: $(ADD4_DIR)/fulladder.h
 	cp $< .
 alu32.sfl: $(ALU32_DIR)/alu32.sfl
 	cp $< .

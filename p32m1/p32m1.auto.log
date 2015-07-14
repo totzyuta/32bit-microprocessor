@@ -1,0 +1,7 @@
+make[1]: ディレクトリ `/home/users/ecs/09425566/workspace/third-year/processor/simple-processor/p32m1' に入ります
+for f in add4 add32 shift32 reg32x8 reg32x32 alu32; do \
+	  auto $f nld1 DEMO demo; \
+	done
+make[2]: ディレクトリ `/home/users/ecs/09425566/workspace/third-year/processor/simple-processor/p32m1' に入ります
+rm -f add4.0on
+sflexp add4.sfl add4.hsl -mem lll  || (rm -f *.cube add4.hsl; false)
