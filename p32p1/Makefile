@@ -7,6 +7,7 @@ MAKEFILE=Makefile.p32p1
 SECONDS=seconds
 
 # modify the following lines as your working directory structure
+FADD_DIR= ../p32m1
 ADD32_DIR=	../add32
 ADD4_DIR=	../add32
 ALU32_DIR=	../alu32
@@ -17,8 +18,9 @@ COMP5_DIR=	../comp5
 
 all: test
 
-copy: copy_add32 copy_alu32 copy_shift32 copy_reg32x32 copy_memunit copy_comp5
+copy: copy_fulladder copy_add32 copy_alu32 copy_shift32 copy_reg32x32 copy_memunit copy_comp5
 
+copy_fulladder: fulladder.sfl fulladder.h
 copy_add32: add32.sfl add32.h add4.sfl add4.h
 copy_alu32: alu32.sfl alu32.h
 copy_shift32: shift32.sfl shift32.h
@@ -26,6 +28,10 @@ copy_reg32x32: reg32x32.sfl reg32x32.h reg32x8.sfl reg32x8.h
 copy_memunit: memunit.sfl memunit.h mem64KB.cir mem64KB.h
 copy_comp5: comp5.sfl comp5.h
 
+fulladder.sfl: $(FADD_DIR)/fulladder.sfl
+	cp $< .
+fulladder.h: $(FADD_DIR)/fulladder.h
+	cp $< .
 add32.sfl: $(ADD32_DIR)/add32.sfl
 	cp $< .
 add32.h: $(ADD32_DIR)/add32.h

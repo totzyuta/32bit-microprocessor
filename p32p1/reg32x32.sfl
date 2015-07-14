@@ -1,0 +1,66 @@
+/* (reg32x32.sfl) */
+
+%i "reg32x8.h"
+
+/* bit width of each registers */
+%d DATA_WIDTH 32
+%d ADDR_WIDTH 5
+
+/* constant value definitions */
+%d CST_0 0b00
+%d CST_1 0b01
+%d CST_2 0b10
+%d CST_3 0b11
+
+%d ZERO 0x00000000
+
+%d A_ADDR_HI a_addr<4:3>
+%d B_ADDR_HI b_addr<4:3>
+%d W_ADDR_HI in_addr<4:3>
+
+%d A_ADDR_LO a_addr<2:0>
+%d B_ADDR_LO b_addr<2:0>
+%d W_ADDR_LO in_addr<2:0>
+
+module reg32x32 {
+    input in<DATA_WIDTH>;    
+    input in_addr<ADDR_WIDTH>;
+    input a_addr<ADDR_WIDTH>;
+    input b_addr<ADDR_WIDTH>;
+    output a<DATA_WIDTH>;
+    output b<DATA_WIDTH>;
+    instrin read_a, read_b, write;
+
+    reg32x8 regs0, regs1, regs2, regs3;
+
+    instruct read_a any {
+      /|a_addr : any { /* a_addr != 0b00000 */
+        A_ADDR_HI == CST_0: a = regs0.read_a(A_ADDR_LO).a; 
+        A_ADDR_HI == CST_1: a = regs1.read_a(A_ADDR_LO).a;
+        A_ADDR_HI == CST_2: a = regs2.read_a(A_ADDR_LO).a;
+        A_ADDR_HI == CST_3: a = regs3.read_a(A_ADDR_LO).a;
+      } 
+      else: a = ZERO;
+    }
+
+    instruct read_b any {
+      /|b_addr : any { /* b_addr != 0b00000 */
+        B_ADDR_HI == CST_0: b = regs0.read_b(B_ADDR_LO).b;
+        B_ADDR_HI == CST_1: b = regs1.read_b(B_ADDR_LO).b;
+        B_ADDR_HI == CST_2: b = regs2.read_b(B_ADDR_LO).b;
+        B_ADDR_HI == CST_3: b = regs3.read_b(B_ADDR_LO).b;
+      }
+      else: b = ZERO;
+    }
+
+    instruct write any {
+      /|in_addr : any { /* in_addr != 0b00000 */
+        W_ADDR_HI == CST_0: regs0.write(W_ADDR_LO, in);
+        W_ADDR_HI == CST_1: regs1.write(W_ADDR_LO, in);
+        W_ADDR_HI == CST_2: regs2.write(W_ADDR_LO, in);
+        W_ADDR_HI == CST_3: regs3.write(W_ADDR_LO, in);
+      }
+    }
+}
+
+/* End of file (reg32x32.sfl) */

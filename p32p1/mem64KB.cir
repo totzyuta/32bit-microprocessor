@@ -1,0 +1,25 @@
+/* memory unit (mem64KB.cir) */
+
+circuit mem64KB {
+    input addr<16>;
+    input loc<4>;
+    input data_in<32>;
+    output data_out<32>;
+    instrin read, write;
+
+    mem cell[65536]<8>;
+
+    instruct read par {
+      data_out = (cell[addr<15:2> || 0b00] || cell[addr<15:2> || 0b01] ||
+      cell[addr<15:2> || 0b10] || cell[addr<15:2> || 0b11]);
+    }
+
+    instruct write any {
+      loc<0>: cell[addr<15:2> || 0b00] := data_in<31:24>;
+      loc<1>: cell[addr<15:2> || 0b01] := data_in<23:16>;
+      loc<2>: cell[addr<15:2> || 0b10] := data_in<15:8>;
+      loc<3>: cell[addr<15:2> || 0b11] := data_in<7:0>;
+    }
+}
+
+/* End of file (mem64KB.cir) */
