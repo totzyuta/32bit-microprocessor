@@ -12,3 +12,5 @@
 *.op2
 *.ps
 *.tsc
+*.dvi
+*.euc.tex
