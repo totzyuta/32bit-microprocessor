@@ -1,0 +1,501 @@
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== fulladder.sfl
+
+Module: fulladder definition start.
+All facilities of module: fulladder defined.
+Instructs arguments and stages tasks of module: fulladder defined.
+Instructs behavior of module: fulladder defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== add4.sfl
+==REF== ./fulladder.h
+** include ./fulladder.h. **
+Submod_class: fulladder defined.
+
+Module: add4 definition start.
+Submod_class: fulladder defined.
+All facilities of module: add4 defined.
+Instructs arguments and stages tasks of module: add4 defined.
+Instructs behavior of module: add4 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== add32.sfl
+==REF== ./add4.h
+** include ./add4.h. **
+Submod_class: add4 defined.
+
+Module: add32 definition start.
+Submod_class: add4 defined.
+All facilities of module: add32 defined.
+Instructs arguments and stages tasks of module: add32 defined.
+Instructs behavior of module: add32 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== comp5.sfl
+
+Module: comp5 definition start.
+All facilities of module: comp5 defined.
+Instructs arguments and stages tasks of module: comp5 defined.
+Instructs behavior of module: comp5 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== shift32.sfl
+==REF== ./shift32.h
+** include ./shift32.h. **
+Submod_class: shift32 defined.
+
+Module: shift32 definition start.
+Submod_class: shift32 defined.
+All facilities of module: shift32 defined.
+Instructs arguments and stages tasks of module: shift32 defined.
+Instructs behavior of module: shift32 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== alu32.sfl
+==REF== ./add32.h
+** include ./add32.h. **
+Submod_class: add32 defined.
+
+Module: alu32 definition start.
+Submod_class: add32 defined.
+All facilities of module: alu32 defined.
+Instructs arguments and stages tasks of module: alu32 defined.
+Instructs behavior of module: alu32 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== reg32x8.sfl
+
+Module: reg32x8 definition start.
+All facilities of module: reg32x8 defined.
+Instructs arguments and stages tasks of module: reg32x8 defined.
+Instructs behavior of module: reg32x8 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== reg32x32.sfl
+==REF== ./reg32x8.h
+** include ./reg32x8.h. **
+Submod_class: reg32x8 defined.
+
+Module: reg32x32 definition start.
+Submod_class: reg32x8 defined.
+All facilities of module: reg32x32 defined.
+Instructs arguments and stages tasks of module: reg32x32 defined.
+Instructs behavior of module: reg32x32 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== p32p1.sfl
+==REF== ./add32.h
+** include ./add32.h. **
+==REF== ./alu32.h
+** include ./alu32.h. **
+Submod_class: add32 defined.
+==REF== ./shift32.h
+** include ./shift32.h. **
+Submod_class: alu32 defined.
+==REF== ./reg32x32.h
+** include ./reg32x32.h. **
+Submod_class: shift32 defined.
+==REF== ./comp5.h
+** include ./comp5.h. **
+Submod_class: reg32x32 defined.
+==REF== ./opcode.def
+** include ./opcode.def. **
+==REF== ./exception.def
+** include ./exception.def. **
+==REF== ./inst.def
+** include ./inst.def. **
+==REF== ./inst_p1.def
+** include ./inst_p1.def. **
+Submod_class: comp5 defined.
+
+Module: p32p1 definition start.
+Submod_class: add32 defined.
+Submod_class: alu32 defined.
+Submod_class: shift32 defined.
+Submod_class: reg32x32 defined.
+Submod_class: comp5 defined.
+==REF== ./p32p1decode_sel.def
+** include ./p32p1decode_sel.def. **
+All facilities of module: p32p1 defined.
+Instructs arguments and stages tasks of module: p32p1 defined.
+Instructs behavior of module: p32p1 defined.
+Behavior of stage: start defined.
+Behavior of stage: IF defined.
+==REF== ./p32id.def
+** include ./p32id.def. **
+Behavior of stage: ID defined.
+==REF== ./p32p1_ex.def
+** include ./p32p1_ex.def. **
+Behavior of stage: EX defined.
+Behavior of stage: MEM defined.
+Behavior of stage: WB defined.
+!! local stack 0%(p: 2%) used, global stack 2%(p: 2%) used, trail stack 0%(p: 1%) used !!
+!! gc free 91116 words !!
+!! local stack 0%(t: 2%) used, global stack 0%(t: 2%) used, trail stack 0%(t: 1%) used !!
+sfl area 99% remained.
+atom area 69% remained.
+!! local stack 2% used, global stack 2% used, trail stack 1% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== mem64KB.cir
+
+Module: mem64KB definition start.
+All facilities of module: mem64KB defined.
+Instructs arguments and stages tasks of module: mem64KB defined.
+Instructs behavior of module: mem64KB defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== memunit.sfl
+==REF== ./mem64KB.h
+** include ./mem64KB.h. **
+Submod_class: mem64KB defined.
+
+Module: memunit definition start.
+Submod_class: mem64KB defined.
+All facilities of module: memunit defined.
+Instructs arguments and stages tasks of module: memunit defined.
+Instructs behavior of module: memunit defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== top_p32p1.sfl
+==REF== ./p32p1.h
+** include ./p32p1.h. **
+==REF== ./memunit.h
+** include ./memunit.h. **
+Submod_class: p32p1 defined.
+Submod_class: memunit defined.
+
+Module: top_p32p1 definition start.
+Submod_class: p32p1 defined.
+Submod_class: memunit defined.
+All facilities of module: top_p32p1 defined.
+Instructs arguments and stages tasks of module: top_p32p1 defined.
+Instructs behavior of module: top_p32p1 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+---
+        PC       IR    i  i_data   d_addr  read       write 
+1    00000000 00000000                                           -   
+2    00000000 00000000 1 3c1c1000                                -   
+3    00000004 3c1c1000 1 379c8000                                -   
+4    00000008 379c8000 1 3c1d7fff                                -   
+5    0000000c 3c1d7fff 1 37bdfffc                                -   
+6    00000010 37bdfffc 1 00000000                                -   
+7    00000014 00000000 1 0c000400                                -   
+8    00000018 0c000400 1 00000000                                -   
+9    00001000 00000000 1 23bdffe0                                -   
+10   00001004 23bdffe0 1 afbf0014                                -   
+11   00001008 afbf0014 1 afbe0010                                -   
+12   0000100c afbe0010 1 27be001c                                -   
+13   00001010 27be001c 1 3484000a 7ffffff0            1 0000001c -   
+14   00001014 3484000a 1 0c00040c 7fffffec            1 00000000 -   
+15   00001018 0c00040c 1 00022820                                -   
+16   00001030 00022820 1 23bdffe0                                -   
+17   00001034 23bdffe0 1 afbf0014                                -   
+18   00001038 afbf0014 1 afbe0010                                -   
+19   0000103c afbe0010 1 27be001c                                -   
+20   00001040 27be001c 1 afc40000 7fffffd0            1 0000101c -   
+21   00001044 afc40000 1 8fc20000 7fffffcc            1 7ffffff8 -   
+22   00001048 8fc20000 1 00000000                                -   
+23   0000104c 00000000 1 0002402a 7fffffd8            1 0000000a -   
+24   00001050 0002402a 1 15000004 7fffffd8 1 0000000a            -   
+25   00001054 15000004 1 00000000                                -   
+26   00001064 00000000 1 8fc30000                                -   
+27   00001068 8fc30000 1 00000000                                -   
+28   0000106c 00000000 1 2062ffff                                -   
+29   00001070 2062ffff 1 00022020 7fffffd8 1 0000000a            -   
+30   00001074 00022020 1 0c00040c                                -   
+31   00001078 0c00040c 1 00000000                                -   
+32   00001030 00000000 1 23bdffe0                                -   
+33   00001034 23bdffe0 1 afbf0014                                -   
+34   00001038 afbf0014 1 afbe0010                                -   
+35   0000103c afbe0010 1 27be001c                                -   
+36   00001040 27be001c 1 afc40000 7fffffb0            1 0000107c -   
+37   00001044 afc40000 1 8fc20000 7fffffac            1 7fffffd8 -   
+38   00001048 8fc20000 1 00000000                                -   
+39   0000104c 00000000 1 0002402a 7fffffb8            1 00000009 -   
+40   00001050 0002402a 1 15000004 7fffffb8 1 00000009            -   
+41   00001054 15000004 1 00000000                                -   
+42   00001064 00000000 1 8fc30000                                -   
+43   00001068 8fc30000 1 00000000                                -   
+44   0000106c 00000000 1 2062ffff                                -   
+45   00001070 2062ffff 1 00022020 7fffffb8 1 00000009            -   
+46   00001074 00022020 1 0c00040c                                -   
+47   00001078 0c00040c 1 00000000                                -   
+48   00001030 00000000 1 23bdffe0                                -   
+49   00001034 23bdffe0 1 afbf0014                                -   
+50   00001038 afbf0014 1 afbe0010                                -   
+51   0000103c afbe0010 1 27be001c                                -   
+52   00001040 27be001c 1 afc40000 7fffff90            1 0000107c -   
+53   00001044 afc40000 1 8fc20000 7fffff8c            1 7fffffb8 -   
+54   00001048 8fc20000 1 00000000                                -   
+55   0000104c 00000000 1 0002402a 7fffff98            1 00000008 -   
+56   00001050 0002402a 1 15000004 7fffff98 1 00000008            -   
+57   00001054 15000004 1 00000000                                -   
+58   00001064 00000000 1 8fc30000                                -   
+59   00001068 8fc30000 1 00000000                                -   
+60   0000106c 00000000 1 2062ffff                                -   
+61   00001070 2062ffff 1 00022020 7fffff98 1 00000008            -   
+62   00001074 00022020 1 0c00040c                                -   
+63   00001078 0c00040c 1 00000000                                -   
+64   00001030 00000000 1 23bdffe0                                -   
+65   00001034 23bdffe0 1 afbf0014                                -   
+66   00001038 afbf0014 1 afbe0010                                -   
+67   0000103c afbe0010 1 27be001c                                -   
+68   00001040 27be001c 1 afc40000 7fffff70            1 0000107c -   
+69   00001044 afc40000 1 8fc20000 7fffff6c            1 7fffff98 -   
+70   00001048 8fc20000 1 00000000                                -   
+71   0000104c 00000000 1 0002402a 7fffff78            1 00000007 -   
+72   00001050 0002402a 1 15000004 7fffff78 1 00000007            -   
+73   00001054 15000004 1 00000000                                -   
+74   00001064 00000000 1 8fc30000                                -   
+75   00001068 8fc30000 1 00000000                                -   
+76   0000106c 00000000 1 2062ffff                                -   
+77   00001070 2062ffff 1 00022020 7fffff78 1 00000007            -   
+78   00001074 00022020 1 0c00040c                                -   
+79   00001078 0c00040c 1 00000000                                -   
+80   00001030 00000000 1 23bdffe0                                -   
+81   00001034 23bdffe0 1 afbf0014                                -   
+82   00001038 afbf0014 1 afbe0010                                -   
+83   0000103c afbe0010 1 27be001c                                -   
+84   00001040 27be001c 1 afc40000 7fffff50            1 0000107c -   
+85   00001044 afc40000 1 8fc20000 7fffff4c            1 7fffff78 -   
+86   00001048 8fc20000 1 00000000                                -   
+87   0000104c 00000000 1 0002402a 7fffff58            1 00000006 -   
+88   00001050 0002402a 1 15000004 7fffff58 1 00000006            -   
+89   00001054 15000004 1 00000000                                -   
+90   00001064 00000000 1 8fc30000                                -   
+91   00001068 8fc30000 1 00000000                                -   
+92   0000106c 00000000 1 2062ffff                                -   
+93   00001070 2062ffff 1 00022020 7fffff58 1 00000006            -   
+94   00001074 00022020 1 0c00040c                                -   
+95   00001078 0c00040c 1 00000000                                -   
+96   00001030 00000000 1 23bdffe0                                -   
+97   00001034 23bdffe0 1 afbf0014                                -   
+98   00001038 afbf0014 1 afbe0010                                -   
+99   0000103c afbe0010 1 27be001c                                -   
+100  00001040 27be001c 1 afc40000 7fffff30            1 0000107c -   
+101  00001044 afc40000 1 8fc20000 7fffff2c            1 7fffff58 -   
+102  00001048 8fc20000 1 00000000                                -   
+103  0000104c 00000000 1 0002402a 7fffff38            1 00000005 -   
+104  00001050 0002402a 1 15000004 7fffff38 1 00000005            -   
+105  00001054 15000004 1 00000000                                -   
+106  00001064 00000000 1 8fc30000                                -   
+107  00001068 8fc30000 1 00000000                                -   
+108  0000106c 00000000 1 2062ffff                                -   
+109  00001070 2062ffff 1 00022020 7fffff38 1 00000005            -   
+110  00001074 00022020 1 0c00040c                                -   
+111  00001078 0c00040c 1 00000000                                -   
+112  00001030 00000000 1 23bdffe0                                -   
+113  00001034 23bdffe0 1 afbf0014                                -   
+114  00001038 afbf0014 1 afbe0010                                -   
+115  0000103c afbe0010 1 27be001c                                -   
+116  00001040 27be001c 1 afc40000 7fffff10            1 0000107c -   
+117  00001044 afc40000 1 8fc20000 7fffff0c            1 7fffff38 -   
+118  00001048 8fc20000 1 00000000                                -   
+119  0000104c 00000000 1 0002402a 7fffff18            1 00000004 -   
+120  00001050 0002402a 1 15000004 7fffff18 1 00000004            -   
+121  00001054 15000004 1 00000000                                -   
+122  00001064 00000000 1 8fc30000                                -   
+123  00001068 8fc30000 1 00000000                                -   
+124  0000106c 00000000 1 2062ffff                                -   
+125  00001070 2062ffff 1 00022020 7fffff18 1 00000004            -   
+126  00001074 00022020 1 0c00040c                                -   
+127  00001078 0c00040c 1 00000000                                -   
+128  00001030 00000000 1 23bdffe0                                -   
+129  00001034 23bdffe0 1 afbf0014                                -   
+130  00001038 afbf0014 1 afbe0010                                -   
+131  0000103c afbe0010 1 27be001c                                -   
+132  00001040 27be001c 1 afc40000 7ffffef0            1 0000107c -   
+133  00001044 afc40000 1 8fc20000 7ffffeec            1 7fffff18 -   
+134  00001048 8fc20000 1 00000000                                -   
+135  0000104c 00000000 1 0002402a 7ffffef8            1 00000003 -   
+136  00001050 0002402a 1 15000004 7ffffef8 1 00000003            -   
+137  00001054 15000004 1 00000000                                -   
+138  00001064 00000000 1 8fc30000                                -   
+139  00001068 8fc30000 1 00000000                                -   
+140  0000106c 00000000 1 2062ffff                                -   
+141  00001070 2062ffff 1 00022020 7ffffef8 1 00000003            -   
+142  00001074 00022020 1 0c00040c                                -   
+143  00001078 0c00040c 1 00000000                                -   
+144  00001030 00000000 1 23bdffe0                                -   
+145  00001034 23bdffe0 1 afbf0014                                -   
+146  00001038 afbf0014 1 afbe0010                                -   
+147  0000103c afbe0010 1 27be001c                                -   
+148  00001040 27be001c 1 afc40000 7ffffed0            1 0000107c -   
+149  00001044 afc40000 1 8fc20000 7ffffecc            1 7ffffef8 -   
+150  00001048 8fc20000 1 00000000                                -   
+151  0000104c 00000000 1 0002402a 7ffffed8            1 00000002 -   
+152  00001050 0002402a 1 15000004 7ffffed8 1 00000002            -   
+153  00001054 15000004 1 00000000                                -   
+154  00001064 00000000 1 8fc30000                                -   
+155  00001068 8fc30000 1 00000000                                -   
+156  0000106c 00000000 1 2062ffff                                -   
+157  00001070 2062ffff 1 00022020 7ffffed8 1 00000002            -   
+158  00001074 00022020 1 0c00040c                                -   
+159  00001078 0c00040c 1 00000000                                -   
+160  00001030 00000000 1 23bdffe0                                -   
+161  00001034 23bdffe0 1 afbf0014                                -   
+162  00001038 afbf0014 1 afbe0010                                -   
+163  0000103c afbe0010 1 27be001c                                -   
+164  00001040 27be001c 1 afc40000 7ffffeb0            1 0000107c -   
+165  00001044 afc40000 1 8fc20000 7ffffeac            1 7ffffed8 -   
+166  00001048 8fc20000 1 00000000                                -   
+167  0000104c 00000000 1 0002402a 7ffffeb8            1 00000001 -   
+168  00001050 0002402a 1 15000004 7ffffeb8 1 00000001            -   
+169  00001054 15000004 1 00000000                                -   
+170  00001064 00000000 1 8fc30000                                -   
+171  00001068 8fc30000 1 00000000                                -   
+172  0000106c 00000000 1 2062ffff                                -   
+173  00001070 2062ffff 1 00022020 7ffffeb8 1 00000001            -   
+174  00001074 00022020 1 0c00040c                                -   
+175  00001078 0c00040c 1 00000000                                -   
+176  00001030 00000000 1 23bdffe0                                -   
+177  00001034 23bdffe0 1 afbf0014                                -   
+178  00001038 afbf0014 1 afbe0010                                -   
+179  0000103c afbe0010 1 27be001c                                -   
+180  00001040 27be001c 1 afc40000 7ffffe90            1 0000107c -   
+181  00001044 afc40000 1 8fc20000 7ffffe8c            1 7ffffeb8 -   
+182  00001048 8fc20000 1 00000000                                -   
+183  0000104c 00000000 1 0002402a 7ffffe98            1 00000000 -   
+184  00001050 0002402a 1 15000004 7ffffe98 1 00000000            -   
+185  00001054 15000004 1 00000000                                -   
+186  00001058 00000000 1 34020000                                -   
+187  0000105c 34020000 1 08000422                                -   
+188  00001060 08000422 1 00000000                                -   
+189  00001088 00000000 1 8fbf0014                                -   
+190  0000108c 8fbf0014 1 8fbe0010                                -   
+191  00001090 8fbe0010 1 27bd0020                                -   
+192  00001094 27bd0020 1 03e00008 7ffffe90 1 0000107c            -   
+193  00001098 03e00008 1 00000000 7ffffe8c 1 7ffffeb8            -   
+194  0000107c 00000000 1 8fc30000                                -   
+195  00001080 8fc30000 1 00000000                                -   
+196  00001084 00000000 1 00431020                                -   
+197  00001088 00431020 1 8fbf0014 7ffffeb8 1 00000001            -   
+198  0000108c 8fbf0014 1 8fbe0010                                -   
+199  00001090 8fbe0010 1 27bd0020                                -   
+200  00001094 27bd0020 1 03e00008 7ffffeb0 1 0000107c            -   
+201  00001098 03e00008 1 00000000 7ffffeac 1 7ffffed8            -   
+202  0000107c 00000000 1 8fc30000                                -   
+203  00001080 8fc30000 1 00000000                                -   
+204  00001084 00000000 1 00431020                                -   
+205  00001088 00431020 1 8fbf0014 7ffffed8 1 00000002            -   
+206  0000108c 8fbf0014 1 8fbe0010                                -   
+207  00001090 8fbe0010 1 27bd0020                                -   
+208  00001094 27bd0020 1 03e00008 7ffffed0 1 0000107c            -   
+209  00001098 03e00008 1 00000000 7ffffecc 1 7ffffef8            -   
+210  0000107c 00000000 1 8fc30000                                -   
+211  00001080 8fc30000 1 00000000                                -   
+212  00001084 00000000 1 00431020                                -   
+213  00001088 00431020 1 8fbf0014 7ffffef8 1 00000003            -   
+214  0000108c 8fbf0014 1 8fbe0010                                -   
+215  00001090 8fbe0010 1 27bd0020                                -   
+216  00001094 27bd0020 1 03e00008 7ffffef0 1 0000107c            -   
+217  00001098 03e00008 1 00000000 7ffffeec 1 7fffff18            -   
+218  0000107c 00000000 1 8fc30000                                -   
+219  00001080 8fc30000 1 00000000                                -   
+220  00001084 00000000 1 00431020                                -   
+221  00001088 00431020 1 8fbf0014 7fffff18 1 00000004            -   
+222  0000108c 8fbf0014 1 8fbe0010                                -   
+223  00001090 8fbe0010 1 27bd0020                                -   
+224  00001094 27bd0020 1 03e00008 7fffff10 1 0000107c            -   
+225  00001098 03e00008 1 00000000 7fffff0c 1 7fffff38            -   
+226  0000107c 00000000 1 8fc30000                                -   
+227  00001080 8fc30000 1 00000000                                -   
+228  00001084 00000000 1 00431020                                -   
+229  00001088 00431020 1 8fbf0014 7fffff38 1 00000005            -   
+230  0000108c 8fbf0014 1 8fbe0010                                -   
+231  00001090 8fbe0010 1 27bd0020                                -   
+232  00001094 27bd0020 1 03e00008 7fffff30 1 0000107c            -   
+233  00001098 03e00008 1 00000000 7fffff2c 1 7fffff58            -   
+234  0000107c 00000000 1 8fc30000                                -   
+235  00001080 8fc30000 1 00000000                                -   
+236  00001084 00000000 1 00431020                                -   
+237  00001088 00431020 1 8fbf0014 7fffff58 1 00000006            -   
+238  0000108c 8fbf0014 1 8fbe0010                                -   
+239  00001090 8fbe0010 1 27bd0020                                -   
+240  00001094 27bd0020 1 03e00008 7fffff50 1 0000107c            -   
+241  00001098 03e00008 1 00000000 7fffff4c 1 7fffff78            -   
+242  0000107c 00000000 1 8fc30000                                -   
+243  00001080 8fc30000 1 00000000                                -   
+244  00001084 00000000 1 00431020                                -   
+245  00001088 00431020 1 8fbf0014 7fffff78 1 00000007            -   
+246  0000108c 8fbf0014 1 8fbe0010                                -   
+247  00001090 8fbe0010 1 27bd0020                                -   
+248  00001094 27bd0020 1 03e00008 7fffff70 1 0000107c            -   
+249  00001098 03e00008 1 00000000 7fffff6c 1 7fffff98            -   
+250  0000107c 00000000 1 8fc30000                                -   
+251  00001080 8fc30000 1 00000000                                -   
+252  00001084 00000000 1 00431020                                -   
+253  00001088 00431020 1 8fbf0014 7fffff98 1 00000008            -   
+254  0000108c 8fbf0014 1 8fbe0010                                -   
+255  00001090 8fbe0010 1 27bd0020                                -   
+256  00001094 27bd0020 1 03e00008 7fffff90 1 0000107c            -   
+257  00001098 03e00008 1 00000000 7fffff8c 1 7fffffb8            -   
+258  0000107c 00000000 1 8fc30000                                -   
+259  00001080 8fc30000 1 00000000                                -   
+260  00001084 00000000 1 00431020                                -   
+261  00001088 00431020 1 8fbf0014 7fffffb8 1 00000009            -   
+262  0000108c 8fbf0014 1 8fbe0010                                -   
+263  00001090 8fbe0010 1 27bd0020                                -   
+264  00001094 27bd0020 1 03e00008 7fffffb0 1 0000107c            -   
+265  00001098 03e00008 1 00000000 7fffffac 1 7fffffd8            -   
+266  0000107c 00000000 1 8fc30000                                -   
+267  00001080 8fc30000 1 00000000                                -   
+268  00001084 00000000 1 00431020                                -   
+269  00001088 00431020 1 8fbf0014 7fffffd8 1 0000000a            -   
+270  0000108c 8fbf0014 1 8fbe0010                                -   
+271  00001090 8fbe0010 1 27bd0020                                -   
+272  00001094 27bd0020 1 03e00008 7fffffd0 1 0000101c            -   
+273  00001098 03e00008 1 00000000 7fffffcc 1 7ffffff8            -   
+274  0000101c 00000000 1 8fbf0014                                -   
+275  00001020 8fbf0014 1 8fbe0010                                -   
+276  00001024 8fbe0010 1 27bd0020                                -   
+277  00001028 27bd0020 1 03e00008 7ffffff0 1 0000001c            -   
+278  0000102c 03e00008 1 00000000 7fffffec 1 00000000            -   
+279  0000001c 00000000 1 0000000c                                -   
+280  00000020 0000000c 1 00000000                                -   
+281  80000080 00000000 1 00000000                                - 1 
+282  80000084 00000000 1 00000000                                - 1 
+283  80000088 00000000 1 00000000                                - 1 
+*** register file dump ***
+$zero    $at($1)  $v0($2)  $v1($3)  $a0($4)  $a1($5)  $a2($6)  $a3($7)
+00000000 00000000 00000037 0000000a 00000000 00000000 00000000 00000000
+$t0($8)  $t1($9)  $t2($10) $t3($11) $t4($12) $t5($13) $t6($14) $t7($15)
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+$s0($16) $s1($17) $s2($18) $s3($19) $s4($20) $s5($21) $s6($22) $s7($23)
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+$t8($24) $t9($25) $k0($26) $k1($27) $gp($28) $sp($29) $fp($30) $ra($31)
+00000000 00000000 00000000 00000000 10008000 7ffffffc 00000000 0000001c

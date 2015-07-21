@@ -1,0 +1,303 @@
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== fulladder.sfl
+
+Module: fulladder definition start.
+All facilities of module: fulladder defined.
+Instructs arguments and stages tasks of module: fulladder defined.
+Instructs behavior of module: fulladder defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== add4.sfl
+==REF== ./fulladder.h
+** include ./fulladder.h. **
+Submod_class: fulladder defined.
+
+Module: add4 definition start.
+Submod_class: fulladder defined.
+All facilities of module: add4 defined.
+Instructs arguments and stages tasks of module: add4 defined.
+Instructs behavior of module: add4 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== add32.sfl
+==REF== ./add4.h
+** include ./add4.h. **
+Submod_class: add4 defined.
+
+Module: add32 definition start.
+Submod_class: add4 defined.
+All facilities of module: add32 defined.
+Instructs arguments and stages tasks of module: add32 defined.
+Instructs behavior of module: add32 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== comp5.sfl
+
+Module: comp5 definition start.
+All facilities of module: comp5 defined.
+Instructs arguments and stages tasks of module: comp5 defined.
+Instructs behavior of module: comp5 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== shift32.sfl
+==REF== ./shift32.h
+** include ./shift32.h. **
+Submod_class: shift32 defined.
+
+Module: shift32 definition start.
+Submod_class: shift32 defined.
+All facilities of module: shift32 defined.
+Instructs arguments and stages tasks of module: shift32 defined.
+Instructs behavior of module: shift32 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== alu32.sfl
+==REF== ./add32.h
+** include ./add32.h. **
+Submod_class: add32 defined.
+
+Module: alu32 definition start.
+Submod_class: add32 defined.
+All facilities of module: alu32 defined.
+Instructs arguments and stages tasks of module: alu32 defined.
+Instructs behavior of module: alu32 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== reg32x8.sfl
+
+Module: reg32x8 definition start.
+All facilities of module: reg32x8 defined.
+Instructs arguments and stages tasks of module: reg32x8 defined.
+Instructs behavior of module: reg32x8 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== reg32x32.sfl
+==REF== ./reg32x8.h
+** include ./reg32x8.h. **
+Submod_class: reg32x8 defined.
+
+Module: reg32x32 definition start.
+Submod_class: reg32x8 defined.
+All facilities of module: reg32x32 defined.
+Instructs arguments and stages tasks of module: reg32x32 defined.
+Instructs behavior of module: reg32x32 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== p32p1.sfl
+==REF== ./add32.h
+** include ./add32.h. **
+==REF== ./alu32.h
+** include ./alu32.h. **
+Submod_class: add32 defined.
+==REF== ./shift32.h
+** include ./shift32.h. **
+Submod_class: alu32 defined.
+==REF== ./reg32x32.h
+** include ./reg32x32.h. **
+Submod_class: shift32 defined.
+==REF== ./comp5.h
+** include ./comp5.h. **
+Submod_class: reg32x32 defined.
+==REF== ./opcode.def
+** include ./opcode.def. **
+==REF== ./exception.def
+** include ./exception.def. **
+==REF== ./inst.def
+** include ./inst.def. **
+==REF== ./inst_p1.def
+** include ./inst_p1.def. **
+Submod_class: comp5 defined.
+
+Module: p32p1 definition start.
+Submod_class: add32 defined.
+Submod_class: alu32 defined.
+Submod_class: shift32 defined.
+Submod_class: reg32x32 defined.
+Submod_class: comp5 defined.
+==REF== ./p32p1decode_sel.def
+** include ./p32p1decode_sel.def. **
+All facilities of module: p32p1 defined.
+Instructs arguments and stages tasks of module: p32p1 defined.
+Instructs behavior of module: p32p1 defined.
+Behavior of stage: start defined.
+Behavior of stage: IF defined.
+==REF== ./p32id.def
+** include ./p32id.def. **
+Behavior of stage: ID defined.
+==REF== ./p32p1_ex.def
+** include ./p32p1_ex.def. **
+Behavior of stage: EX defined.
+Behavior of stage: MEM defined.
+Behavior of stage: WB defined.
+!! local stack 0%(p: 2%) used, global stack 2%(p: 2%) used, trail stack 0%(p: 1%) used !!
+!! gc free 91116 words !!
+!! local stack 0%(t: 2%) used, global stack 0%(t: 2%) used, trail stack 0%(t: 1%) used !!
+sfl area 99% remained.
+atom area 69% remained.
+!! local stack 2% used, global stack 2% used, trail stack 1% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== mem64KB.cir
+
+Module: mem64KB definition start.
+All facilities of module: mem64KB defined.
+Instructs arguments and stages tasks of module: mem64KB defined.
+Instructs behavior of module: mem64KB defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== memunit.sfl
+==REF== ./mem64KB.h
+** include ./mem64KB.h. **
+Submod_class: mem64KB defined.
+
+Module: memunit definition start.
+Submod_class: mem64KB defined.
+All facilities of module: memunit defined.
+Instructs arguments and stages tasks of module: memunit defined.
+Instructs behavior of module: memunit defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== top_p32p1.sfl
+==REF== ./p32p1.h
+** include ./p32p1.h. **
+==REF== ./memunit.h
+** include ./memunit.h. **
+Submod_class: p32p1 defined.
+Submod_class: memunit defined.
+
+Module: top_p32p1 definition start.
+Submod_class: p32p1 defined.
+Submod_class: memunit defined.
+All facilities of module: top_p32p1 defined.
+Instructs arguments and stages tasks of module: top_p32p1 defined.
+Instructs behavior of module: top_p32p1 defined.
+sfl area 99% remained.
+atom area 73% remained.
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+---
+        PC       IR    i  i_data   d_addr  read       write 
+1    00000000 00000000                                           -   
+2    00000000 00000000 1 3c1c1000                                -   
+3    00000004 3c1c1000 1 379c8000                                -   
+4    00000008 379c8000 1 3c1d7fff                                -   
+5    0000000c 3c1d7fff 1 37bdfffc                                -   
+6    00000010 37bdfffc 1 00000000                                -   
+7    00000014 00000000 1 0c000400                                -   
+8    00000018 0c000400 1 00000000                                -   
+9    00001000 00000000 1 3c081000                                -   
+10   00001004 3c081000 1 35084000                                -   
+11   00001008 35084000 1 8d090004                                -   
+12   0000100c 8d090004 1 340a0000                                -   
+13   00001010 340a0000 1 11200005                                -   
+14   00001014 11200005 1 00000000 10004004 1 0000000a            -   
+15   00001018 00000000 1 01495020                                -   
+16   0000101c 01495020 1 2129ffff                                -   
+17   00001020 2129ffff 1 08000404                                -   
+18   00001024 08000404 1 00000000                                -   
+19   00001010 00000000 1 11200005                                -   
+20   00001014 11200005 1 00000000                                -   
+21   00001018 00000000 1 01495020                                -   
+22   0000101c 01495020 1 2129ffff                                -   
+23   00001020 2129ffff 1 08000404                                -   
+24   00001024 08000404 1 00000000                                -   
+25   00001010 00000000 1 11200005                                -   
+26   00001014 11200005 1 00000000                                -   
+27   00001018 00000000 1 01495020                                -   
+28   0000101c 01495020 1 2129ffff                                -   
+29   00001020 2129ffff 1 08000404                                -   
+30   00001024 08000404 1 00000000                                -   
+31   00001010 00000000 1 11200005                                -   
+32   00001014 11200005 1 00000000                                -   
+33   00001018 00000000 1 01495020                                -   
+34   0000101c 01495020 1 2129ffff                                -   
+35   00001020 2129ffff 1 08000404                                -   
+36   00001024 08000404 1 00000000                                -   
+37   00001010 00000000 1 11200005                                -   
+38   00001014 11200005 1 00000000                                -   
+39   00001018 00000000 1 01495020                                -   
+40   0000101c 01495020 1 2129ffff                                -   
+41   00001020 2129ffff 1 08000404                                -   
+42   00001024 08000404 1 00000000                                -   
+43   00001010 00000000 1 11200005                                -   
+44   00001014 11200005 1 00000000                                -   
+45   00001018 00000000 1 01495020                                -   
+46   0000101c 01495020 1 2129ffff                                -   
+47   00001020 2129ffff 1 08000404                                -   
+48   00001024 08000404 1 00000000                                -   
+49   00001010 00000000 1 11200005                                -   
+50   00001014 11200005 1 00000000                                -   
+51   00001018 00000000 1 01495020                                -   
+52   0000101c 01495020 1 2129ffff                                -   
+53   00001020 2129ffff 1 08000404                                -   
+54   00001024 08000404 1 00000000                                -   
+55   00001010 00000000 1 11200005                                -   
+56   00001014 11200005 1 00000000                                -   
+57   00001018 00000000 1 01495020                                -   
+58   0000101c 01495020 1 2129ffff                                -   
+59   00001020 2129ffff 1 08000404                                -   
+60   00001024 08000404 1 00000000                                -   
+61   00001010 00000000 1 11200005                                -   
+62   00001014 11200005 1 00000000                                -   
+63   00001018 00000000 1 01495020                                -   
+64   0000101c 01495020 1 2129ffff                                -   
+65   00001020 2129ffff 1 08000404                                -   
+66   00001024 08000404 1 00000000                                -   
+67   00001010 00000000 1 11200005                                -   
+68   00001014 11200005 1 00000000                                -   
+69   00001018 00000000 1 01495020                                -   
+70   0000101c 01495020 1 2129ffff                                -   
+71   00001020 2129ffff 1 08000404                                -   
+72   00001024 08000404 1 00000000                                -   
+73   00001010 00000000 1 11200005                                -   
+74   00001014 11200005 1 00000000                                -   
+75   00001028 00000000 1 ad0a0000                                -   
+76   0000102c ad0a0000 1 03e00008                                -   
+77   00001030 03e00008 1 00000000                                -   
+78   0000001c 00000000 1 0000000c 10004000            1 00000037 -   
+79   00000020 0000000c 1 00000000                                -   
+80   80000080 00000000 1 00000000                                - 1 
+81   80000084 00000000 1 00000000                                - 1 
+82   80000088 00000000 1 00000000                                - 1 
+83   8000008c 00000000 1 00000000                                - 1 
+84   80000090 00000000 1 00000000                                - 1 
+85   80000094 00000000 1 00000000                                - 1 
+*** register file dump ***
+$zero    $at($1)  $v0($2)  $v1($3)  $a0($4)  $a1($5)  $a2($6)  $a3($7)
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+$t0($8)  $t1($9)  $t2($10) $t3($11) $t4($12) $t5($13) $t6($14) $t7($15)
+10004000 00000000 00000037 00000000 00000000 00000000 00000000 00000000
+$s0($16) $s1($17) $s2($18) $s3($19) $s4($20) $s5($21) $s6($22) $s7($23)
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+$t8($24) $t9($25) $k0($26) $k1($27) $gp($28) $sp($29) $fp($30) $ra($31)
+00000000 00000000 00000000 00000000 10008000 7ffffffc 00000000 0000001c
