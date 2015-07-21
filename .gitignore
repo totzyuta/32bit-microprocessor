@@ -14,3 +14,6 @@
 *.tsc
 *.dvi
 *.euc.tex
+*.aux
+*.log
+a.out
