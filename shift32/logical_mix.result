@@ -1,0 +1,2031 @@
+rm -rf shift32.2nd shift32.2on shift32.2off
+mkdir shift32.2nd
+echo shift32.op1 | opt_map shift32 shift32.1st /home/users/ecs/nobuya/opt/parthenon/sfl_lib.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start_ex.dir
+--------- submodule shift32_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule sel-1_subm-4 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule sel-1_subm-3 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule sel-1_subm-2 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule sel-1_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o8_subm-4 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o8_subm-3 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o8_subm-2 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o8_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o4_subm-5 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o4_subm-4 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o4_subm-3 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o4_subm-2 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o4_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o2_subm-4 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o2_subm-3 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o2_subm-2 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o2_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o1_subm-5 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o1_subm-4 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o1_subm-3 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o1_subm-2 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o1_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule shift32_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule sel-1_subm-4 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule sel-1_subm-3 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule sel-1_subm-2 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule sel-1_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o8_subm-4 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o8_subm-3 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o8_subm-2 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o8_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o4_subm-12 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o4_subm-5 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o4_subm-4 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o4_subm-3 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o4_subm-2 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o4_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o2_subm-5 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o2_subm-4 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o2_subm-3 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o2_subm-2 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o2_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o1_subm-5 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o1_subm-4 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o1_subm-3 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o1_subm-2 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule o1_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+
++-------------------------------------------------------------+
+| OPT_MAP       3.0 2002/08/31 (i686-Linux-2.6.27-10-generic) |
+|             This program is a part of the PARTHENON system. |
+|                                 Copyright (C) 1989-2002 NTT |
++-------------------------------------------------------------+
+
+** load library from shift32.1st **
+** load library from /home/users/ecs/nobuya/opt/parthenon/sfl_lib.dir **
+opt_map: start to read r1024_8.pcd
+opt_map: start to read r256_8.pcd
+opt_map: start to read r64_8.pcd
+** load library from /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start.dir **
+opt_map: start to read and--2.pcd
+opt_map: start to read and--3.pcd
+opt_map: start to read and--4.pcd
+opt_map: start to read and--5.pcd
+opt_map: start to read and--6.pcd
+opt_map: start to read and--7.pcd
+opt_map: start to read and--8.pcd
+opt_map: start to read aoi--21.pcd
+opt_map: start to read aoi--211.pcd
+opt_map: start to read aoi--22.pcd
+opt_map: start to read aoi--221.pcd
+opt_map: start to read aoi--222.pcd
+opt_map: start to read aoi--31.pcd
+opt_map: start to read aoi--32.pcd
+opt_map: start to read aoi--33.pcd
+opt_map: start to read bgate--2.pcd
+opt_map: start to read enor--2.pcd
+opt_map: start to read eor--2.pcd
+opt_map: start to read high-.pcd
+opt_map: start to read inv-.pcd
+opt_map: start to read low-.pcd
+opt_map: start to read nand--2.pcd
+opt_map: start to read nand--3.pcd
+opt_map: start to read nand--4.pcd
+opt_map: start to read nand--5.pcd
+opt_map: start to read nand--6.pcd
+opt_map: start to read nand--7.pcd
+opt_map: start to read nand--8.pcd
+opt_map: start to read ninv-.pcd
+opt_map: start to read nor--2.pcd
+opt_map: start to read nor--3.pcd
+opt_map: start to read nor--4.pcd
+opt_map: start to read nor--5.pcd
+opt_map: start to read nor--6.pcd
+opt_map: start to read nor--7.pcd
+opt_map: start to read nor--8.pcd
+opt_map: start to read oai--21.pcd
+opt_map: start to read oai--211.pcd
+opt_map: start to read oai--22.pcd
+opt_map: start to read oai--221.pcd
+opt_map: start to read oai--222.pcd
+opt_map: start to read oai--31.pcd
+opt_map: start to read oai--32.pcd
+opt_map: start to read oai--33.pcd
+opt_map: start to read or--2.pcd
+opt_map: start to read or--3.pcd
+opt_map: start to read or--4.pcd
+opt_map: start to read or--5.pcd
+opt_map: start to read or--6.pcd
+opt_map: start to read or--7.pcd
+opt_map: start to read or--8.pcd
+opt_map: start to read reg---1.pcd
+opt_map: start to read reg--1.pcd
+opt_map: start to read reg-1.pcd
+opt_map: start to read regr-1.pcd
+opt_map: start to read regs-1.pcd
+opt_map: start to read sreg---1.pcd
+opt_map: start to read sreg--1.pcd
+opt_map: start to read sreg-1.pcd
+opt_map: start to read srgr-1.pcd
+opt_map: start to read srgs-1.pcd
+opt_map: start to read ts_buf-.pcd
+** load library from /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start_ex.dir **
+** install top module (shift32) **
+opt_map: start to read shift32.1st/shift32.nld
+opt_map: start to read shift32.1st/inst-dum.nld
+opt_map: start to read shift32.1st/sl1-2.nld
+opt_map: start to read shift32.1st/sl32-3.nld
+opt_map: start to read shift32.1st/sl1-3.nld
+####### start #############################
+    all statistics calculated
+--- initial statistics summary ------------
+	position   = /
+	type       = NLD
+	class_name = shift32
+	power      = 2519.8
+	area       = 367.91
+	gates      = 1488
+
+		synthesized gates = 42
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- initial component summary -------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+nld            0            15            0           0            0 inst-dum
+nld            6             1           10           1            6 sl1-2
+nld          288             5         2416         354         1440 sl32-3
+pcd            0             1            0           0            0 high-
+pcd            1             6            8           2            6 inv-
+pcd            0             1            0           0            0 low-
+pcd            2            16           75          10           32 nor--2
+pcd            4             1           10           1            4 nor--3
+-------------------------------------------------------------------------------
+pcd_total                   25           94          13           42
+####### remove ############################
+####### after remove ######################
+    all statistics calculated
+--- statistics summary --------------------
+	position   = /
+	type       = NLD
+	class_name = shift32
+	power      = 2274.1
+	area       = 331.62
+	gates      = 1340
+
+		synthesized gates = 42
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- component summary ---------------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+nld            3             1            5           1            3 sl1-2
+nld          210             5         2176         318         1295 sl32-3
+pcd            1             6            8           2            6 inv-
+pcd            2            16           75          10           32 nor--2
+pcd            4             1           10           1            4 nor--3
+-------------------------------------------------------------------------------
+pcd_total                   23           94          13           42
+OK!
+####### ONSET iteration 1 #######
+####### apply ONSET on each flatten submodule ########
+type class   power         area                 gates  sub_mod_name
+-------------------------------------------------------------------
+nld  sl32-3  3.538000e+02  5.153000e+01           210  sel-1
+nld  sl1-2   4.800000e+00  8.600000e-01             3  s
+nld  sl32-3  4.202000e+02  6.137000e+01           250  o8
+nld  sl32-3  4.534000e+02  6.629000e+01           270  o4
+nld  sl32-3  4.700000e+02  6.875000e+01           280  o2
+nld  sl32-3  4.783000e+02  6.998000e+01           285  o1
+--- flat & enclose at each nld in the top-module -------
+created a new sub_module. class: sl32-3_subc-1, name: sel-1_subm-1
+ nof_pcds: 25, nof_inputs: 12, nof_outputs: 9
+created a new sub_module. class: sl32-3_subc-2, name: sel-1_subm-2
+ nof_pcds: 24, nof_inputs: 12, nof_outputs: 8
+created a new sub_module. class: sl32-3_subc-3, name: sel-1_subm-3
+ nof_pcds: 24, nof_inputs: 12, nof_outputs: 8
+created a new sub_module. class: sl32-3_subc-4, name: sel-1_subm-4
+ nof_pcds: 24, nof_inputs: 12, nof_outputs: 8
+created a new sub_module. class: sl1-2_subc-1, name: s_subm-1
+ nof_pcds: 2, nof_inputs: 2, nof_outputs: 1
+sub_module(s_subm-1) was disclosed.
+created a new sub_module. class: sl32-3_subc-5, name: o8_subm-1
+ nof_pcds: 29, nof_inputs: 12, nof_outputs: 9
+created a new sub_module. class: sl32-3_subc-6, name: o8_subm-2
+ nof_pcds: 28, nof_inputs: 12, nof_outputs: 8
+created a new sub_module. class: sl32-3_subc-7, name: o8_subm-3
+ nof_pcds: 28, nof_inputs: 12, nof_outputs: 8
+created a new sub_module. class: sl32-3_subc-8, name: o8_subm-4
+ nof_pcds: 28, nof_inputs: 12, nof_outputs: 8
+created a new sub_module. class: sl32-3_subc-9, name: o4_subm-1
+ nof_pcds: 31, nof_inputs: 12, nof_outputs: 9
+created a new sub_module. class: sl32-3_subc-10, name: o4_subm-2
+ nof_pcds: 32, nof_inputs: 12, nof_outputs: 12
+created a new sub_module. class: sl32-3_subc-11, name: o4_subm-3
+ nof_pcds: 31, nof_inputs: 12, nof_outputs: 11
+created a new sub_module. class: sl32-3_subc-12, name: o4_subm-4
+ nof_pcds: 23, nof_inputs: 12, nof_outputs: 9
+created a new sub_module. class: sl32-3_subc-13, name: o4_subm-5
+ nof_pcds: 3, nof_inputs: 7, nof_outputs: 3
+created a new sub_module. class: sl32-3_subc-14, name: o4_subm-6
+ nof_pcds: 1, nof_inputs: 3, nof_outputs: 1
+sub_module(o4_subm-6) was disclosed.
+created a new sub_module. class: sl32-3_subc-14, name: o2_subm-1
+ nof_pcds: 34, nof_inputs: 12, nof_outputs: 11
+created a new sub_module. class: sl32-3_subc-15, name: o2_subm-2
+ nof_pcds: 34, nof_inputs: 12, nof_outputs: 11
+created a new sub_module. class: sl32-3_subc-16, name: o2_subm-3
+ nof_pcds: 30, nof_inputs: 12, nof_outputs: 13
+created a new sub_module. class: sl32-3_subc-17, name: o2_subm-4
+ nof_pcds: 23, nof_inputs: 11, nof_outputs: 7
+created a new sub_module. class: sl32-3_subc-18, name: o2_subm-5
+ nof_pcds: 1, nof_inputs: 3, nof_outputs: 1
+created a new sub_module. class: sl32-3_subc-19, name: o2_subm-6
+ nof_pcds: 1, nof_inputs: 3, nof_outputs: 1
+created a new sub_module. class: sl32-3_subc-20, name: o2_subm-7
+ nof_pcds: 1, nof_inputs: 3, nof_outputs: 1
+created a new sub_module. class: sl32-3_subc-21, name: o2_subm-8
+ nof_pcds: 1, nof_inputs: 3, nof_outputs: 1
+sub_module(o2_subm-8) was disclosed.
+sub_module(o2_subm-7) was disclosed.
+sub_module(o2_subm-6) was disclosed.
+sub_module(o2_subm-5) was disclosed.
+created a new sub_module. class: sl32-3_subc-18, name: o1_subm-1
+ nof_pcds: 34, nof_inputs: 12, nof_outputs: 11
+created a new sub_module. class: sl32-3_subc-19, name: o1_subm-2
+ nof_pcds: 30, nof_inputs: 12, nof_outputs: 13
+created a new sub_module. class: sl32-3_subc-20, name: o1_subm-3
+ nof_pcds: 28, nof_inputs: 12, nof_outputs: 11
+created a new sub_module. class: sl32-3_subc-21, name: o1_subm-4
+ nof_pcds: 21, nof_inputs: 12, nof_outputs: 12
+created a new sub_module. class: sl32-3_subc-22, name: o1_subm-5
+ nof_pcds: 10, nof_inputs: 11, nof_outputs: 4
+created a new sub_module. class: sl32-3_subc-23, name: o1_subm-6
+ nof_pcds: 1, nof_inputs: 3, nof_outputs: 1
+created a new sub_module. class: sl32-3_subc-24, name: o1_subm-7
+ nof_pcds: 1, nof_inputs: 3, nof_outputs: 1
+created a new sub_module. class: sl32-3_subc-25, name: o1_subm-8
+ nof_pcds: 1, nof_inputs: 3, nof_outputs: 1
+created a new sub_module. class: sl32-3_subc-26, name: o1_subm-9
+ nof_pcds: 1, nof_inputs: 3, nof_outputs: 1
+sub_module(o1_subm-9) was disclosed.
+sub_module(o1_subm-8) was disclosed.
+sub_module(o1_subm-7) was disclosed.
+sub_module(o1_subm-6) was disclosed.
+created a new sub_module. class: shift32_subc-1, name: shift32_subm-1
+ nof_pcds: 23, nof_inputs: 8, nof_outputs: 15
+    all statistics calculated
+opt_map: start to read shift32._dr/shift32_subc-1.nld
+  replacement was cancelled!
+   [/shift32_subm-1]
+	net_num is 31
+	dot_num is 87
+opt_map: start to read shift32._dr/sl32-3_subc-4.nld
+   [/sel-1/sel-1_subm-4]
+	change power   87.600000 to 115.400000
+	change area    12.760000 to 12.390000
+	change gates   52.000000 to 47.000000
+	net_num is 31
+	dot_num is 86
+opt_map: start to read shift32._dr/sl32-3_subc-3.nld
+   [/sel-1/sel-1_subm-3]
+	change power   87.600000 to 115.400000
+	change area    12.760000 to 12.390000
+	change gates   52.000000 to 47.000000
+	net_num is 31
+	dot_num is 86
+opt_map: start to read shift32._dr/sl32-3_subc-2.nld
+   [/sel-1/sel-1_subm-2]
+	change power   87.600000 to 115.400000
+	change area    12.760000 to 12.390000
+	change gates   52.000000 to 47.000000
+	net_num is 31
+	dot_num is 86
+opt_map: start to read shift32._dr/sl32-3_subc-1.nld
+   [/sel-1/sel-1_subm-1]
+	change power   91.000000 to 118.800000
+	change area    13.250000 to 12.880000
+	change gates   54.000000 to 49.000000
+	net_num is 32
+	dot_num is 90
+opt_map: start to read shift32._dr/sl32-3_subc-8.nld
+   [/o8/o8_subm-4]
+	change power   104.200000 to 121.400000
+	change area    15.220000 to 14.230000
+	change gates   62.000000 to 53.000000
+	net_num is 31
+	dot_num is 92
+opt_map: start to read shift32._dr/sl32-3_subc-7.nld
+   [/o8/o8_subm-3]
+	change power   104.200000 to 121.400000
+	change area    15.220000 to 14.230000
+	change gates   62.000000 to 53.000000
+	net_num is 31
+	dot_num is 92
+opt_map: start to read shift32._dr/sl32-3_subc-6.nld
+   [/o8/o8_subm-2]
+	change power   104.200000 to 121.400000
+	change area    15.220000 to 14.230000
+	change gates   62.000000 to 53.000000
+	net_num is 31
+	dot_num is 92
+opt_map: start to read shift32._dr/sl32-3_subc-5.nld
+   [/o8/o8_subm-1]
+	change power   107.600000 to 124.800000
+	change area    15.710000 to 14.720000
+	change gates   64.000000 to 55.000000
+	net_num is 32
+	dot_num is 96
+opt_map: start to read shift32._dr/sl32-3_subc-13.nld
+  replacement was cancelled!
+   [/o4/o4_subm-5]
+	net_num is 10
+	dot_num is 22
+opt_map: start to read shift32._dr/sl32-3_subc-12.nld
+   [/o4/o4_subm-4]
+	change power   85.700000 to 101.800000
+	change area    12.520000 to 12.080000
+	change gates   51.000000 to 46.000000
+	net_num is 30
+	dot_num is 85
+opt_map: start to read shift32._dr/sl32-3_subc-11.nld
+  replacement was cancelled!
+   [/o4/o4_subm-3]
+	net_num is 43
+	dot_num is 122
+opt_map: start to read shift32._dr/sl32-3_subc-10.nld
+  replacement was cancelled!
+   [/o4/o4_subm-2]
+	net_num is 44
+	dot_num is 126
+opt_map: start to read shift32._dr/sl32-3_subc-9.nld
+   [/o4/o4_subm-1]
+	change power   115.900000 to 127.800000
+	change area    16.940000 to 15.640000
+	change gates   69.000000 to 58.000000
+	net_num is 32
+	dot_num is 99
+opt_map: start to read shift32._dr/sl32-3_subc-17.nld
+   [/o2/o2_subm-4]
+	change power   87.200000 to 98.000000
+	change area    12.770000 to 12.020000
+	change gates   52.000000 to 45.000000
+	net_num is 27
+	dot_num is 79
+opt_map: start to read shift32._dr/sl32-3_subc-16.nld
+  replacement was cancelled!
+   [/o2/o2_subm-3]
+	net_num is 42
+	dot_num is 121
+opt_map: start to read shift32._dr/sl32-3_subc-15.nld
+  replacement was cancelled!
+   [/o2/o2_subm-2]
+	net_num is 46
+	dot_num is 132
+opt_map: start to read shift32._dr/sl32-3_subc-14.nld
+  replacement was cancelled!
+   [/o2/o2_subm-1]
+	net_num is 46
+	dot_num is 132
+opt_map: start to read shift32._dr/sl32-3_subc-22.nld
+  replacement was cancelled!
+   [/o1/o1_subm-5]
+	net_num is 21
+	dot_num is 49
+opt_map: start to read shift32._dr/sl32-3_subc-21.nld
+  replacement was cancelled!
+   [/o1/o1_subm-4]
+	net_num is 33
+	dot_num is 91
+opt_map: start to read shift32._dr/sl32-3_subc-20.nld
+  replacement was cancelled!
+   [/o1/o1_subm-3]
+	net_num is 40
+	dot_num is 113
+opt_map: start to read shift32._dr/sl32-3_subc-19.nld
+  replacement was cancelled!
+   [/o1/o1_subm-2]
+	net_num is 42
+	dot_num is 121
+opt_map: start to read shift32._dr/sl32-3_subc-18.nld
+  replacement was cancelled!
+   [/o1/o1_subm-1]
+	net_num is 46
+	dot_num is 132
+--- disclose -------------------------------
+sub_module(sel-1_subm-4) was disclosed.
+sub_module(sel-1_subm-3) was disclosed.
+sub_module(sel-1_subm-2) was disclosed.
+sub_module(sel-1_subm-1) was disclosed.
+sub_module(o8_subm-4) was disclosed.
+sub_module(o8_subm-3) was disclosed.
+sub_module(o8_subm-2) was disclosed.
+sub_module(o8_subm-1) was disclosed.
+sub_module(o4_subm-5) was disclosed.
+sub_module(o4_subm-4) was disclosed.
+sub_module(o4_subm-3) was disclosed.
+sub_module(o4_subm-2) was disclosed.
+sub_module(o4_subm-1) was disclosed.
+sub_module(o2_subm-4) was disclosed.
+sub_module(o2_subm-3) was disclosed.
+sub_module(o2_subm-2) was disclosed.
+sub_module(o2_subm-1) was disclosed.
+sub_module(o1_subm-5) was disclosed.
+sub_module(o1_subm-4) was disclosed.
+sub_module(o1_subm-3) was disclosed.
+sub_module(o1_subm-2) was disclosed.
+sub_module(o1_subm-1) was disclosed.
+sub_module(shift32_subm-1) was disclosed.
+####### after ONSET ###################
+    all statistics calculated
+--- statistics summary --------------------
+	position   = /
+	type       = NLD
+	class_name = shift32
+	power      = 2463.5
+	area       = 315.92
+	gates      = 1240
+
+		synthesized gates = 42
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- component summary ---------------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+nld            3             1            5           1            3 sl1-2
+nld          181             5         2365         302         1195 sl32-3
+pcd            1             6            8           2            6 inv-
+pcd            2            16           75          10           32 nor--2
+pcd            4             1           10           1            4 nor--3
+-------------------------------------------------------------------------------
+pcd_total                   23           94          13           42
+####### ONSET iteration 2 #######
+####### apply ONSET on each flatten submodule ########
+type class   power         area                 gates  sub_mod_name
+-------------------------------------------------------------------
+nld  sl32-3  4.524000e+02  4.672000e+01           181  sel-1
+nld  sl1-2   4.800000e+00  8.600000e-01             3  s
+nld  sl32-3  4.764000e+02  5.408000e+01           205  o8
+nld  sl32-3  4.772000e+02  6.344000e+01           251  o4
+nld  sl32-3  4.808000e+02  6.800000e+01           273  o2
+nld  sl32-3  4.783000e+02  6.998000e+01           285  o1
+--- flat & enclose at each nld in the top-module -------
+created a new sub_module. class: sl32-3_subc-1, name: sel-1_subm-1
+ nof_pcds: 20, nof_inputs: 12, nof_outputs: 12
+created a new sub_module. class: sl32-3_subc-2, name: sel-1_subm-2
+ nof_pcds: 16, nof_inputs: 12, nof_outputs: 8
+created a new sub_module. class: sl32-3_subc-3, name: sel-1_subm-3
+ nof_pcds: 16, nof_inputs: 12, nof_outputs: 8
+created a new sub_module. class: sl32-3_subc-4, name: sel-1_subm-4
+ nof_pcds: 16, nof_inputs: 12, nof_outputs: 8
+created a new sub_module. class: sl1-2_subc-1, name: s_subm-1
+ nof_pcds: 2, nof_inputs: 2, nof_outputs: 1
+sub_module(s_subm-1) was disclosed.
+created a new sub_module. class: sl32-3_subc-5, name: o8_subm-1
+ nof_pcds: 20, nof_inputs: 12, nof_outputs: 12
+created a new sub_module. class: sl32-3_subc-6, name: o8_subm-2
+ nof_pcds: 16, nof_inputs: 12, nof_outputs: 8
+created a new sub_module. class: sl32-3_subc-7, name: o8_subm-3
+ nof_pcds: 16, nof_inputs: 12, nof_outputs: 8
+created a new sub_module. class: sl32-3_subc-8, name: o8_subm-4
+ nof_pcds: 16, nof_inputs: 12, nof_outputs: 8
+created a new sub_module. class: sl32-3_subc-9, name: o4_subm-1
+ nof_pcds: 22, nof_inputs: 12, nof_outputs: 16
+created a new sub_module. class: sl32-3_subc-10, name: o4_subm-2
+ nof_pcds: 13, nof_inputs: 12, nof_outputs: 10
+created a new sub_module. class: sl32-3_subc-11, name: o4_subm-3
+ nof_pcds: 13, nof_inputs: 12, nof_outputs: 12
+created a new sub_module. class: sl32-3_subc-12, name: o4_subm-4
+ nof_pcds: 27, nof_inputs: 12, nof_outputs: 13
+created a new sub_module. class: sl32-3_subc-13, name: o4_subm-5
+ nof_pcds: 16, nof_inputs: 11, nof_outputs: 5
+created a new sub_module. class: sl32-3_subc-14, name: o4_subm-6
+ nof_pcds: 1, nof_inputs: 3, nof_outputs: 1
+created a new sub_module. class: sl32-3_subc-15, name: o4_subm-7
+ nof_pcds: 1, nof_inputs: 3, nof_outputs: 1
+created a new sub_module. class: sl32-3_subc-16, name: o4_subm-8
+ nof_pcds: 1, nof_inputs: 3, nof_outputs: 1
+created a new sub_module. class: sl32-3_subc-17, name: o4_subm-9
+ nof_pcds: 1, nof_inputs: 3, nof_outputs: 1
+created a new sub_module. class: sl32-3_subc-18, name: o4_subm-10
+ nof_pcds: 1, nof_inputs: 3, nof_outputs: 1
+created a new sub_module. class: sl32-3_subc-19, name: o4_subm-11
+ nof_pcds: 1, nof_inputs: 3, nof_outputs: 1
+created a new sub_module. class: sl32-3_subc-20, name: o4_subm-12
+ nof_pcds: 4, nof_inputs: 12, nof_outputs: 4
+created a new sub_module. class: sl32-3_subc-21, name: o4_subm-13
+ nof_pcds: 1, nof_inputs: 6, nof_outputs: 1
+sub_module(o4_subm-13) was disclosed.
+sub_module(o4_subm-11) was disclosed.
+sub_module(o4_subm-10) was disclosed.
+sub_module(o4_subm-9) was disclosed.
+sub_module(o4_subm-8) was disclosed.
+sub_module(o4_subm-7) was disclosed.
+sub_module(o4_subm-6) was disclosed.
+created a new sub_module. class: sl32-3_subc-14, name: o2_subm-1
+ nof_pcds: 22, nof_inputs: 12, nof_outputs: 15
+created a new sub_module. class: sl32-3_subc-15, name: o2_subm-2
+ nof_pcds: 33, nof_inputs: 12, nof_outputs: 13
+created a new sub_module. class: sl32-3_subc-16, name: o2_subm-3
+ nof_pcds: 26, nof_inputs: 12, nof_outputs: 10
+created a new sub_module. class: sl32-3_subc-17, name: o2_subm-4
+ nof_pcds: 25, nof_inputs: 12, nof_outputs: 15
+created a new sub_module. class: sl32-3_subc-18, name: o2_subm-5
+ nof_pcds: 6, nof_inputs: 10, nof_outputs: 3
+created a new sub_module. class: sl32-3_subc-19, name: o2_subm-6
+ nof_pcds: 1, nof_inputs: 3, nof_outputs: 1
+created a new sub_module. class: sl32-3_subc-21, name: o2_subm-7
+ nof_pcds: 1, nof_inputs: 3, nof_outputs: 1
+created a new sub_module. class: sl32-3_subc-22, name: o2_subm-8
+ nof_pcds: 1, nof_inputs: 3, nof_outputs: 1
+created a new sub_module. class: sl32-3_subc-23, name: o2_subm-9
+ nof_pcds: 1, nof_inputs: 3, nof_outputs: 1
+created a new sub_module. class: sl32-3_subc-24, name: o2_subm-10
+ nof_pcds: 1, nof_inputs: 3, nof_outputs: 1
+created a new sub_module. class: sl32-3_subc-25, name: o2_subm-11
+ nof_pcds: 1, nof_inputs: 5, nof_outputs: 1
+sub_module(o2_subm-11) was disclosed.
+sub_module(o2_subm-10) was disclosed.
+sub_module(o2_subm-9) was disclosed.
+sub_module(o2_subm-8) was disclosed.
+sub_module(o2_subm-7) was disclosed.
+sub_module(o2_subm-6) was disclosed.
+created a new sub_module. class: sl32-3_subc-19, name: o1_subm-1
+ nof_pcds: 34, nof_inputs: 12, nof_outputs: 11
+created a new sub_module. class: sl32-3_subc-21, name: o1_subm-2
+ nof_pcds: 30, nof_inputs: 12, nof_outputs: 13
+created a new sub_module. class: sl32-3_subc-22, name: o1_subm-3
+ nof_pcds: 28, nof_inputs: 12, nof_outputs: 11
+created a new sub_module. class: sl32-3_subc-23, name: o1_subm-4
+ nof_pcds: 21, nof_inputs: 12, nof_outputs: 12
+created a new sub_module. class: sl32-3_subc-24, name: o1_subm-5
+ nof_pcds: 10, nof_inputs: 11, nof_outputs: 4
+created a new sub_module. class: sl32-3_subc-25, name: o1_subm-6
+ nof_pcds: 1, nof_inputs: 3, nof_outputs: 1
+created a new sub_module. class: sl32-3_subc-26, name: o1_subm-7
+ nof_pcds: 1, nof_inputs: 3, nof_outputs: 1
+created a new sub_module. class: sl32-3_subc-27, name: o1_subm-8
+ nof_pcds: 1, nof_inputs: 3, nof_outputs: 1
+created a new sub_module. class: sl32-3_subc-28, name: o1_subm-9
+ nof_pcds: 1, nof_inputs: 3, nof_outputs: 1
+sub_module(o1_subm-9) was disclosed.
+sub_module(o1_subm-8) was disclosed.
+sub_module(o1_subm-7) was disclosed.
+sub_module(o1_subm-6) was disclosed.
+created a new sub_module. class: shift32_subc-1, name: shift32_subm-1
+ nof_pcds: 23, nof_inputs: 8, nof_outputs: 15
+    all statistics calculated
+opt_map: start to read shift32._dr/shift32_subc-1.nld
+  replacement was cancelled!
+   [/shift32_subm-1]
+	net_num is 31
+	dot_num is 87
+opt_map: start to read shift32._dr/sl32-3_subc-4.nld
+  replacement was cancelled!
+   [/sel-1/sel-1_subm-4]
+	net_num is 28
+	dot_num is 80
+opt_map: start to read shift32._dr/sl32-3_subc-3.nld
+  replacement was cancelled!
+   [/sel-1/sel-1_subm-3]
+	net_num is 28
+	dot_num is 80
+opt_map: start to read shift32._dr/sl32-3_subc-2.nld
+  replacement was cancelled!
+   [/sel-1/sel-1_subm-2]
+	net_num is 28
+	dot_num is 80
+opt_map: start to read shift32._dr/sl32-3_subc-1.nld
+  replacement was cancelled!
+   [/sel-1/sel-1_subm-1]
+	net_num is 32
+	dot_num is 93
+opt_map: start to read shift32._dr/sl32-3_subc-8.nld
+  replacement was cancelled!
+   [/o8/o8_subm-4]
+	net_num is 28
+	dot_num is 86
+opt_map: start to read shift32._dr/sl32-3_subc-7.nld
+  replacement was cancelled!
+   [/o8/o8_subm-3]
+	net_num is 28
+	dot_num is 86
+opt_map: start to read shift32._dr/sl32-3_subc-6.nld
+  replacement was cancelled!
+   [/o8/o8_subm-2]
+	net_num is 28
+	dot_num is 86
+opt_map: start to read shift32._dr/sl32-3_subc-5.nld
+  replacement was cancelled!
+   [/o8/o8_subm-1]
+	net_num is 32
+	dot_num is 99
+opt_map: start to read shift32._dr/sl32-3_subc-20.nld
+  replacement was cancelled!
+   [/o4/o4_subm-12]
+	net_num is 16
+	dot_num is 42
+opt_map: start to read shift32._dr/sl32-3_subc-13.nld
+   [/o4/o4_subm-5]
+	change power   61.900000 to 74.800000
+	change area    9.090000 to 8.770000
+	change gates   37.000000 to 33.000000
+	net_num is 23
+	dot_num is 61
+opt_map: start to read shift32._dr/sl32-3_subc-12.nld
+  replacement was cancelled!
+   [/o4/o4_subm-4]
+	net_num is 39
+	dot_num is 111
+opt_map: start to read shift32._dr/sl32-3_subc-11.nld
+  replacement was cancelled!
+   [/o4/o4_subm-3]
+	net_num is 25
+	dot_num is 63
+opt_map: start to read shift32._dr/sl32-3_subc-10.nld
+  replacement was cancelled!
+   [/o4/o4_subm-2]
+	net_num is 25
+	dot_num is 66
+opt_map: start to read shift32._dr/sl32-3_subc-9.nld
+  replacement was cancelled!
+   [/o4/o4_subm-1]
+	net_num is 34
+	dot_num is 102
+opt_map: start to read shift32._dr/sl32-3_subc-18.nld
+  replacement was cancelled!
+   [/o2/o2_subm-5]
+	net_num is 16
+	dot_num is 34
+opt_map: start to read shift32._dr/sl32-3_subc-17.nld
+  replacement was cancelled!
+   [/o2/o2_subm-4]
+	net_num is 37
+	dot_num is 106
+opt_map: start to read shift32._dr/sl32-3_subc-16.nld
+   [/o2/o2_subm-3]
+	change power   97.400000 to 108.200000
+	change area    14.240000 to 13.490000
+	change gates   58.000000 to 51.000000
+	net_num is 31
+	dot_num is 92
+opt_map: start to read shift32._dr/sl32-3_subc-15.nld
+  replacement was cancelled!
+   [/o2/o2_subm-2]
+	net_num is 45
+	dot_num is 130
+opt_map: start to read shift32._dr/sl32-3_subc-14.nld
+  replacement was cancelled!
+   [/o2/o2_subm-1]
+	net_num is 34
+	dot_num is 103
+opt_map: start to read shift32._dr/sl32-3_subc-24.nld
+  replacement was cancelled!
+   [/o1/o1_subm-5]
+	net_num is 21
+	dot_num is 49
+opt_map: start to read shift32._dr/sl32-3_subc-23.nld
+  replacement was cancelled!
+   [/o1/o1_subm-4]
+	net_num is 33
+	dot_num is 91
+opt_map: start to read shift32._dr/sl32-3_subc-22.nld
+  replacement was cancelled!
+   [/o1/o1_subm-3]
+	net_num is 40
+	dot_num is 113
+opt_map: start to read shift32._dr/sl32-3_subc-21.nld
+  replacement was cancelled!
+   [/o1/o1_subm-2]
+	net_num is 42
+	dot_num is 121
+opt_map: start to read shift32._dr/sl32-3_subc-19.nld
+  replacement was cancelled!
+   [/o1/o1_subm-1]
+	net_num is 46
+	dot_num is 132
+--- disclose -------------------------------
+sub_module(sel-1_subm-4) was disclosed.
+sub_module(sel-1_subm-3) was disclosed.
+sub_module(sel-1_subm-2) was disclosed.
+sub_module(sel-1_subm-1) was disclosed.
+sub_module(o8_subm-4) was disclosed.
+sub_module(o8_subm-3) was disclosed.
+sub_module(o8_subm-2) was disclosed.
+sub_module(o8_subm-1) was disclosed.
+sub_module(o4_subm-12) was disclosed.
+sub_module(o4_subm-5) was disclosed.
+sub_module(o4_subm-4) was disclosed.
+sub_module(o4_subm-3) was disclosed.
+sub_module(o4_subm-2) was disclosed.
+sub_module(o4_subm-1) was disclosed.
+sub_module(o2_subm-5) was disclosed.
+sub_module(o2_subm-4) was disclosed.
+sub_module(o2_subm-3) was disclosed.
+sub_module(o2_subm-2) was disclosed.
+sub_module(o2_subm-1) was disclosed.
+sub_module(o1_subm-5) was disclosed.
+sub_module(o1_subm-4) was disclosed.
+sub_module(o1_subm-3) was disclosed.
+sub_module(o1_subm-2) was disclosed.
+sub_module(o1_subm-1) was disclosed.
+sub_module(shift32_subm-1) was disclosed.
+####### after ONSET ###################
+    all statistics calculated
+--- statistics summary --------------------
+	position   = /
+	type       = NLD
+	class_name = shift32
+	power      = 2478.8
+	area       = 312.63
+	gates      = 1223
+
+		synthesized gates = 42
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- component summary ---------------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+nld            3             1            5           1            3 sl1-2
+nld          181             5         2380         299         1178 sl32-3
+pcd            1             6            8           2            6 inv-
+pcd            2            16           75          10           32 nor--2
+pcd            4             1           10           1            4 nor--3
+-------------------------------------------------------------------------------
+pcd_total                   23           94          13           42
+####### output ############################
+** check level 1 **
+** check level 2 **
+rm -f shift32._tp
+touch shift32.2off
+rm -rf shift32.3rd shift32.3on shift32.3off
+mkdir shift32.3rd
+rinv shift32 shift32.2nd /home/users/ecs/nobuya/opt/parthenon/sfl_lib.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start_ex.dir -w shift32.3rd
+touch shift32.3off
+cat /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/opt_scr.op2 | sed 's/TargeT/shift32/' > shift32.op2
+cat /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/opt_scr.cpb | sed 's/TargeT/shift32/' \
+	| sed 's/InputpiN/12/' > shift32.tmp
+echo "echo OK!" > shift32.cpb
+ITR_TIMES=1 ;\
+	while (test $ITR_TIMES -le 2) \
+	do \
+	   echo "making script file for ONSET CPB iteration $ITR_TIMES" ;\
+	   echo "echo ####### ONSET CPB iteration $ITR_TIMES #######" >> shift32.cpb ;\
+	   cat shift32.tmp >> shift32.cpb ;\
+	   ITR_TIMES=`expr $ITR_TIMES + 1` ;\
+	done
+making script file for ONSET CPB iteration 1
+making script file for ONSET CPB iteration 2
+rm -f shift32.tmp
+rm -rf shift32.4th shift32.4on shift32.4off
+mkdir shift32.4th
+echo shift32.op2 | opt_map shift32 shift32.3rd /home/users/ecs/nobuya/opt/parthenon/sfl_lib.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start_ex.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/cell.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/cell_ex.dir 
+--------- submodule shift32_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/delay.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/delay.scr) ####
+--------- submodule shift32_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/delay.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/delay.scr) ####
+
++-------------------------------------------------------------+
+| OPT_MAP       3.0 2002/08/31 (i686-Linux-2.6.27-10-generic) |
+|             This program is a part of the PARTHENON system. |
+|                                 Copyright (C) 1989-2002 NTT |
++-------------------------------------------------------------+
+
+** load library from shift32.3rd **
+** load library from /home/users/ecs/nobuya/opt/parthenon/sfl_lib.dir **
+opt_map: start to read r1024_8.pcd
+opt_map: start to read r256_8.pcd
+opt_map: start to read r64_8.pcd
+** load library from /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start.dir **
+opt_map: start to read and--2.pcd
+opt_map: start to read and--3.pcd
+opt_map: start to read and--4.pcd
+opt_map: start to read and--5.pcd
+opt_map: start to read and--6.pcd
+opt_map: start to read and--7.pcd
+opt_map: start to read and--8.pcd
+opt_map: start to read aoi--21.pcd
+opt_map: start to read aoi--211.pcd
+opt_map: start to read aoi--22.pcd
+opt_map: start to read aoi--221.pcd
+opt_map: start to read aoi--222.pcd
+opt_map: start to read aoi--31.pcd
+opt_map: start to read aoi--32.pcd
+opt_map: start to read aoi--33.pcd
+opt_map: start to read bgate--2.pcd
+opt_map: start to read enor--2.pcd
+opt_map: start to read eor--2.pcd
+opt_map: start to read high-.pcd
+opt_map: start to read inv-.pcd
+opt_map: start to read low-.pcd
+opt_map: start to read nand--2.pcd
+opt_map: start to read nand--3.pcd
+opt_map: start to read nand--4.pcd
+opt_map: start to read nand--5.pcd
+opt_map: start to read nand--6.pcd
+opt_map: start to read nand--7.pcd
+opt_map: start to read nand--8.pcd
+opt_map: start to read ninv-.pcd
+opt_map: start to read nor--2.pcd
+opt_map: start to read nor--3.pcd
+opt_map: start to read nor--4.pcd
+opt_map: start to read nor--5.pcd
+opt_map: start to read nor--6.pcd
+opt_map: start to read nor--7.pcd
+opt_map: start to read nor--8.pcd
+opt_map: start to read oai--21.pcd
+opt_map: start to read oai--211.pcd
+opt_map: start to read oai--22.pcd
+opt_map: start to read oai--221.pcd
+opt_map: start to read oai--222.pcd
+opt_map: start to read oai--31.pcd
+opt_map: start to read oai--32.pcd
+opt_map: start to read oai--33.pcd
+opt_map: start to read or--2.pcd
+opt_map: start to read or--3.pcd
+opt_map: start to read or--4.pcd
+opt_map: start to read or--5.pcd
+opt_map: start to read or--6.pcd
+opt_map: start to read or--7.pcd
+opt_map: start to read or--8.pcd
+opt_map: start to read reg---1.pcd
+opt_map: start to read reg--1.pcd
+opt_map: start to read reg-1.pcd
+opt_map: start to read regr-1.pcd
+opt_map: start to read regs-1.pcd
+opt_map: start to read sreg---1.pcd
+opt_map: start to read sreg--1.pcd
+opt_map: start to read sreg-1.pcd
+opt_map: start to read srgr-1.pcd
+opt_map: start to read srgs-1.pcd
+opt_map: start to read ts_buf-.pcd
+** load library from /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start_ex.dir **
+** load library from /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/cell.dir **
+opt_map: start to read an1_i2.pcd
+opt_map: start to read an1_i3.pcd
+opt_map: start to read an1_i4.pcd
+opt_map: start to read an1_i5.pcd
+opt_map: start to read an1_i6.pcd
+opt_map: start to read an1_i7.pcd
+opt_map: start to read an1_i8.pcd
+opt_map: start to read an3_i2.pcd
+opt_map: start to read an3_i3.pcd
+opt_map: start to read an3_i4.pcd
+opt_map: start to read an3_i5.pcd
+opt_map: start to read an3_i6.pcd
+opt_map: start to read an3_i7.pcd
+opt_map: start to read an3_i8.pcd
+opt_map: start to read ao_i21.pcd
+opt_map: start to read ao_i211.pcd
+opt_map: start to read ao_i22.pcd
+opt_map: start to read ao_i221.pcd
+opt_map: start to read ao_i222.pcd
+opt_map: start to read ao_i31.pcd
+opt_map: start to read ao_i32.pcd
+opt_map: start to read ao_i33.pcd
+opt_map: start to read bf1_i1.pcd
+opt_map: start to read bf2_i1.pcd
+opt_map: start to read bf3_i1.pcd
+opt_map: start to read bgnd1_i2.pcd
+opt_map: start to read bgnd3_i2.pcd
+opt_map: start to read cbf1_i1.pcd
+opt_map: start to read cbf2_i1.pcd
+opt_map: start to read cbf3_i1.pcd
+opt_map: start to read dbf1_i1.pcd
+opt_map: start to read dbf2_i1.pcd
+opt_map: start to read dbf3_i1.pcd
+opt_map: start to read dt_reg.pcd
+opt_map: start to read dt_sreg.pcd
+opt_map: start to read dtr_reg.pcd
+opt_map: start to read dtr_sreg.pcd
+opt_map: start to read dts_reg.pcd
+opt_map: start to read dts_sreg.pcd
+opt_map: start to read high-.pcd
+    skip this (module 'high-.pcd' is already installed)
+opt_map: start to read in1_i1.pcd
+opt_map: start to read in2_i1.pcd
+opt_map: start to read in3_i1.pcd
+opt_map: start to read low-.pcd
+    skip this (module 'low-.pcd' is already installed)
+opt_map: start to read nd1_i2.pcd
+opt_map: start to read nd1_i3.pcd
+opt_map: start to read nd1_i4.pcd
+opt_map: start to read nd1_i5.pcd
+opt_map: start to read nd1_i6.pcd
+opt_map: start to read nd1_i7.pcd
+opt_map: start to read nd1_i8.pcd
+opt_map: start to read nd3_i2.pcd
+opt_map: start to read nd3_i3.pcd
+opt_map: start to read nd3_i4.pcd
+opt_map: start to read nd3_i5.pcd
+opt_map: start to read nd3_i6.pcd
+opt_map: start to read nd3_i7.pcd
+opt_map: start to read nd3_i8.pcd
+opt_map: start to read nr1_i2.pcd
+opt_map: start to read nr1_i3.pcd
+opt_map: start to read nr1_i4.pcd
+opt_map: start to read nr1_i5.pcd
+opt_map: start to read nr1_i6.pcd
+opt_map: start to read nr1_i7.pcd
+opt_map: start to read nr1_i8.pcd
+opt_map: start to read nr3_i2.pcd
+opt_map: start to read nr3_i3.pcd
+opt_map: start to read nr3_i4.pcd
+opt_map: start to read nr3_i5.pcd
+opt_map: start to read nr3_i6.pcd
+opt_map: start to read nr3_i7.pcd
+opt_map: start to read nr3_i8.pcd
+opt_map: start to read oa_i21.pcd
+opt_map: start to read oa_i211.pcd
+opt_map: start to read oa_i22.pcd
+opt_map: start to read oa_i221.pcd
+opt_map: start to read oa_i222.pcd
+opt_map: start to read oa_i31.pcd
+opt_map: start to read oa_i32.pcd
+opt_map: start to read oa_i33.pcd
+opt_map: start to read or1_i2.pcd
+opt_map: start to read or1_i3.pcd
+opt_map: start to read or1_i4.pcd
+opt_map: start to read or1_i5.pcd
+opt_map: start to read or1_i6.pcd
+opt_map: start to read or1_i7.pcd
+opt_map: start to read or1_i8.pcd
+opt_map: start to read or3_i2.pcd
+opt_map: start to read or3_i3.pcd
+opt_map: start to read or3_i4.pcd
+opt_map: start to read or3_i5.pcd
+opt_map: start to read or3_i6.pcd
+opt_map: start to read or3_i7.pcd
+opt_map: start to read or3_i8.pcd
+opt_map: start to read sts_reg.pcd
+opt_map: start to read sts_sreg.pcd
+opt_map: start to read tbf1_i2.pcd
+opt_map: start to read tbf2_i2.pcd
+opt_map: start to read tbf3_i2.pcd
+opt_map: start to read tsk_reg.pcd
+opt_map: start to read tsk_sreg.pcd
+opt_map: start to read xn1_i2.pcd
+opt_map: start to read xn3_i2.pcd
+opt_map: start to read xo1_i2.pcd
+opt_map: start to read xo3_i2.pcd
+** load library from /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/cell_ex.dir **
+** install top module (shift32) **
+opt_map: start to read shift32.3rd/shift32.nld
+opt_map: start to read shift32.3rd/shift32_sl1-2-1.nld
+opt_map: start to read shift32.3rd/shift32_sl32-3-1.nld
+opt_map: start to read shift32.3rd/shift32_sl32-3_m1-1.nld
+opt_map: start to read shift32.3rd/shift32_sl32-3_m2-1.nld
+opt_map: start to read shift32.3rd/shift32_sl32-3_m3-1.nld
+opt_map: start to read shift32.3rd/shift32_sl32-3_m4-1.nld
+####### start  ############################
+    all statistics calculated
+--- initial statistics summary ------------
+	position   = /
+	type       = NLD
+	class_name = shift32
+	power      = 2420.1
+	area       = 284.94
+	gates      = 1142
+
+		synthesized gates = 62
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- initial component summary -------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+nld            2             1            3           0            2 shift32_sl1-2-1
+nld          285             1          478          70          285 shift32_sl32-3-1
+nld          252             1          496          63          252 shift32_sl32-3_m1-1
+nld          225             1          462          55          225 shift32_sl32-3_m2-1
+nld          170             1          461          43          170 shift32_sl32-3_m3-1
+nld          146             1          403          34          146 shift32_sl32-3_m4-1
+pcd            1            26           36          10           26 inv-
+pcd            2             4           14           2            8 nand--2
+pcd            2            12           56           7           24 nor--2
+pcd            4             1           10           1            4 nor--3
+-------------------------------------------------------------------------------
+pcd_total                   43          116          20           62
+####### remove ############################
+####### after remove ######################
+    all statistics calculated
+--- statistics summary --------------------
+	position   = /
+	type       = NLD
+	class_name = shift32
+	power      = 2420.1
+	area       = 284.94
+	gates      = 1142
+
+		synthesized gates = 62
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- component summary ---------------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+nld            2             1            3           0            2 shift32_sl1-2-1
+nld          285             1          478          70          285 shift32_sl32-3-1
+nld          252             1          496          63          252 shift32_sl32-3_m1-1
+nld          225             1          462          55          225 shift32_sl32-3_m2-1
+nld          170             1          461          43          170 shift32_sl32-3_m3-1
+nld          146             1          403          34          146 shift32_sl32-3_m4-1
+pcd            1            26           36          10           26 inv-
+pcd            2             4           14           2            8 nand--2
+pcd            2            12           56           7           24 nor--2
+pcd            4             1           10           1            4 nor--3
+-------------------------------------------------------------------------------
+pcd_total                   43          116          20           62
+####### set conditions ####################
+    top module pin initialized
+        normal net    410
+        in calc net     0
+        source net     40
+        inhibit net     0
+        sink net        0
+    no pin found
+    no pin found
+    no pin found
+    no pin found
+??error ext_pin(scan_clock) is not found
+####### initial constraint ################
+    all statistics calculated
+    all load calculated
+    all delay calculated
+
+    --- failure constraint histogram for power up -----------------------
+    5.23000e+00    4 
+    4.70700e+00    2 
+    4.18400e+00    2 
+    3.66100e+00    1 
+    3.13800e+00    2 
+    2.61500e+00    3 
+    2.09200e+00    5 
+    1.56900e+00    0 
+    1.04600e+00   33 ****
+    5.23000e-01  358 **************************************************
+    ---------------------------------------------------------------------
+    total        410
+    maximum difference  5.23000e+00
+    minimum difference  6.80000e-02
+    average difference  4.46024e-01
+
+    --- no failure constraint for speed up -----
+
+    --- no failure constraint for speed down ---
+
+    --- no failure constraint for power down ---
+
+####### optimize ##########################
+   [power up]    replaced to /nor-1(nr1_i2) from (nor--2)
+ ?  more improvement should be done
+   [power up]    replaced to /nor-3(nr1_i2) from (nor--2)
+ ?  more improvement should be done
+   [power up]    replaced to /nor-2(nr1_i2) from (nor--2)
+ ?  more improvement should be done
+   [power up]    replaced to /nor-10(nr1_i2) from (nor--2)
+ ?  more improvement should be done
+   [power up]    replaced to /nor-12(nr1_i2) from (nor--2)
+ ?  more improvement should be done
+   [power up]    replaced to /nor-11(nr1_i2) from (nor--2)
+ ?  more improvement should be done
+   [power up]    replaced to /nor-6(nr1_i2) from (nor--2)
+ ?  more improvement should be done
+   [power up]    replaced to /inv-19(in1_i1) from (inv-)
+ ?  more improvement should be done
+   [power up]    replaced to /nor-8(nr3_i2) from (nor--2)
+   [power up]    replaced to /nor-7(nr3_i2) from (nor--2)
+   [power up]    replaced to /nor-9(nr3_i2) from (nor--2)
+   [power up]    replaced to /nand-3(nd3_i2) from (nand--2)
+   [power up]    replaced to /inv-17(in2_i1) from (inv-)
+   [power up]    replaced to /nand-4(nd3_i2) from (nand--2)
+   [power up]    replaced to /sel-1/nand-1(nd3_i2) from (nand--2)
+   [power up]    replaced to /nand-2(nd3_i2) from (nand--2)
+   [power up]    replaced to /inv-4(in2_i1) from (inv-)
+   [power up]    replaced to /inv-1(in2_i1) from (inv-)
+   [power up]    replaced to /nand-1(nd3_i2) from (nand--2)
+   [power up]    replaced to /o8/nor-1(nr1_i2) from (nor--2)
+   [power up]    replaced to /nor-13(nr3_i3) from (nor--3)
+   [power up]    replaced to /nor-5(nr1_i2) from (nor--2)
+   [power up]    replaced to /inv-20(in1_i1) from (inv-)
+   [power up]    replaced to /o4/nand-13(nd1_i2) from (nand--2)
+   [power up]    replaced to /inv-26(in1_i1) from (inv-)
+   [power up]    replaced to /o1/nand-101(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-103(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-104(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-106(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-108(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-110(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-111(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-112(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-113(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-114(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-116(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-123(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-125(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-126(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-127(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-98(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-99(nd1_i3) from (nand--3)
+   [power up]    replaced to /o2/nand-65(nd1_i3) from (nand--3)
+   [power up]    replaced to /o2/nand-67(nd1_i3) from (nand--3)
+   [power up]    replaced to /o2/nand-69(nd1_i3) from (nand--3)
+   [power up]    replaced to /o2/nand-73(nd1_i3) from (nand--3)
+   [power up]    replaced to /o2/nand-76(nd1_i3) from (nand--3)
+   [power up]    replaced to /o2/nand-78(nd1_i3) from (nand--3)
+   [power up]    replaced to /o2/nand-81(nd1_i3) from (nand--3)
+   [power up]    replaced to /inv-12(in1_i1) from (inv-)
+   [power up]    replaced to /inv-14(in1_i1) from (inv-)
+   [power up]    replaced to /inv-16(in1_i1) from (inv-)
+   [power up]    replaced to /o1/nand-109(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-100(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-115(nd1_i3) from (nand--3)
+   [power up]    replaced to /o2/aoi-6(ao_i222) from (aoi--222)
+   [power up]    replaced to /o2/aoi-8(ao_i222) from (aoi--222)
+   [power up]    replaced to /o1/nand-105(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-118(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-119(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-120(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-124(nd1_i3) from (nand--3)
+   [power up]    replaced to /o4/nand-43(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-107(nd1_i3) from (nand--3)
+   [power up]    replaced to /o4/nand-44(nd1_i3) from (nand--3)
+   [power up]    replaced to /o4/nand-49(nd1_i3) from (nand--3)
+   [power up]    replaced to /o4/nand-51(nd1_i3) from (nand--3)
+   [power up]    replaced to /o4/nand-52(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-102(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-117(nd1_i3) from (nand--3)
+   [power up]    replaced to /o4/nand-45(nd1_i3) from (nand--3)
+   [power up]    replaced to /o4/oai-3(oa_i211) from (oai--211)
+   [power up]    replaced to /o4/oai-8(oa_i221) from (oai--221)
+   [power up]    replaced to /o4/oai-11(oa_i222) from (oai--222)
+   [power up]    replaced to /o4/oai-12(oa_i222) from (oai--222)
+   [power up]    replaced to /o4/oai-13(oa_i222) from (oai--222)
+   [power up]    replaced to /o4/oai-18(oa_i222) from (oai--222)
+   [power up]    replaced to /o1/nand-121(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-97(nd1_i3) from (nand--3)
+   [power up]    replaced to /o2/nand-77(nd1_i3) from (nand--3)
+   [power up]    replaced to /o2/nand-79(nd1_i3) from (nand--3)
+   [power up]    replaced to /inv-23(in1_i1) from (inv-)
+   [power up]    replaced to /inv-24(in1_i1) from (inv-)
+   [power up]    replaced to /inv-25(in1_i1) from (inv-)
+   [power up]    replaced to /o4/oai-4(oa_i221) from (oai--221)
+   [power up]    replaced to /o4/oai-7(oa_i221) from (oai--221)
+   [power up]    replaced to /o2/aoi-7(ao_i222) from (aoi--222)
+   [power up]    replaced to /o4/oai-15(oa_i222) from (oai--222)
+   [power up]    replaced to /o4/oai-17(oa_i222) from (oai--222)
+   [power up]    replaced to /o1/nand-2(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-14(nd1_i2) from (nand--2)
+   [power up]    replaced to /s/nand-1(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/aoi-11(ao_i222) from (aoi--222)
+   [power up]    replaced to /o2/aoi-9(ao_i222) from (aoi--222)
+   [power up]    replaced to /o2/aoi-4(ao_i221) from (aoi--221)
+   [power up]    replaced to /o2/nand-7(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-70(nd1_i3) from (nand--3)
+   [power up]    replaced to /inv-15(in1_i1) from (inv-)
+   [power up]    replaced to /o2/aoi-3(ao_i221) from (aoi--221)
+   [power up]    replaced to /inv-10(in1_i1) from (inv-)
+   [power up]    replaced to /inv-11(in1_i1) from (inv-)
+   [power up]    replaced to /inv-13(in1_i1) from (inv-)
+   [power up]    replaced to /inv-7(in1_i1) from (inv-)
+   [power up]    replaced to /inv-8(in1_i1) from (inv-)
+   [power up]    replaced to /inv-22(in1_i1) from (inv-)
+   [power up]    replaced to /inv-5(in1_i1) from (inv-)
+   [power up]    replaced to /o4/nand-48(nd1_i3) from (nand--3)
+   [power up]    replaced to /o4/nand-50(nd1_i3) from (nand--3)
+   [power up]    replaced to /o4/nand-46(nd1_i3) from (nand--3)
+   [power up]    replaced to /o1/nand-122(nd1_i3) from (nand--3)
+   [power up]    replaced to /o4/nand-15(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-3(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-47(nd1_i3) from (nand--3)
+   [power up]    replaced to /o4/nand-53(nd1_i3) from (nand--3)
+   [power up]    replaced to /o4/oai-14(oa_i222) from (oai--222)
+   [power up]    replaced to /o8/aoi-19(ao_i222) from (aoi--222)
+   [power up]    replaced to /o8/aoi-22(ao_i222) from (aoi--222)
+   [power up]    replaced to /o8/aoi-23(ao_i222) from (aoi--222)
+   [power up]    replaced to /o8/aoi-25(ao_i222) from (aoi--222)
+   [power up]    replaced to /o8/aoi-26(ao_i222) from (aoi--222)
+   [power up]    replaced to /o8/aoi-27(ao_i222) from (aoi--222)
+   [power up]    replaced to /o8/aoi-28(ao_i222) from (aoi--222)
+   [power up]    replaced to /o8/aoi-29(ao_i222) from (aoi--222)
+   [power up]    replaced to /o8/aoi-30(ao_i222) from (aoi--222)
+   [power up]    replaced to /o8/aoi-31(ao_i222) from (aoi--222)
+   [power up]    replaced to /o4/oai-10(oa_i222) from (oai--222)
+   [power up]    replaced to /o4/oai-16(oa_i222) from (oai--222)
+   [power up]    replaced to /o4/oai-19(oa_i222) from (oai--222)
+   [power up]    replaced to /o4/oai-1(oa_i22) from (oai--22)
+   [power up]    replaced to /o4/oai-2(oa_i22) from (oai--22)
+   [power up]    replaced to /o4/oai-5(oa_i221) from (oai--221)
+   [power up]    replaced to /o4/oai-9(oa_i221) from (oai--221)
+   [power up]    replaced to /o2/aoi-5(ao_i222) from (aoi--222)
+   [power up]    replaced to /o8/aoi-17(ao_i222) from (aoi--222)
+   [power up]    replaced to /o8/aoi-18(ao_i222) from (aoi--222)
+   [power up]    replaced to /o8/aoi-20(ao_i222) from (aoi--222)
+   [power up]    replaced to /o8/aoi-21(ao_i222) from (aoi--222)
+   [power up]    replaced to /o8/aoi-24(ao_i222) from (aoi--222)
+   [power up]    replaced to /o8/aoi-32(ao_i222) from (aoi--222)
+   [power up]    replaced to /o8/aoi-10(ao_i221) from (aoi--221)
+   [power up]    replaced to /o8/aoi-11(ao_i221) from (aoi--221)
+   [power up]    replaced to /o8/aoi-12(ao_i221) from (aoi--221)
+   [power up]    replaced to /o8/aoi-16(ao_i221) from (aoi--221)
+   [power up]    replaced to /o8/aoi-9(ao_i221) from (aoi--221)
+   [power up]    replaced to /inv-6(in1_i1) from (inv-)
+   [power up]    replaced to /inv-9(in1_i1) from (inv-)
+   [power up]    replaced to /o4/oai-6(oa_i221) from (oai--221)
+   [power up]    replaced to /o8/aoi-1(ao_i22) from (aoi--22)
+   [power up]    replaced to /o8/aoi-13(ao_i221) from (aoi--221)
+   [power up]    replaced to /o8/aoi-14(ao_i221) from (aoi--221)
+   [power up]    replaced to /o8/aoi-15(ao_i221) from (aoi--221)
+   [power up]    replaced to /inv-2(in1_i1) from (inv-)
+   [power up]    replaced to /inv-3(in1_i1) from (inv-)
+   [power up]    replaced to /o8/aoi-2(ao_i22) from (aoi--22)
+   [power up]    replaced to /o8/aoi-3(ao_i22) from (aoi--22)
+   [power up]    replaced to /o8/aoi-4(ao_i22) from (aoi--22)
+   [power up]    replaced to /o8/aoi-5(ao_i22) from (aoi--22)
+   [power up]    replaced to /o8/aoi-6(ao_i22) from (aoi--22)
+   [power up]    replaced to /o8/aoi-7(ao_i22) from (aoi--22)
+   [power up]    replaced to /o8/aoi-8(ao_i22) from (aoi--22)
+   [power up]    replaced to /o1/nand-10(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-11(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-12(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-13(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-14(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-15(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-16(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-17(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-18(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-19(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-20(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-21(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-22(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-23(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-24(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-25(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-26(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-27(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-28(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-29(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-30(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-31(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-32(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-33(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-34(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-35(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-36(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-37(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-38(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-39(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-4(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-40(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-41(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-42(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-43(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-44(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-45(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-46(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-47(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-48(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-49(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-5(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-50(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-51(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-52(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-53(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-54(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-55(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-56(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-57(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-58(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-59(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-6(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-60(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-61(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-62(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-63(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-64(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-65(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-66(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-67(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-68(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-69(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-7(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-70(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-71(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-72(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-73(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-74(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-75(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-76(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-77(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-78(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-79(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-8(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-80(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-81(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-82(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-83(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-84(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-85(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-86(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-87(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-88(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-89(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-9(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-90(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-91(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-92(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-93(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-94(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-95(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-96(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-1(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-10(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-11(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-13(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-16(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-17(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-18(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-19(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-20(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-21(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-22(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-23(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-24(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-25(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-26(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-27(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-28(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-29(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-30(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-31(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-32(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-33(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-34(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-35(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-36(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-37(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-38(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-39(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-40(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-41(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-42(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-43(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-44(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-45(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-46(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-47(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-48(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-50(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-51(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-52(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-53(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-54(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-55(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-56(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-57(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-58(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-59(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-6(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-60(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-61(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-62(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-63(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-8(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-1(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-10(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-16(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-18(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-19(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-20(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-22(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-23(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-24(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-25(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-27(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-29(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-30(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-31(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-32(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-33(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-34(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-35(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-36(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-37(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-38(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-39(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-40(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-41(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-42(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-5(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-6(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-7(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-9(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-1(nd1_i2) from (nand--2)
+   [power up]    replaced to /o1/nand-3(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-12(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-15(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-2(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-4(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-11(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-14(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-2(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-4(nd1_i2) from (nand--2)
+   [power up]    replaced to /nor-4(nr1_i2) from (nor--2)
+   [power up]    replaced to /o2/nand-64(nd1_i3) from (nand--3)
+   [power up]    replaced to /o2/nand-66(nd1_i3) from (nand--3)
+   [power up]    replaced to /o2/nand-68(nd1_i3) from (nand--3)
+   [power up]    replaced to /o2/nand-71(nd1_i3) from (nand--3)
+   [power up]    replaced to /o2/nand-72(nd1_i3) from (nand--3)
+   [power up]    replaced to /o2/nand-74(nd1_i3) from (nand--3)
+   [power up]    replaced to /o2/nand-75(nd1_i3) from (nand--3)
+   [power up]    replaced to /o2/nand-80(nd1_i3) from (nand--3)
+   [power up]    replaced to /o4/nor-1(nr1_i2) from (nor--2)
+   [power up]    replaced to /o4/nor-2(nr1_i2) from (nor--2)
+   [power up]    replaced to /inv-18(in1_i1) from (inv-)
+   [power up]    replaced to /o2/nand-3(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-49(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-5(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/nand-9(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/inv-1(in1_i1) from (inv-)
+   [power up]    replaced to /o4/inv-2(in1_i1) from (inv-)
+   [power up]    replaced to /inv-21(in1_i1) from (inv-)
+   [power up]    replaced to /o2/aoi-10(ao_i222) from (aoi--222)
+   [power up]    replaced to /o2/aoi-12(ao_i222) from (aoi--222)
+   [power up]    replaced to /o4/nand-12(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-21(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-26(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-8(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/aoi-1(ao_i221) from (aoi--221)
+   [power up]    replaced to /o2/aoi-2(ao_i221) from (aoi--221)
+   [power up]    replaced to /o4/nand-17(nd1_i2) from (nand--2)
+   [power up]    replaced to /o4/nand-28(nd1_i2) from (nand--2)
+   [power up]    replaced to /o2/inv-1(in1_i1) from (inv-)
+   [power up]    replaced to /o2/inv-2(in1_i1) from (inv-)
+   [power up]    replaced to /o2/inv-3(in1_i1) from (inv-)
+   [power up]    replaced to /o2/inv-4(in1_i1) from (inv-)
+   [power up]    replaced to /sel-1/oai-1(oa_i22) from (oai--22)
+   [power up]    replaced to /sel-1/oai-10(oa_i22) from (oai--22)
+   [power up]    replaced to /sel-1/oai-11(oa_i22) from (oai--22)
+   [power up]    replaced to /sel-1/oai-12(oa_i22) from (oai--22)
+   [power up]    replaced to /sel-1/oai-13(oa_i22) from (oai--22)
+   [power up]    replaced to /sel-1/oai-14(oa_i22) from (oai--22)
+   [power up]    replaced to /sel-1/oai-15(oa_i22) from (oai--22)
+   [power up]    replaced to /sel-1/oai-16(oa_i22) from (oai--22)
+   [power up]    replaced to /sel-1/oai-2(oa_i22) from (oai--22)
+   [power up]    replaced to /sel-1/oai-3(oa_i22) from (oai--22)
+   [power up]    replaced to /sel-1/oai-4(oa_i22) from (oai--22)
+   [power up]    replaced to /sel-1/oai-5(oa_i22) from (oai--22)
+   [power up]    replaced to /sel-1/oai-6(oa_i22) from (oai--22)
+   [power up]    replaced to /sel-1/oai-7(oa_i22) from (oai--22)
+   [power up]    replaced to /sel-1/oai-8(oa_i22) from (oai--22)
+   [power up]    replaced to /sel-1/oai-9(oa_i22) from (oai--22)
+   [power up]    replaced to /sel-1/oai-17(oa_i221) from (oai--221)
+   [power up]    replaced to /sel-1/oai-18(oa_i221) from (oai--221)
+   [power up]    replaced to /sel-1/oai-19(oa_i221) from (oai--221)
+   [power up]    replaced to /sel-1/oai-20(oa_i221) from (oai--221)
+   [power up]    replaced to /sel-1/oai-21(oa_i221) from (oai--221)
+   [power up]    replaced to /sel-1/oai-22(oa_i221) from (oai--221)
+   [power up]    replaced to /sel-1/oai-23(oa_i221) from (oai--221)
+   [power up]    replaced to /sel-1/oai-24(oa_i221) from (oai--221)
+   [power up]    replaced to /sel-1/oai-25(oa_i221) from (oai--221)
+   [power up]    replaced to /sel-1/oai-26(oa_i221) from (oai--221)
+   [power up]    replaced to /sel-1/oai-27(oa_i221) from (oai--221)
+   [power up]    replaced to /sel-1/oai-28(oa_i221) from (oai--221)
+   [power up]    replaced to /sel-1/oai-29(oa_i221) from (oai--221)
+   [power up]    replaced to /sel-1/oai-30(oa_i221) from (oai--221)
+   [power up]    replaced to /sel-1/oai-31(oa_i221) from (oai--221)
+   [power up]    replaced to /sel-1/oai-32(oa_i221) from (oai--221)
+   [power up]    buffer buf0-0..buf0-1(dbf3_i1) inserted from /nor-1(nr1_i2) zn
+   [power up]    buffer buf0-0..buf0-1(dbf3_i1) inserted from /nor-3(nr1_i2) zn
+   [power up]    buffer buf0-0..buf0-1(dbf3_i1) inserted from /nor-2(nr1_i2) zn
+   [power up]    buffer buf0-0..buf0-1(dbf3_i1) inserted from /nor-10(nr1_i2) zn
+   [power up]    buffer buf0-0..buf0-1(dbf3_i1) inserted from /nor-12(nr1_i2) zn
+   [power up]    buffer buf0-0..buf0-1(dbf3_i1) inserted from /nor-11(nr1_i2) zn
+   [power up]    buffer buf0-0..buf0-1(dbf3_i1) inserted from /nor-6(nr1_i2) zn
+   [power up]    buffer buf0-0..buf0-1(dbf3_i1) inserted from /inv-19(in1_i1) zn
+####### flat ############################
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+pcd            4             8           80           8           32 ao_i22
+pcd            5            12          156          13           60 ao_i221
+pcd            6            24          408          38          144 ao_i222
+pcd            3            16          160          10           48 dbf3_i1
+pcd            1            29           41          11           29 in1_i1
+pcd            2             3            8           1            6 in2_i1
+pcd            2           202          687          99          404 nd1_i2
+pcd            3            60          294          44          180 nd1_i3
+pcd            4             5           34           5           20 nd3_i2
+pcd            2            12           56           7           24 nr1_i2
+pcd            4             3           28           4           12 nr3_i2
+pcd            8             1           21           2            8 nr3_i3
+pcd            4             1           11           1            4 oa_i211
+pcd            4            18          216          18           72 oa_i22
+pcd            5            22          286          24          110 oa_i221
+pcd            6            10          140          15           60 oa_i222
+-------------------------------------------------------------------------------
+pcd_total                  426         2625         300         1213
+    maximum rise delay path 1
+        src  0  max 2.00000e+01  
+        nml  1  max 2.20060e+01  (/a1      ) to (/zn      )  /nor-5(nr1_i2)
+        nml  2  max 2.29320e+01  (/a2      ) to (/zn      )  /nor-1(nr1_i2)
+        nml  3  max 2.54135e+01  (/i       ) to (/z       )  /nor-1-buf0-0(dbf3_i1)
+        nml  4  max 2.60495e+01  (/a2      ) to (/zn      )  /o1_nand-56(nd1_i2)
+        nml  5  max 2.73515e+01  (/a1      ) to (/zn      )  /o1_nand-110(nd1_i3)
+        nml  6  max 2.79335e+01  (/a1      ) to (/zn      )  /o2_nand-9(nd1_i2)
+        nml  7  max 2.83895e+01  (/i       ) to (/zn      )  /o2_inv-1(in1_i1)
+        nml  8  max 2.98303e+01  (/c       ) to (/zn      )  /o2_aoi-2(ao_i221)
+        nml  9  max 3.10263e+01  (/i       ) to (/zn      )  /inv-12(in1_i1)
+        nml 10  max 3.16623e+01  (/a1      ) to (/zn      )  /o4_nand-31(nd1_i2)
+        nml 11  max 3.27663e+01  (/a3      ) to (/zn      )  /o4_nand-43(nd1_i3)
+        nml 12  max 3.43069e+01  (/c2      ) to (/zn      )  /o8_aoi-27(ao_i222)
+        snk 13  max 3.57242e+01  (/b2      ) to (/zn      )  /sel-1_oai-12(oa_i22)
+OK!
+####### ONSET CPB iteration 1 #######
+####### critical path break ##################
+created a new sub_module. class: shift32_subc-1, name: shift32_subm-1
+ nof_pcds: 15, nof_inputs: 12, nof_outputs: 12
+    all statistics calculated
+opt_map: start to read shift32._dr/shift32_subc-1.nld
+   [/shift32_subm-1]
+	change power   112.400000 to 115.500000
+	change area    10.800000 to 13.880000
+	change gates   43.000000 to 49.000000
+	net_num is 32
+	dot_num is 93
+sub_module(shift32_subm-1) was disclosed.
+    all statistics calculated
+    all load calculated
+    all delay calculated
+   [power up]    replaced to /inv-_55(in1_i1) from (inv-)
+ ?  more improvement should be done
+   [power up]    buffer buf0-0..buf0-1(dbf3_i1) inserted from /nor-6(nr1_i2) zn
+   [power up]    replaced to /inv-_52(in3_i1) from (inv-)
+   [power up]    replaced to /nor--2_46(nr1_i2) from (nor--2)
+   [power up]    replaced to /nor--2_47(nr1_i2) from (nor--2)
+   [power up]    replaced to /inv-_56(in1_i1) from (inv-)
+   [power up]    replaced to /inv-_58(in1_i1) from (inv-)
+   [power up]    replaced to /nor--2_45(nr1_i2) from (nor--2)
+   [power up]    replaced to /inv-_57(in1_i1) from (inv-)
+   [power up]    replaced to /inv-_53(in1_i1) from (inv-)
+   [power up]    replaced to /inv-_54(in1_i1) from (inv-)
+   [power up]    replaced to /nand--2_44(nd1_i2) from (nand--2)
+   [power up]    replaced to /nand--2_35(nd1_i2) from (nand--2)
+   [power up]    replaced to /aoi--222_30(ao_i222) from (aoi--222)
+   [power up]    replaced to /aoi--222_25(ao_i222) from (aoi--222)
+   [power up]    replaced to /inv-_51(in1_i1) from (inv-)
+   [power up]    replaced to /aoi--222_48(ao_i222) from (aoi--222)
+   [power up]    replaced to /aoi--22_49(ao_i22) from (aoi--22)
+   [power up]    replaced to /aoi--21_33(ao_i21) from (aoi--21)
+   [power up]    replaced to /inv-_50(in1_i1) from (inv-)
+   [power up]    replaced to /oai--221_43(oa_i221) from (oai--221)
+   [power up]    buffer buf0-0..buf0-1(dbf3_i1) inserted from /inv-_55(in1_i1) zn
+	position   = /
+	type       = NLD
+	class_name = shift32
+	power      = 2628.6
+	area       = 303.3
+	gates      = 1219
+
+		synthesized gates = 0
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+    maximum rise delay path 1
+        src  0  max 2.00000e+01  
+        nml  1  max 2.20060e+01  (/a1      ) to (/zn      )  /nor-5(nr1_i2)
+        nml  2  max 2.29320e+01  (/a2      ) to (/zn      )  /nor-1(nr1_i2)
+        nml  3  max 2.54135e+01  (/i       ) to (/z       )  /nor-1-buf0-0(dbf3_i1)
+        nml  4  max 2.60495e+01  (/a2      ) to (/zn      )  /o1_nand-43(nd1_i2)
+        nml  5  max 2.71355e+01  (/a1      ) to (/zn      )  /o1_nand-107(nd1_i3)
+        nml  6  max 2.85141e+01  (/c2      ) to (/zn      )  /o2_aoi-12(ao_i222)
+        nml  7  max 2.97101e+01  (/i       ) to (/zn      )  /inv-14(in1_i1)
+        nml  8  max 3.02921e+01  (/a1      ) to (/zn      )  /o4_nand-25(nd1_i2)
+        nml  9  max 3.11281e+01  (/i       ) to (/zn      )  /inv-_54(in1_i1)
+        nml 10  max 3.23061e+01  (/a2      ) to (/zn      )  /nor--2_46(nr1_i2)
+        nml 11  max 3.34545e+01  (/a2      ) to (/zn      )  /aoi--22_49(ao_i22)
+        nml 12  max 3.48731e+01  (/a2      ) to (/zn      )  /aoi--222_30(ao_i222)
+        snk 13  max 3.61887e+01  (/b2      ) to (/zn      )  /oai--221_43(oa_i221)
+####### ONSET CPB iteration 2 #######
+####### critical path break ##################
+created a new sub_module. class: shift32_subc-1, name: shift32_subm-1
+ nof_pcds: 20, nof_inputs: 12, nof_outputs: 14
+    all statistics calculated
+opt_map: start to read shift32._dr/shift32_subc-1.nld
+   [/shift32_subm-1]
+	change power   132.500000 to 127.800000
+	change area    13.610000 to 16.200000
+	change gates   52.000000 to 56.000000
+	net_num is 38
+	dot_num is 108
+sub_module(shift32_subm-1) was disclosed.
+    all statistics calculated
+    all load calculated
+    all delay calculated
+   [power up]    replaced to /shift32_subm-1_inv-_53(in1_i1) from (inv-)
+ ?  more improvement should be done
+   [power up]    buffer buf0-0..buf0-1(dbf3_i1) inserted from /nor-6(nr1_i2) zn
+   [power up]    replaced to /shift32_subm-1_inv-_54(in2_i1) from (inv-)
+   [power up]    replaced to /inv-_57(in1_i1) from (inv-)
+   [power up]    replaced to /inv-_52(in1_i1) from (inv-)
+   [power up]    replaced to /inv-_59(in1_i1) from (inv-)
+   [power up]    replaced to /nor--2_27(nr1_i2) from (nor--2)
+   [power up]    replaced to /inv-_56(in1_i1) from (inv-)
+   [power up]    replaced to /inv-_58(in1_i1) from (inv-)
+   [power up]    replaced to /nand--2_46(nd1_i2) from (nand--2)
+   [power up]    replaced to /nor--2_45(nr1_i2) from (nor--2)
+   [power up]    replaced to /nor--2_48(nr1_i2) from (nor--2)
+   [power up]    replaced to /nor--2_49(nr1_i2) from (nor--2)
+   [power up]    replaced to /nor--2_37(nr1_i2) from (nor--2)
+   [power up]    replaced to /nor--2_47(nr1_i2) from (nor--2)
+   [power up]    replaced to /aoi--222_44(ao_i222) from (aoi--222)
+   [power up]    replaced to /aoi--22_33(ao_i22) from (aoi--22)
+   [power up]    replaced to /inv-_55(in1_i1) from (inv-)
+   [power up]    replaced to /inv-_60(in1_i1) from (inv-)
+   [power up]    replaced to /inv-_61(in1_i1) from (inv-)
+   [power up]    replaced to /aoi--222_50(ao_i222) from (aoi--222)
+   [power up]    replaced to /aoi--221_51(ao_i221) from (aoi--221)
+   [power up]    replaced to /nor--4_32(nr1_i4) from (nor--4)
+   [power up]    replaced to /inv-_63(in1_i1) from (inv-)
+   [power up]    replaced to /aoi--21_43(ao_i21) from (aoi--21)
+   [power up]    replaced to /inv-_62(in1_i1) from (inv-)
+   [power up]    replaced to /nand--2_38(nd1_i2) from (nand--2)
+   [power up]    buffer buf0-0..buf0-1(dbf3_i1) inserted from /shift32_subm-1_inv-_53(in1_i1) zn
+	position   = /
+	type       = NLD
+	class_name = shift32
+	power      = 2665.4
+	area       = 308.57
+	gates      = 1236
+
+		synthesized gates = 0
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+    maximum rise delay path 1
+        src  0  max 2.00000e+01  
+        nml  1  max 2.20060e+01  (/a1      ) to (/zn      )  /nor-5(nr1_i2)
+        nml  2  max 2.29320e+01  (/a2      ) to (/zn      )  /nor-1(nr1_i2)
+        nml  3  max 2.54135e+01  (/i       ) to (/z       )  /nor-1-buf0-0(dbf3_i1)
+        nml  4  max 2.60495e+01  (/a2      ) to (/zn      )  /o1_nand-43(nd1_i2)
+        nml  5  max 2.71355e+01  (/a1      ) to (/zn      )  /o1_nand-107(nd1_i3)
+        nml  6  max 2.85141e+01  (/c2      ) to (/zn      )  /o2_aoi-12(ao_i222)
+        nml  7  max 2.97101e+01  (/i       ) to (/zn      )  /inv-14(in1_i1)
+        nml  8  max 3.02921e+01  (/a1      ) to (/zn      )  /o4_nand-25(nd1_i2)
+        nml  9  max 3.11281e+01  (/i       ) to (/zn      )  /inv-_54(in1_i1)
+        nml 10  max 3.23421e+01  (/a2      ) to (/zn      )  /nor--2_46(nr1_i2)
+        nml 11  max 3.36885e+01  (/a1      ) to (/zn      )  /aoi--22_33(ao_i22)
+        nml 12  max 3.51791e+01  (/b2      ) to (/zn      )  /aoi--222_44(ao_i222)
+        snk 13  max 3.65964e+01  (/b2      ) to (/zn      )  /sel-1_oai-6(oa_i22)
+####### remained constraint ###############
+    --- no failure constraint for power up -----
+
+    --- no failure constraint for speed up -----
+
+    --- no failure constraint for speed down ---
+
+    --- no failure constraint for power down ---
+
+####### summary ###########################
+
+    --- maximum rise delay path histogram -------------------------------
+    3.65964e+01   32 ********************************
+    3.29368e+01    0 
+    2.92771e+01    0 
+    2.56175e+01    0 
+    2.19578e+01    0 
+    1.82982e+01    0 
+    1.46386e+01    0 
+    1.09789e+01    0 
+    7.31928e+00    0 
+    3.65964e+00    0 
+    ---------------------------------------------------------------------
+    total         32
+    delay path maximum  3.65964e+01
+    delay path minimum  3.45071e+01
+    delay path average  3.52256e+01
+
+    --- minimum rise delay path histogram -------------------------------
+    2.26515e+01   32 ********************************
+    2.03864e+01    0 
+    1.81212e+01    0 
+    1.58560e+01    0 
+    1.35909e+01    0 
+    1.13257e+01    0 
+    9.06060e+00    0 
+    6.79545e+00    0 
+    4.53030e+00    0 
+    2.26515e+00    0 
+    ---------------------------------------------------------------------
+    total         32
+    delay path maximum  2.26515e+01
+    delay path minimum  2.25473e+01
+    delay path average  2.26220e+01
+
+        no path found
+        no path found
+        no path found
+        no path found
+
+    --- net load histogram ----------------------------------------------
+    3.28000e+00   10 *
+    2.95200e+00    1 
+    2.62400e+00    1 
+    2.29600e+00   10 *
+    1.96800e+00    0 
+    1.64000e+00    3 
+    1.31200e+00    3 
+    9.84000e-01   11 *
+    6.56000e-01  142 ***********************
+    3.28000e-01  304 **************************************************
+    ---------------------------------------------------------------------
+    total        485
+    maximum  3.28000e+00
+    minimum  6.80000e-02
+    average  4.45602e-01
+
+    maximum rise delay path 1
+        src  0  max 2.00000e+01  
+        nml  1  max 2.20060e+01  (/a1      ) to (/zn      )  /nor-5(nr1_i2)
+        nml  2  max 2.29320e+01  (/a2      ) to (/zn      )  /nor-1(nr1_i2)
+        nml  3  max 2.54135e+01  (/i       ) to (/z       )  /nor-1-buf0-0(dbf3_i1)
+        nml  4  max 2.60495e+01  (/a2      ) to (/zn      )  /o1_nand-43(nd1_i2)
+        nml  5  max 2.71355e+01  (/a1      ) to (/zn      )  /o1_nand-107(nd1_i3)
+        nml  6  max 2.85141e+01  (/c2      ) to (/zn      )  /o2_aoi-12(ao_i222)
+        nml  7  max 2.97101e+01  (/i       ) to (/zn      )  /inv-14(in1_i1)
+        nml  8  max 3.02921e+01  (/a1      ) to (/zn      )  /o4_nand-25(nd1_i2)
+        nml  9  max 3.11281e+01  (/i       ) to (/zn      )  /inv-_54(in1_i1)
+        nml 10  max 3.23421e+01  (/a2      ) to (/zn      )  /nor--2_46(nr1_i2)
+        nml 11  max 3.36885e+01  (/a1      ) to (/zn      )  /aoi--22_33(ao_i22)
+        nml 12  max 3.51791e+01  (/b2      ) to (/zn      )  /aoi--222_44(ao_i222)
+        snk 13  max 3.65964e+01  (/b2      ) to (/zn      )  /sel-1_oai-6(oa_i22)
+        no path found
+        no path found
+
+    all statistics calculated
+--- statistics summary --------------------
+	position   = /
+	type       = NLD
+	class_name = shift32
+	power      = 2706.5
+	area       = 311.13
+	gates      = 1249
+
+		synthesized gates = 0
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- component summary ---------------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates (nof_include_nld) class_name
+-------------------------------------------------------------------------------------------------
+nld         1249             1         2706         311         1249 (0) shift32
+pcd            3             1            8           1            3 ao_i21
+pcd            4             8           80           8           32 ao_i22
+pcd            5            13          169          14           65 ao_i221
+pcd            6            25          425          40          150 ao_i222
+pcd            3            16          160          10           48 dbf3_i1
+pcd            1            38           53          14           38 in1_i1
+pcd            2             3            8           1            6 in2_i1
+pcd            2           203          690          99          406 nd1_i2
+pcd            3            59          289          44          177 nd1_i3
+pcd            4             5           34           5           20 nd3_i2
+pcd            2            19           89          12           38 nr1_i2
+pcd            4             1           11           1            4 nr1_i4
+pcd            4             3           28           4           12 nr3_i2
+pcd            8             1           21           2            8 nr3_i3
+pcd            4             1           11           1            4 oa_i211
+pcd            4            17          204          17           68 oa_i22
+pcd            5            22          286          24          110 oa_i221
+pcd            6            10          140          15           60 oa_i222
+-------------------------------------------------------------------------------------------------
+pcd_total                  445         2706         311         1249
+--- pin summary ---------------------------
+p typ c pin_load     net_load      dot drive_power  max_load     pin_name
+-------------------------------------------------------------------------
+P INP - 0.000000e+00 4.100000e-01    3 9.999999e+30 9.999999e+30 srl
+P INP - 0.000000e+00 5.700000e-01    4 9.999999e+30 9.999999e+30 sra
+P INP - 0.000000e+00 9.900000e-01    5 9.999999e+30 9.999999e+30 sll
+P INP - 0.000000e+00 8.000000e-01    4 9.999999e+30 9.999999e+30 shamt[4]
+P INP - 0.000000e+00 3.200000e-01    3 9.999999e+30 9.999999e+30 shamt[3]
+P INP - 0.000000e+00 9.800000e-01    4 9.999999e+30 9.999999e+30 shamt[2]
+P INP - 0.000000e+00 3.200000e-01    3 9.999999e+30 9.999999e+30 shamt[1]
+P INP - 0.000000e+00 3.200000e-01    3 9.999999e+30 9.999999e+30 shamt[0]
+  UNU - 0.000000e+00 ------------ ---- 9.999999e+30 9.999999e+30 s_clock
+  UNU - 0.000000e+00 ------------ ---- 9.999999e+30 1.000000e+00 p_reset
+P OUT - 0.000000e+00 6.900000e-02    2 9.999999e+30 9.999999e+30 out[9]
+P OUT - 0.000000e+00 6.900000e-02    2 9.999999e+30 9.999999e+30 out[8]
+P OUT - 0.000000e+00 6.900000e-02    2 9.999999e+30 9.999999e+30 out[7]
+P OUT - 0.000000e+00 1.000000e-01    2 9.999999e+30 9.999999e+30 out[6]
+P OUT - 0.000000e+00 6.900000e-02    2 9.999999e+30 9.999999e+30 out[5]
+P OUT - 0.000000e+00 6.900000e-02    2 9.999999e+30 9.999999e+30 out[4]
+P OUT - 0.000000e+00 6.900000e-02    2 9.999999e+30 9.999999e+30 out[3]
+P OUT - 0.000000e+00 6.800000e-02    2 9.999999e+30 9.999999e+30 out[31]
+P OUT - 0.000000e+00 6.800000e-02    2 9.999999e+30 9.999999e+30 out[30]
+P OUT - 0.000000e+00 6.900000e-02    2 9.999999e+30 9.999999e+30 out[2]
+P OUT - 0.000000e+00 6.800000e-02    2 9.999999e+30 9.999999e+30 out[29]
+P OUT - 0.000000e+00 6.800000e-02    2 9.999999e+30 9.999999e+30 out[28]
+P OUT - 0.000000e+00 6.800000e-02    2 9.999999e+30 9.999999e+30 out[27]
+P OUT - 0.000000e+00 6.800000e-02    2 9.999999e+30 9.999999e+30 out[26]
+P OUT - 0.000000e+00 6.800000e-02    2 9.999999e+30 9.999999e+30 out[25]
+P OUT - 0.000000e+00 6.800000e-02    2 9.999999e+30 9.999999e+30 out[24]
+P OUT - 0.000000e+00 6.800000e-02    2 9.999999e+30 9.999999e+30 out[23]
+P OUT - 0.000000e+00 6.800000e-02    2 9.999999e+30 9.999999e+30 out[22]
+P OUT - 0.000000e+00 6.800000e-02    2 9.999999e+30 9.999999e+30 out[21]
+P OUT - 0.000000e+00 6.800000e-02    2 9.999999e+30 9.999999e+30 out[20]
+P OUT - 0.000000e+00 6.900000e-02    2 9.999999e+30 9.999999e+30 out[1]
+P OUT - 0.000000e+00 6.800000e-02    2 9.999999e+30 9.999999e+30 out[19]
+P OUT - 0.000000e+00 6.800000e-02    2 9.999999e+30 9.999999e+30 out[18]
+P OUT - 0.000000e+00 6.800000e-02    2 9.999999e+30 9.999999e+30 out[17]
+P OUT - 0.000000e+00 6.800000e-02    2 9.999999e+30 9.999999e+30 out[16]
+P OUT - 0.000000e+00 6.900000e-02    2 9.999999e+30 9.999999e+30 out[15]
+P OUT - 0.000000e+00 6.900000e-02    2 9.999999e+30 9.999999e+30 out[14]
+P OUT - 0.000000e+00 6.900000e-02    2 9.999999e+30 9.999999e+30 out[13]
+P OUT - 0.000000e+00 6.900000e-02    2 9.999999e+30 9.999999e+30 out[12]
+P OUT - 0.000000e+00 6.900000e-02    2 9.999999e+30 9.999999e+30 out[11]
+P OUT - 0.000000e+00 6.900000e-02    2 9.999999e+30 9.999999e+30 out[10]
+P OUT - 0.000000e+00 6.900000e-02    2 9.999999e+30 9.999999e+30 out[0]
+  UNU - 0.000000e+00 ------------ ---- 9.999999e+30 1.000000e+00 m_clock
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[9]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[8]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[7]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[6]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[5]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[4]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[3]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[31]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[30]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[2]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[29]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[28]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[27]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[26]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[25]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[24]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[23]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[22]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[21]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[20]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[1]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[19]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[18]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[17]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[16]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[15]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[14]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[13]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[12]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[11]
+P INP - 0.000000e+00 4.800000e-01    4 9.999999e+30 9.999999e+30 in[10]
+P INP - 0.000000e+00 3.200000e-01    3 9.999999e+30 9.999999e+30 in[0]
+  UNU - 0.000000e+00 ------------ ---- 9.999999e+30 9.999999e+30 b_clock
+####### output ############################
+** check level 1 **
+** check level 1 **
+rm -f shift32._tp
+touch shift32.4off

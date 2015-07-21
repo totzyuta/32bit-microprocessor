@@ -10,7 +10,7 @@
 #
 
 # modify the following line as your module structure
-SUBMODULE=add4 add32 shift32 reg32x8 reg32x32 alu32
+SUBMODULE=fulladder add4 add32 shift32 reg32x8 reg32x32 alu32
 TOPMODULE=p32m2
 
 all: synthe

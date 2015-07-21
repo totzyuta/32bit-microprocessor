@@ -1,0 +1,889 @@
+rm -f comp5.0on
+sflexp comp5.sfl comp5.hsl -mem lll  || (rm -f *.cube comp5.hsl; false)
+
++-------------------------------------------------------------+
+| SFLEXP        3.0 2002/08/31 (i686-Linux-2.6.27-10-generic) |
+|             This program is a part of the PARTHENON system. |
+|                                 Copyright (C) 1989-2002 NTT |
++-------------------------------------------------------------+
+
+Memory LLL size
+Mem alloc start address 0xeb704020 end 0xf770401f
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== comp5.sfl
+
+Module: comp5 definition start.
+All facilities of module: comp5 defined.
+Instructs arguments and stages tasks of module: comp5 defined.
+Instructs behavior of module: comp5 defined.
+sfl area 99% remained.
+atom area 95% remained.
+** translate completion **
+** expantion start **
+** expand parameters are as follow **
+	mode_flg---------------exp
+	tmp_value--------------sel_org
+	post_opt---------------single
+	time_limit-------------v100
+	change_to_nand_nor-----8
+	nld_out_mode-----------yes
+	pcd_out_mode-----------no
+	circuit_pcd_out_mode---no
+	sel_type---------------hie
+	exp_mode_flg-----------group
+	multi_level_opt--------yes
+	dont_care_opt----------yes
+	level_factor-----------0
+	to_other_tool----------no
+	machine----------------sun
+	partial_demo-----------partial
+	file_name--------------comp5.sfl
+	out_file_name----------comp5.hsl
+
+#### module: comp5 ####
+** start checking exclusively constant assign **
+** end checking exclusively constant assign **
+** flatten end **
+
+#### start logic expand which appear in data transfer source ####
+** state encode done **
+** bool op done **
+** enter mini_divide ** level=1, size=1 **
+** condition elements sort done **
+** actions sort done **
+** destinations sort done **
+** sources sort done **
+** Nof inputs = 5, Nof outputs = 1, Nof cubes = 1 **
+** start logic compaction **
+** Nof cubes = 1 **
+** logic compaction done **
+** nots(5) extraction done **
+** ands(1) extraction done **
+** ors(0) extraction done **
+** selectors(1) extraction done **
+
+#### start expand behavior in stage or instruct: do ####
+** state encode done **
+** bool op done **
+** enter mini_divide ** level=1, size=11 **
+** condition elements sort done **
+** actions sort done **
+** destinations sort done **
+** sources sort done **
+** Nof inputs = 1, Nof outputs = 11, Nof cubes = 11 **
+** start logic compaction **
+** Nof cubes = 1 **
+** logic compaction done **
+** nots(0) extraction done **
+** ands(0) extraction done **
+** ors(0) extraction done **
+** selectors(11) extraction done **
+
+#### into merge phase ####
+** selecter(11) merge done **
+** ors(0) added **
+
+#### into multi-level logic optimization ####
+** used gate extract done **
+** used gate sort done **
+** used pin extract and sort done **
+** nof_nots = 5, nof_ands = 1, nof_ors = 0 **
+** nots_fin = 5, ands_fin = 5, ors_fin = 0 **
+** input pins: pin(type,width,name) **
+	1	pin(const,1,1)
+	2	pin(eor_out,1,eor-5)
+	3	pin(eor_out,1,eor-4)
+	4	pin(eor_out,1,eor-3)
+	5	pin(eor_out,1,eor-2)
+	6	pin(eor_out,1,eor-1)
+** nots: not(fin) **
+	1	not(pin(2))
+	2	not(pin(3))
+	3	not(pin(4))
+	4	not(pin(5))
+	5	not(pin(6))
+** ands: and(fin,...) **
+	1	and(not(5),not(4),not(3),not(2),not(1))
+** ors: or(fin,...) **
+** actions: action(destination,source,type,target) **
+	1	action(pin(output,1,eq),and(1),data,and(1))
+** into interface to c-program **
+** make comp done **
+** nots link done **
+** ands link done **
+** ors link done **
+** sels link done **
+** dont_cares link done **
+** into post opt **
+** time limit is v100 **
+** Action_id = 1 *****************************
+True (nof_products = 1)
+Dont_care (nof_products = 1)
+Result (nof_products = 1)
+** into interface to multi **
+** nof_nots = 5, nof_ands = 1, nof_ors = 1 **
+** input     5 **
+** output    1 **
+                               ** fin   10 **  ** gate    6 **  ** level  1 **
+** start factorization <1> **
+                               ** fin   10 **  ** gate    6 **  ** level  1 **
+** start and extraction <1> **
+                               ** fin   10 **  ** gate    6 **  ** level  1 **
+** start or extraction <1> **
+                               ** fin   10 **  ** gate    6 **  ** level  1 **
+** start gate reshaping **
+                               ** fin   10 **  ** gate    6 **  ** level  1 **
+N006<A001>   A001         
+N005                      
+N004                      
+N003                      
+N002                      
+                          
+** nots extract done **
+** ands extract done **
+** ors extract done **
+** sels extract done **
+
+#### start and-or to nand-nor exchange and limit fin ####
+** make comp done **
+** sels link done **
+** pins link done **
+** nots link done **
+** ands link done **
+** ors link done **
+** fin limit done **
+** insert or replace not gate **
+** insert or replace not gate **
+** insert or replace not gate **
+** insert or replace not gate **
+** insert or replace not gate **
+** and-or to nand-nor done **
+
+#### generating net list in HSL ####
+** out one HSL module(comp5) **
+
+	There are 0 errors.
+
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+rm -f *.cube
+touch comp5.0off
+rm -rf comp5.1st comp5.1on comp5.1off
+mkdir comp5.1st
+hsl_nld comp5.hsl comp5.1st
+touch comp5.1off
+cat /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/opt_scr.op1 | sed 's/TargeT/comp5/' > comp5.op1
+cat /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/opt_scr.lv2 | sed 's/TargeT/comp5/' \
+	| sed 's/InputpiN/12/' > comp5.tmp
+echo "echo OK!" > comp5.ons
+ITR_TIMES=1 ;\
+	while (test $ITR_TIMES -le 2) \
+	do \
+	   echo "making script file for ONSET iteration $ITR_TIMES" ;\
+	   echo "echo ####### ONSET iteration $ITR_TIMES #######" >> comp5.ons ;\
+	   cat comp5.tmp >> comp5.ons ;\
+	   ITR_TIMES=`expr $ITR_TIMES + 1` ;\
+	done
+making script file for ONSET iteration 1
+making script file for ONSET iteration 2
+rm -f comp5.tmp
+rm -rf comp5.2nd comp5.2on comp5.2off
+mkdir comp5.2nd
+echo comp5.op1 | opt_map comp5 comp5.1st /home/users/ecs/nobuya/opt/parthenon/sfl_lib.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start_ex.dir
+
++-------------------------------------------------------------+
+| OPT_MAP       3.0 2002/08/31 (i686-Linux-2.6.27-10-generic) |
+|             This program is a part of the PARTHENON system. |
+|                                 Copyright (C) 1989-2002 NTT |
++-------------------------------------------------------------+
+
+** load library from comp5.1st **
+** load library from /home/users/ecs/nobuya/opt/parthenon/sfl_lib.dir **
+opt_map: start to read r1024_8.pcd
+opt_map: start to read r256_8.pcd
+opt_map: start to read r64_8.pcd
+** load library from /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start.dir **
+opt_map: start to read and--2.pcd
+opt_map: start to read and--3.pcd
+opt_map: start to read and--4.pcd
+opt_map: start to read and--5.pcd
+opt_map: start to read and--6.pcd
+opt_map: start to read and--7.pcd
+opt_map: start to read and--8.pcd
+opt_map: start to read aoi--21.pcd
+opt_map: start to read aoi--211.pcd
+opt_map: start to read aoi--22.pcd
+opt_map: start to read aoi--221.pcd
+opt_map: start to read aoi--222.pcd
+opt_map: start to read aoi--31.pcd
+opt_map: start to read aoi--32.pcd
+opt_map: start to read aoi--33.pcd
+opt_map: start to read bgate--2.pcd
+opt_map: start to read enor--2.pcd
+opt_map: start to read eor--2.pcd
+opt_map: start to read high-.pcd
+opt_map: start to read inv-.pcd
+opt_map: start to read low-.pcd
+opt_map: start to read nand--2.pcd
+opt_map: start to read nand--3.pcd
+opt_map: start to read nand--4.pcd
+opt_map: start to read nand--5.pcd
+opt_map: start to read nand--6.pcd
+opt_map: start to read nand--7.pcd
+opt_map: start to read nand--8.pcd
+opt_map: start to read ninv-.pcd
+opt_map: start to read nor--2.pcd
+opt_map: start to read nor--3.pcd
+opt_map: start to read nor--4.pcd
+opt_map: start to read nor--5.pcd
+opt_map: start to read nor--6.pcd
+opt_map: start to read nor--7.pcd
+opt_map: start to read nor--8.pcd
+opt_map: start to read oai--21.pcd
+opt_map: start to read oai--211.pcd
+opt_map: start to read oai--22.pcd
+opt_map: start to read oai--221.pcd
+opt_map: start to read oai--222.pcd
+opt_map: start to read oai--31.pcd
+opt_map: start to read oai--32.pcd
+opt_map: start to read oai--33.pcd
+opt_map: start to read or--2.pcd
+opt_map: start to read or--3.pcd
+opt_map: start to read or--4.pcd
+opt_map: start to read or--5.pcd
+opt_map: start to read or--6.pcd
+opt_map: start to read or--7.pcd
+opt_map: start to read or--8.pcd
+opt_map: start to read reg---1.pcd
+opt_map: start to read reg--1.pcd
+opt_map: start to read reg-1.pcd
+opt_map: start to read regr-1.pcd
+opt_map: start to read regs-1.pcd
+opt_map: start to read sreg---1.pcd
+opt_map: start to read sreg--1.pcd
+opt_map: start to read sreg-1.pcd
+opt_map: start to read srgr-1.pcd
+opt_map: start to read srgs-1.pcd
+opt_map: start to read ts_buf-.pcd
+** load library from /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start_ex.dir **
+** install top module (comp5) **
+opt_map: start to read comp5.1st/comp5.nld
+####### start #############################
+    all statistics calculated
+--- initial statistics summary ------------
+	position   = /
+	type       = NLD
+	class_name = comp5
+	power      = 66
+	area       = 5.5
+	gates      = 25
+
+		synthesized gates = 25
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- initial component summary -------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+pcd            4             5           50           4           20 eor--2
+pcd            0             1            0           0            0 high-
+pcd            0             1            0           0            0 low-
+pcd            5             1           16           1            5 nor--5
+-------------------------------------------------------------------------------
+pcd_total                    8           66           6           25
+####### remove ############################
+####### after remove ######################
+    all statistics calculated
+--- statistics summary --------------------
+	position   = /
+	type       = NLD
+	class_name = comp5
+	power      = 66
+	area       = 5.5
+	gates      = 25
+
+		synthesized gates = 25
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- component summary ---------------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+pcd            4             5           50           4           20 eor--2
+pcd            5             1           16           1            5 nor--5
+-------------------------------------------------------------------------------
+pcd_total                    6           66           6           25
+OK!
+####### ONSET iteration 1 #######
+####### apply ONSET on each flatten submodule ########
+--- flat & enclose at each nld in the top-module -------
+created a new sub_module. class: comp5_subc-1, name: comp5_subm-1
+ nof_pcds: 1, nof_inputs: 5, nof_outputs: 1
+sub_module(comp5_subm-1) was disclosed.
+    all statistics calculated
+--- disclose -------------------------------
+####### after ONSET ###################
+    all statistics calculated
+--- statistics summary --------------------
+	position   = /
+	type       = NLD
+	class_name = comp5
+	power      = 66
+	area       = 5.5
+	gates      = 25
+
+		synthesized gates = 25
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- component summary ---------------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+pcd            4             5           50           4           20 eor--2
+pcd            5             1           16           1            5 nor--5
+-------------------------------------------------------------------------------
+pcd_total                    6           66           6           25
+####### ONSET iteration 2 #######
+####### apply ONSET on each flatten submodule ########
+--- flat & enclose at each nld in the top-module -------
+created a new sub_module. class: comp5_subc-1, name: comp5_subm-1
+ nof_pcds: 1, nof_inputs: 5, nof_outputs: 1
+sub_module(comp5_subm-1) was disclosed.
+    all statistics calculated
+--- disclose -------------------------------
+####### after ONSET ###################
+    all statistics calculated
+--- statistics summary --------------------
+	position   = /
+	type       = NLD
+	class_name = comp5
+	power      = 66
+	area       = 5.5
+	gates      = 25
+
+		synthesized gates = 25
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- component summary ---------------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+pcd            4             5           50           4           20 eor--2
+pcd            5             1           16           1            5 nor--5
+-------------------------------------------------------------------------------
+pcd_total                    6           66           6           25
+####### output ############################
+** check level 1 **
+rm -f comp5._tp
+touch comp5.2off
+rm -rf comp5.3rd comp5.3on comp5.3off
+mkdir comp5.3rd
+rinv comp5 comp5.2nd /home/users/ecs/nobuya/opt/parthenon/sfl_lib.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start_ex.dir -w comp5.3rd
+touch comp5.3off
+cat /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/opt_scr.op2 | sed 's/TargeT/comp5/' > comp5.op2
+cat /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/opt_scr.cpb | sed 's/TargeT/comp5/' \
+	| sed 's/InputpiN/12/' > comp5.tmp
+echo "echo OK!" > comp5.cpb
+ITR_TIMES=1 ;\
+	while (test $ITR_TIMES -le 2) \
+	do \
+	   echo "making script file for ONSET CPB iteration $ITR_TIMES" ;\
+	   echo "echo ####### ONSET CPB iteration $ITR_TIMES #######" >> comp5.cpb ;\
+	   cat comp5.tmp >> comp5.cpb ;\
+	   ITR_TIMES=`expr $ITR_TIMES + 1` ;\
+	done
+making script file for ONSET CPB iteration 1
+making script file for ONSET CPB iteration 2
+rm -f comp5.tmp
+rm -rf comp5.4th comp5.4on comp5.4off
+mkdir comp5.4th
+echo comp5.op2 | opt_map comp5 comp5.3rd /home/users/ecs/nobuya/opt/parthenon/sfl_lib.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start_ex.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/cell.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/cell_ex.dir 
+--------- submodule comp5_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/delay.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/delay.scr) ####
+--------- submodule comp5_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/delay.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/delay.scr) ####
+
++-------------------------------------------------------------+
+| OPT_MAP       3.0 2002/08/31 (i686-Linux-2.6.27-10-generic) |
+|             This program is a part of the PARTHENON system. |
+|                                 Copyright (C) 1989-2002 NTT |
++-------------------------------------------------------------+
+
+** load library from comp5.3rd **
+** load library from /home/users/ecs/nobuya/opt/parthenon/sfl_lib.dir **
+opt_map: start to read r1024_8.pcd
+opt_map: start to read r256_8.pcd
+opt_map: start to read r64_8.pcd
+** load library from /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start.dir **
+opt_map: start to read and--2.pcd
+opt_map: start to read and--3.pcd
+opt_map: start to read and--4.pcd
+opt_map: start to read and--5.pcd
+opt_map: start to read and--6.pcd
+opt_map: start to read and--7.pcd
+opt_map: start to read and--8.pcd
+opt_map: start to read aoi--21.pcd
+opt_map: start to read aoi--211.pcd
+opt_map: start to read aoi--22.pcd
+opt_map: start to read aoi--221.pcd
+opt_map: start to read aoi--222.pcd
+opt_map: start to read aoi--31.pcd
+opt_map: start to read aoi--32.pcd
+opt_map: start to read aoi--33.pcd
+opt_map: start to read bgate--2.pcd
+opt_map: start to read enor--2.pcd
+opt_map: start to read eor--2.pcd
+opt_map: start to read high-.pcd
+opt_map: start to read inv-.pcd
+opt_map: start to read low-.pcd
+opt_map: start to read nand--2.pcd
+opt_map: start to read nand--3.pcd
+opt_map: start to read nand--4.pcd
+opt_map: start to read nand--5.pcd
+opt_map: start to read nand--6.pcd
+opt_map: start to read nand--7.pcd
+opt_map: start to read nand--8.pcd
+opt_map: start to read ninv-.pcd
+opt_map: start to read nor--2.pcd
+opt_map: start to read nor--3.pcd
+opt_map: start to read nor--4.pcd
+opt_map: start to read nor--5.pcd
+opt_map: start to read nor--6.pcd
+opt_map: start to read nor--7.pcd
+opt_map: start to read nor--8.pcd
+opt_map: start to read oai--21.pcd
+opt_map: start to read oai--211.pcd
+opt_map: start to read oai--22.pcd
+opt_map: start to read oai--221.pcd
+opt_map: start to read oai--222.pcd
+opt_map: start to read oai--31.pcd
+opt_map: start to read oai--32.pcd
+opt_map: start to read oai--33.pcd
+opt_map: start to read or--2.pcd
+opt_map: start to read or--3.pcd
+opt_map: start to read or--4.pcd
+opt_map: start to read or--5.pcd
+opt_map: start to read or--6.pcd
+opt_map: start to read or--7.pcd
+opt_map: start to read or--8.pcd
+opt_map: start to read reg---1.pcd
+opt_map: start to read reg--1.pcd
+opt_map: start to read reg-1.pcd
+opt_map: start to read regr-1.pcd
+opt_map: start to read regs-1.pcd
+opt_map: start to read sreg---1.pcd
+opt_map: start to read sreg--1.pcd
+opt_map: start to read sreg-1.pcd
+opt_map: start to read srgr-1.pcd
+opt_map: start to read srgs-1.pcd
+opt_map: start to read ts_buf-.pcd
+** load library from /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start_ex.dir **
+** load library from /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/cell.dir **
+opt_map: start to read an1_i2.pcd
+opt_map: start to read an1_i3.pcd
+opt_map: start to read an1_i4.pcd
+opt_map: start to read an1_i5.pcd
+opt_map: start to read an1_i6.pcd
+opt_map: start to read an1_i7.pcd
+opt_map: start to read an1_i8.pcd
+opt_map: start to read an3_i2.pcd
+opt_map: start to read an3_i3.pcd
+opt_map: start to read an3_i4.pcd
+opt_map: start to read an3_i5.pcd
+opt_map: start to read an3_i6.pcd
+opt_map: start to read an3_i7.pcd
+opt_map: start to read an3_i8.pcd
+opt_map: start to read ao_i21.pcd
+opt_map: start to read ao_i211.pcd
+opt_map: start to read ao_i22.pcd
+opt_map: start to read ao_i221.pcd
+opt_map: start to read ao_i222.pcd
+opt_map: start to read ao_i31.pcd
+opt_map: start to read ao_i32.pcd
+opt_map: start to read ao_i33.pcd
+opt_map: start to read bf1_i1.pcd
+opt_map: start to read bf2_i1.pcd
+opt_map: start to read bf3_i1.pcd
+opt_map: start to read bgnd1_i2.pcd
+opt_map: start to read bgnd3_i2.pcd
+opt_map: start to read cbf1_i1.pcd
+opt_map: start to read cbf2_i1.pcd
+opt_map: start to read cbf3_i1.pcd
+opt_map: start to read dbf1_i1.pcd
+opt_map: start to read dbf2_i1.pcd
+opt_map: start to read dbf3_i1.pcd
+opt_map: start to read dt_reg.pcd
+opt_map: start to read dt_sreg.pcd
+opt_map: start to read dtr_reg.pcd
+opt_map: start to read dtr_sreg.pcd
+opt_map: start to read dts_reg.pcd
+opt_map: start to read dts_sreg.pcd
+opt_map: start to read high-.pcd
+    skip this (module 'high-.pcd' is already installed)
+opt_map: start to read in1_i1.pcd
+opt_map: start to read in2_i1.pcd
+opt_map: start to read in3_i1.pcd
+opt_map: start to read low-.pcd
+    skip this (module 'low-.pcd' is already installed)
+opt_map: start to read nd1_i2.pcd
+opt_map: start to read nd1_i3.pcd
+opt_map: start to read nd1_i4.pcd
+opt_map: start to read nd1_i5.pcd
+opt_map: start to read nd1_i6.pcd
+opt_map: start to read nd1_i7.pcd
+opt_map: start to read nd1_i8.pcd
+opt_map: start to read nd3_i2.pcd
+opt_map: start to read nd3_i3.pcd
+opt_map: start to read nd3_i4.pcd
+opt_map: start to read nd3_i5.pcd
+opt_map: start to read nd3_i6.pcd
+opt_map: start to read nd3_i7.pcd
+opt_map: start to read nd3_i8.pcd
+opt_map: start to read nr1_i2.pcd
+opt_map: start to read nr1_i3.pcd
+opt_map: start to read nr1_i4.pcd
+opt_map: start to read nr1_i5.pcd
+opt_map: start to read nr1_i6.pcd
+opt_map: start to read nr1_i7.pcd
+opt_map: start to read nr1_i8.pcd
+opt_map: start to read nr3_i2.pcd
+opt_map: start to read nr3_i3.pcd
+opt_map: start to read nr3_i4.pcd
+opt_map: start to read nr3_i5.pcd
+opt_map: start to read nr3_i6.pcd
+opt_map: start to read nr3_i7.pcd
+opt_map: start to read nr3_i8.pcd
+opt_map: start to read oa_i21.pcd
+opt_map: start to read oa_i211.pcd
+opt_map: start to read oa_i22.pcd
+opt_map: start to read oa_i221.pcd
+opt_map: start to read oa_i222.pcd
+opt_map: start to read oa_i31.pcd
+opt_map: start to read oa_i32.pcd
+opt_map: start to read oa_i33.pcd
+opt_map: start to read or1_i2.pcd
+opt_map: start to read or1_i3.pcd
+opt_map: start to read or1_i4.pcd
+opt_map: start to read or1_i5.pcd
+opt_map: start to read or1_i6.pcd
+opt_map: start to read or1_i7.pcd
+opt_map: start to read or1_i8.pcd
+opt_map: start to read or3_i2.pcd
+opt_map: start to read or3_i3.pcd
+opt_map: start to read or3_i4.pcd
+opt_map: start to read or3_i5.pcd
+opt_map: start to read or3_i6.pcd
+opt_map: start to read or3_i7.pcd
+opt_map: start to read or3_i8.pcd
+opt_map: start to read sts_reg.pcd
+opt_map: start to read sts_sreg.pcd
+opt_map: start to read tbf1_i2.pcd
+opt_map: start to read tbf2_i2.pcd
+opt_map: start to read tbf3_i2.pcd
+opt_map: start to read tsk_reg.pcd
+opt_map: start to read tsk_sreg.pcd
+opt_map: start to read xn1_i2.pcd
+opt_map: start to read xn3_i2.pcd
+opt_map: start to read xo1_i2.pcd
+opt_map: start to read xo3_i2.pcd
+** load library from /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/cell_ex.dir **
+** install top module (comp5) **
+opt_map: start to read comp5.3rd/comp5.nld
+####### start  ############################
+    all statistics calculated
+--- initial statistics summary ------------
+	position   = /
+	type       = NLD
+	class_name = comp5
+	power      = 66
+	area       = 5.5
+	gates      = 25
+
+		synthesized gates = 25
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- initial component summary -------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+pcd            4             5           50           4           20 eor--2
+pcd            5             1           16           1            5 nor--5
+-------------------------------------------------------------------------------
+pcd_total                    6           66           6           25
+####### remove ############################
+####### after remove ######################
+    all statistics calculated
+--- statistics summary --------------------
+	position   = /
+	type       = NLD
+	class_name = comp5
+	power      = 66
+	area       = 5.5
+	gates      = 25
+
+		synthesized gates = 25
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- component summary ---------------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+pcd            4             5           50           4           20 eor--2
+pcd            5             1           16           1            5 nor--5
+-------------------------------------------------------------------------------
+pcd_total                    6           66           6           25
+####### set conditions ####################
+    top module pin initialized
+        normal net      6
+        in calc net     0
+        source net     10
+        inhibit net     0
+        sink net        0
+    no pin found
+    no pin found
+    no pin found
+    no pin found
+??error ext_pin(scan_clock) is not found
+####### initial constraint ################
+    all statistics calculated
+    all load calculated
+    all delay calculated
+
+    --- failure constraint histogram for power up -----------------------
+    1.94000e-01    5 *****
+    1.74600e-01    0 
+    1.55200e-01    0 
+    1.35800e-01    0 
+    1.16400e-01    0 
+    9.70000e-02    1 *
+    7.76000e-02    0 
+    5.82000e-02    0 
+    3.88000e-02    0 
+    1.94000e-02    0 
+    ---------------------------------------------------------------------
+    total          6
+    maximum difference  1.94000e-01
+    minimum difference  8.20000e-02
+    average difference  1.75333e-01
+
+    --- no failure constraint for speed up -----
+
+    --- no failure constraint for speed down ---
+
+    --- no failure constraint for power down ---
+
+####### optimize ##########################
+   [power up]    replaced to /eor-1(xo1_i2) from (eor--2)
+   [power up]    replaced to /eor-2(xo1_i2) from (eor--2)
+   [power up]    replaced to /eor-3(xo1_i2) from (eor--2)
+   [power up]    replaced to /eor-4(xo1_i2) from (eor--2)
+   [power up]    replaced to /eor-5(xo1_i2) from (eor--2)
+   [power up]    replaced to /nor-1(nr1_i5) from (nor--5)
+####### flat ############################
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+pcd            5             1           16           1            5 nr1_i5
+pcd            4             5           50           4           20 xo1_i2
+-------------------------------------------------------------------------------
+pcd_total                    6           66           6           25
+    maximum rise delay path 1
+        src  0  max 2.00000e+01  
+        nml  1  max 2.13492e+01  (/a1      ) to (/z       )  /eor-1(xo1_i2)
+        snk  2  max 2.29886e+01  (/a1      ) to (/zn      )  /nor-1(nr1_i5)
+OK!
+####### ONSET CPB iteration 1 #######
+####### critical path break ##################
+created a new sub_module. class: comp5_subc-1, name: comp5_subm-1
+ nof_pcds: 1, nof_inputs: 5, nof_outputs: 1
+    all statistics calculated
+opt_map: start to read comp5._dr/comp5_subc-1.nld
+   [/comp5_subm-1]
+	change power   16.000000 to 17.100000
+	change area    1.200000 to 1.960000
+	change gates   5.000000 to 7.000000
+	net_num is 8
+	dot_num is 16
+sub_module(comp5_subm-1) was disclosed.
+    all statistics calculated
+    all load calculated
+    all delay calculated
+   [power up]    replaced to /inv-_9(in1_i1) from (inv-)
+   [power up]    replaced to /nor--4_8(nr1_i4) from (nor--4)
+   [power up]    replaced to /nor--2_7(nr1_i2) from (nor--2)
+	position   = /
+	type       = NLD
+	class_name = comp5
+	power      = 67.1
+	area       = 6.26
+	gates      = 27
+
+		synthesized gates = 0
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+    maximum rise delay path 1
+        src  0  max 2.00000e+01  
+        nml  1  max 2.13312e+01  (/a1      ) to (/z       )  /eor-4(xo1_i2)
+        nml  2  max 2.29272e+01  (/a1      ) to (/zn      )  /nor--4_8(nr1_i4)
+        nml  3  max 2.35232e+01  (/i       ) to (/zn      )  /inv-_9(in1_i1)
+        snk  4  max 2.39812e+01  (/a2      ) to (/zn      )  /nor--2_7(nr1_i2)
+####### ONSET CPB iteration 2 #######
+####### critical path break ##################
+created a new sub_module. class: comp5_subc-1, name: comp5_subm-1
+ nof_pcds: 3, nof_inputs: 5, nof_outputs: 1
+    all statistics calculated
+opt_map: start to read comp5._dr/comp5_subc-1.nld
+   [/comp5_subm-1]
+	net_num is 8
+	dot_num is 16
+sub_module(comp5_subm-1) was disclosed.
+    all statistics calculated
+    all load calculated
+    all delay calculated
+   [power up]    replaced to /inv-_9(in1_i1) from (inv-)
+   [power up]    replaced to /nor--4_8(nr1_i4) from (nor--4)
+   [power up]    replaced to /nor--2_7(nr1_i2) from (nor--2)
+	position   = /
+	type       = NLD
+	class_name = comp5
+	power      = 67.1
+	area       = 6.26
+	gates      = 27
+
+		synthesized gates = 0
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+    maximum rise delay path 1
+        src  0  max 2.00000e+01  
+        nml  1  max 2.13312e+01  (/a1      ) to (/z       )  /eor-1(xo1_i2)
+        nml  2  max 2.29272e+01  (/a1      ) to (/zn      )  /nor--4_8(nr1_i4)
+        nml  3  max 2.35232e+01  (/i       ) to (/zn      )  /inv-_9(in1_i1)
+        snk  4  max 2.39812e+01  (/a2      ) to (/zn      )  /nor--2_7(nr1_i2)
+####### remained constraint ###############
+    --- no failure constraint for power up -----
+
+    --- no failure constraint for speed up -----
+
+    --- no failure constraint for speed down ---
+
+    --- no failure constraint for power down ---
+
+####### summary ###########################
+
+    --- maximum rise delay path histogram -------------------------------
+    2.39812e+01    1 *
+    2.15831e+01    0 
+    1.91850e+01    0 
+    1.67868e+01    0 
+    1.43887e+01    0 
+    1.19906e+01    0 
+    9.59248e+00    0 
+    7.19436e+00    0 
+    4.79624e+00    0 
+    2.39812e+00    0 
+    ---------------------------------------------------------------------
+    total          1
+    delay path maximum  2.39812e+01
+    delay path minimum  2.39812e+01
+    delay path average  2.39812e+01
+
+    --- minimum rise delay path histogram -------------------------------
+    2.19152e+01    1 *
+    1.97237e+01    0 
+    1.75322e+01    0 
+    1.53406e+01    0 
+    1.31491e+01    0 
+    1.09576e+01    0 
+    8.76608e+00    0 
+    6.57456e+00    0 
+    4.38304e+00    0 
+    2.19152e+00    0 
+    ---------------------------------------------------------------------
+    total          1
+    delay path maximum  2.19152e+01
+    delay path minimum  2.19152e+01
+    delay path average  2.19152e+01
+
+        no path found
+        no path found
+        no path found
+        no path found
+
+    --- net load histogram ----------------------------------------------
+    2.54000e-01    2 **
+    2.28600e-01    1 *
+    2.03200e-01    4 ****
+    1.77800e-01    0 
+    1.52400e-01   10 **********
+    1.27000e-01    1 *
+    1.01600e-01    0 
+    7.62000e-02    0 
+    5.08000e-02    0 
+    2.54000e-02    0 
+    ---------------------------------------------------------------------
+    total         18
+    maximum  2.54000e-01
+    minimum  1.10000e-01
+    average  1.70444e-01
+
+    maximum rise delay path 1
+        src  0  max 2.00000e+01  
+        nml  1  max 2.13312e+01  (/a1      ) to (/z       )  /eor-1(xo1_i2)
+        nml  2  max 2.29272e+01  (/a1      ) to (/zn      )  /nor--4_8(nr1_i4)
+        nml  3  max 2.35232e+01  (/i       ) to (/zn      )  /inv-_9(in1_i1)
+        snk  4  max 2.39812e+01  (/a2      ) to (/zn      )  /nor--2_7(nr1_i2)
+        no path found
+        no path found
+
+    all statistics calculated
+--- statistics summary --------------------
+	position   = /
+	type       = NLD
+	class_name = comp5
+	power      = 67.1
+	area       = 6.26
+	gates      = 27
+
+		synthesized gates = 0
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- component summary ---------------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates (nof_include_nld) class_name
+-------------------------------------------------------------------------------------------------
+nld           27             1           67           6           27 (0) comp5
+pcd            1             1            1           0            1 in1_i1
+pcd            2             1            5           1            2 nr1_i2
+pcd            4             1           11           1            4 nr1_i4
+pcd            4             5           50           4           20 xo1_i2
+-------------------------------------------------------------------------------------------------
+pcd_total                    8           67           6           27
+--- pin summary ---------------------------
+p typ c pin_load     net_load      dot drive_power  max_load     pin_name
+-------------------------------------------------------------------------
+  UNU - 0.000000e+00 ------------ ---- 9.999999e+30 9.999999e+30 s_clock
+  UNU - 0.000000e+00 ------------ ---- 9.999999e+30 1.000000e+00 p_reset
+  UNU - 0.000000e+00 ------------ ---- 9.999999e+30 1.000000e+00 m_clock
+P OUT - 0.000000e+00 1.100000e-01    2 9.999999e+30 9.999999e+30 eq
+  UNU - 0.000000e+00 ------------ ---- 9.999999e+30 9.999999e+30 do
+  UNU - 0.000000e+00 ------------ ---- 9.999999e+30 9.999999e+30 b_clock
+P INP - 0.000000e+00 1.500000e-01    2 9.999999e+30 9.999999e+30 b[4]
+P INP - 0.000000e+00 1.500000e-01    2 9.999999e+30 9.999999e+30 b[3]
+P INP - 0.000000e+00 1.500000e-01    2 9.999999e+30 9.999999e+30 b[2]
+P INP - 0.000000e+00 1.500000e-01    2 9.999999e+30 9.999999e+30 b[1]
+P INP - 0.000000e+00 1.500000e-01    2 9.999999e+30 9.999999e+30 b[0]
+P INP - 0.000000e+00 1.500000e-01    2 9.999999e+30 9.999999e+30 a[4]
+P INP - 0.000000e+00 1.500000e-01    2 9.999999e+30 9.999999e+30 a[3]
+P INP - 0.000000e+00 1.500000e-01    2 9.999999e+30 9.999999e+30 a[2]
+P INP - 0.000000e+00 1.500000e-01    2 9.999999e+30 9.999999e+30 a[1]
+P INP - 0.000000e+00 1.500000e-01    2 9.999999e+30 9.999999e+30 a[0]
+####### output ############################
+** check level 1 **
+** check level 1 **
+rm -f comp5._tp
+touch comp5.4off
