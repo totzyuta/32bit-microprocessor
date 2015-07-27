@@ -1,0 +1,13 @@
+(def-module	shift32_sl1-2
+	(def-pin	sel2	type	input)
+	(def-pin	out	type	output)
+	(def-pin	in2	type	input)
+
+	(def-comp	inv-	nand-1)
+	(def-comp	nand--2	nand-2)
+
+	(def-net	sel2	nand-2.in2)
+	(def-net	nand-1.nout	out)
+	(def-net	in2	nand-2.in1)
+	(def-net	nand-1.in	nand-2.nout)
+)

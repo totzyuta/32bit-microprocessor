@@ -1,0 +1,939 @@
+cat /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/opt_scr.op1 | sed 's/TargeT/add4/' > add4.op1
+cat /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/opt_scr.lv2 | sed 's/TargeT/add4/' \
+	| sed 's/InputpiN/12/' > add4.tmp
+echo "echo OK!" > add4.ons
+ITR_TIMES=1 ;\
+	while (test $ITR_TIMES -le 2) \
+	do \
+	   echo "making script file for ONSET iteration $ITR_TIMES" ;\
+	   echo "echo ####### ONSET iteration $ITR_TIMES #######" >> add4.ons ;\
+	   cat add4.tmp >> add4.ons ;\
+	   ITR_TIMES=`expr $ITR_TIMES + 1` ;\
+	done
+making script file for ONSET iteration 1
+making script file for ONSET iteration 2
+rm -f add4.tmp
+rm -rf add4.2nd add4.2on add4.2off
+mkdir add4.2nd
+echo add4.op1 | opt_map add4 add4.1st /home/users/ecs/nobuya/opt/parthenon/sfl_lib.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start_ex.dir
+--------- submodule fa3_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule fa2_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule fa1_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule fa0_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule fa3_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule fa2_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule fa1_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule fa0_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+
++-------------------------------------------------------------+
+| OPT_MAP       3.0 2002/08/31 (i686-Linux-2.6.27-10-generic) |
+|             This program is a part of the PARTHENON system. |
+|                                 Copyright (C) 1989-2002 NTT |
++-------------------------------------------------------------+
+
+** load library from add4.1st **
+** load library from /home/users/ecs/nobuya/opt/parthenon/sfl_lib.dir **
+opt_map: start to read r1024_8.pcd
+opt_map: start to read r256_8.pcd
+opt_map: start to read r64_8.pcd
+** load library from /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start.dir **
+opt_map: start to read and--2.pcd
+opt_map: start to read and--3.pcd
+opt_map: start to read and--4.pcd
+opt_map: start to read and--5.pcd
+opt_map: start to read and--6.pcd
+opt_map: start to read and--7.pcd
+opt_map: start to read and--8.pcd
+opt_map: start to read aoi--21.pcd
+opt_map: start to read aoi--211.pcd
+opt_map: start to read aoi--22.pcd
+opt_map: start to read aoi--221.pcd
+opt_map: start to read aoi--222.pcd
+opt_map: start to read aoi--31.pcd
+opt_map: start to read aoi--32.pcd
+opt_map: start to read aoi--33.pcd
+opt_map: start to read bgate--2.pcd
+opt_map: start to read enor--2.pcd
+opt_map: start to read eor--2.pcd
+opt_map: start to read high-.pcd
+opt_map: start to read inv-.pcd
+opt_map: start to read low-.pcd
+opt_map: start to read nand--2.pcd
+opt_map: start to read nand--3.pcd
+opt_map: start to read nand--4.pcd
+opt_map: start to read nand--5.pcd
+opt_map: start to read nand--6.pcd
+opt_map: start to read nand--7.pcd
+opt_map: start to read nand--8.pcd
+opt_map: start to read ninv-.pcd
+opt_map: start to read nor--2.pcd
+opt_map: start to read nor--3.pcd
+opt_map: start to read nor--4.pcd
+opt_map: start to read nor--5.pcd
+opt_map: start to read nor--6.pcd
+opt_map: start to read nor--7.pcd
+opt_map: start to read nor--8.pcd
+opt_map: start to read oai--21.pcd
+opt_map: start to read oai--211.pcd
+opt_map: start to read oai--22.pcd
+opt_map: start to read oai--221.pcd
+opt_map: start to read oai--222.pcd
+opt_map: start to read oai--31.pcd
+opt_map: start to read oai--32.pcd
+opt_map: start to read oai--33.pcd
+opt_map: start to read or--2.pcd
+opt_map: start to read or--3.pcd
+opt_map: start to read or--4.pcd
+opt_map: start to read or--5.pcd
+opt_map: start to read or--6.pcd
+opt_map: start to read or--7.pcd
+opt_map: start to read or--8.pcd
+opt_map: start to read reg---1.pcd
+opt_map: start to read reg--1.pcd
+opt_map: start to read reg-1.pcd
+opt_map: start to read regr-1.pcd
+opt_map: start to read regs-1.pcd
+opt_map: start to read sreg---1.pcd
+opt_map: start to read sreg--1.pcd
+opt_map: start to read sreg-1.pcd
+opt_map: start to read srgr-1.pcd
+opt_map: start to read srgs-1.pcd
+opt_map: start to read ts_buf-.pcd
+** load library from /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start_ex.dir **
+** install top module (add4) **
+opt_map: start to read add4.1st/add4.nld
+opt_map: start to read add4.1st/fulladder.nld
+####### start #############################
+    all statistics calculated
+--- initial statistics summary ------------
+	position   = /
+	type       = NLD
+	class_name = add4
+	power      = 180
+	area       = 29
+	gates      = 108
+
+		synthesized gates = 108
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- initial component summary -------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+nld           27             4          180          29          108 fulladder
+pcd            0             1            0           0            0 high-
+pcd            0             1            0           0            0 low-
+-------------------------------------------------------------------------------
+pcd_total                    2            0           0            0
+####### remove ############################
+####### after remove ######################
+    all statistics calculated
+--- statistics summary --------------------
+	position   = /
+	type       = NLD
+	class_name = add4
+	power      = 180
+	area       = 29
+	gates      = 108
+
+		synthesized gates = 108
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- component summary ---------------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+nld           27             4          180          29          108 fulladder
+-------------------------------------------------------------------------------
+pcd_total                    0            0           0            0
+OK!
+####### ONSET iteration 1 #######
+####### apply ONSET on each flatten submodule ########
+type class      power         area                 gates  sub_mod_name
+----------------------------------------------------------------------
+nld  fulladder  4.500000e+01  7.250000e+00            27  fa3
+nld  fulladder  4.500000e+01  7.250000e+00            27  fa2
+nld  fulladder  4.500000e+01  7.250000e+00            27  fa1
+nld  fulladder  4.500000e+01  7.250000e+00            27  fa0
+--- flat & enclose at each nld in the top-module -------
+created a new sub_module. class: fulladder_subc-1, name: fa3_subm-1
+ nof_pcds: 13, nof_inputs: 3, nof_outputs: 2
+created a new sub_module. class: fulladder_subc-2, name: fa2_subm-1
+ nof_pcds: 13, nof_inputs: 3, nof_outputs: 2
+created a new sub_module. class: fulladder_subc-3, name: fa1_subm-1
+ nof_pcds: 13, nof_inputs: 3, nof_outputs: 2
+created a new sub_module. class: fulladder_subc-4, name: fa0_subm-1
+ nof_pcds: 13, nof_inputs: 3, nof_outputs: 2
+    all statistics calculated
+opt_map: start to read add4._dr/fulladder_subc-1.nld
+   [/fa3/fa3_subm-1]
+	change power   45.000000 to 43.200000
+	change area    7.250000 to 4.480000
+	change gates   27.000000 to 17.000000
+	net_num is 9
+	dot_num is 29
+opt_map: start to read add4._dr/fulladder_subc-2.nld
+   [/fa2/fa2_subm-1]
+	change power   45.000000 to 43.200000
+	change area    7.250000 to 4.480000
+	change gates   27.000000 to 17.000000
+	net_num is 9
+	dot_num is 29
+opt_map: start to read add4._dr/fulladder_subc-3.nld
+   [/fa1/fa1_subm-1]
+	change power   45.000000 to 43.200000
+	change area    7.250000 to 4.480000
+	change gates   27.000000 to 17.000000
+	net_num is 9
+	dot_num is 29
+opt_map: start to read add4._dr/fulladder_subc-4.nld
+   [/fa0/fa0_subm-1]
+	change power   45.000000 to 43.200000
+	change area    7.250000 to 4.480000
+	change gates   27.000000 to 17.000000
+	net_num is 9
+	dot_num is 29
+--- disclose -------------------------------
+sub_module(fa3_subm-1) was disclosed.
+sub_module(fa2_subm-1) was disclosed.
+sub_module(fa1_subm-1) was disclosed.
+sub_module(fa0_subm-1) was disclosed.
+####### after ONSET ###################
+    all statistics calculated
+--- statistics summary --------------------
+	position   = /
+	type       = NLD
+	class_name = add4
+	power      = 172.8
+	area       = 17.92
+	gates      = 68
+
+		synthesized gates = 28
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- component summary ---------------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+nld           17             4          173          18           68 fulladder
+-------------------------------------------------------------------------------
+pcd_total                    0            0           0            0
+####### ONSET iteration 2 #######
+####### apply ONSET on each flatten submodule ########
+type class      power         area                 gates  sub_mod_name
+----------------------------------------------------------------------
+nld  fulladder  4.320000e+01  4.480000e+00            17  fa3
+nld  fulladder  4.320000e+01  4.480000e+00            17  fa2
+nld  fulladder  4.320000e+01  4.480000e+00            17  fa1
+nld  fulladder  4.320000e+01  4.480000e+00            17  fa0
+--- flat & enclose at each nld in the top-module -------
+created a new sub_module. class: fulladder_subc-1, name: fa3_subm-1
+ nof_pcds: 6, nof_inputs: 3, nof_outputs: 2
+created a new sub_module. class: fulladder_subc-2, name: fa2_subm-1
+ nof_pcds: 6, nof_inputs: 3, nof_outputs: 2
+created a new sub_module. class: fulladder_subc-3, name: fa1_subm-1
+ nof_pcds: 6, nof_inputs: 3, nof_outputs: 2
+created a new sub_module. class: fulladder_subc-4, name: fa0_subm-1
+ nof_pcds: 6, nof_inputs: 3, nof_outputs: 2
+    all statistics calculated
+opt_map: start to read add4._dr/fulladder_subc-1.nld
+  replacement was cancelled!
+   [/fa3/fa3_subm-1]
+	net_num is 9
+	dot_num is 29
+opt_map: start to read add4._dr/fulladder_subc-2.nld
+  replacement was cancelled!
+   [/fa2/fa2_subm-1]
+	net_num is 9
+	dot_num is 29
+opt_map: start to read add4._dr/fulladder_subc-3.nld
+  replacement was cancelled!
+   [/fa1/fa1_subm-1]
+	net_num is 9
+	dot_num is 29
+opt_map: start to read add4._dr/fulladder_subc-4.nld
+  replacement was cancelled!
+   [/fa0/fa0_subm-1]
+	net_num is 9
+	dot_num is 29
+--- disclose -------------------------------
+sub_module(fa3_subm-1) was disclosed.
+sub_module(fa2_subm-1) was disclosed.
+sub_module(fa1_subm-1) was disclosed.
+sub_module(fa0_subm-1) was disclosed.
+####### after ONSET ###################
+    all statistics calculated
+--- statistics summary --------------------
+	position   = /
+	type       = NLD
+	class_name = add4
+	power      = 172.8
+	area       = 17.92
+	gates      = 68
+
+		synthesized gates = 28
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- component summary ---------------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+nld           17             4          173          18           68 fulladder
+-------------------------------------------------------------------------------
+pcd_total                    0            0           0            0
+####### output ############################
+** check level 1 **
+** check level 2 **
+rm -f add4._tp
+touch add4.2off
+rm -rf add4.3rd add4.3on add4.3off
+mkdir add4.3rd
+rinv add4 add4.2nd /home/users/ecs/nobuya/opt/parthenon/sfl_lib.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start_ex.dir -w add4.3rd
+touch add4.3off
+cat /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/opt_scr.op2 | sed 's/TargeT/add4/' > add4.op2
+cat /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/opt_scr.cpb | sed 's/TargeT/add4/' \
+	| sed 's/InputpiN/12/' > add4.tmp
+echo "echo OK!" > add4.cpb
+ITR_TIMES=1 ;\
+	while (test $ITR_TIMES -le 2) \
+	do \
+	   echo "making script file for ONSET CPB iteration $ITR_TIMES" ;\
+	   echo "echo ####### ONSET CPB iteration $ITR_TIMES #######" >> add4.cpb ;\
+	   cat add4.tmp >> add4.cpb ;\
+	   ITR_TIMES=`expr $ITR_TIMES + 1` ;\
+	done
+making script file for ONSET CPB iteration 1
+making script file for ONSET CPB iteration 2
+rm -f add4.tmp
+rm -rf add4.4th add4.4on add4.4off
+mkdir add4.4th
+echo add4.op2 | opt_map add4 add4.3rd /home/users/ecs/nobuya/opt/parthenon/sfl_lib.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start_ex.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/cell.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/cell_ex.dir 
+--------- submodule add4_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/delay.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/delay.scr) ####
+--------- submodule add4_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/delay.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/delay.scr) ####
+
++-------------------------------------------------------------+
+| OPT_MAP       3.0 2002/08/31 (i686-Linux-2.6.27-10-generic) |
+|             This program is a part of the PARTHENON system. |
+|                                 Copyright (C) 1989-2002 NTT |
++-------------------------------------------------------------+
+
+** load library from add4.3rd **
+** load library from /home/users/ecs/nobuya/opt/parthenon/sfl_lib.dir **
+opt_map: start to read r1024_8.pcd
+opt_map: start to read r256_8.pcd
+opt_map: start to read r64_8.pcd
+** load library from /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start.dir **
+opt_map: start to read and--2.pcd
+opt_map: start to read and--3.pcd
+opt_map: start to read and--4.pcd
+opt_map: start to read and--5.pcd
+opt_map: start to read and--6.pcd
+opt_map: start to read and--7.pcd
+opt_map: start to read and--8.pcd
+opt_map: start to read aoi--21.pcd
+opt_map: start to read aoi--211.pcd
+opt_map: start to read aoi--22.pcd
+opt_map: start to read aoi--221.pcd
+opt_map: start to read aoi--222.pcd
+opt_map: start to read aoi--31.pcd
+opt_map: start to read aoi--32.pcd
+opt_map: start to read aoi--33.pcd
+opt_map: start to read bgate--2.pcd
+opt_map: start to read enor--2.pcd
+opt_map: start to read eor--2.pcd
+opt_map: start to read high-.pcd
+opt_map: start to read inv-.pcd
+opt_map: start to read low-.pcd
+opt_map: start to read nand--2.pcd
+opt_map: start to read nand--3.pcd
+opt_map: start to read nand--4.pcd
+opt_map: start to read nand--5.pcd
+opt_map: start to read nand--6.pcd
+opt_map: start to read nand--7.pcd
+opt_map: start to read nand--8.pcd
+opt_map: start to read ninv-.pcd
+opt_map: start to read nor--2.pcd
+opt_map: start to read nor--3.pcd
+opt_map: start to read nor--4.pcd
+opt_map: start to read nor--5.pcd
+opt_map: start to read nor--6.pcd
+opt_map: start to read nor--7.pcd
+opt_map: start to read nor--8.pcd
+opt_map: start to read oai--21.pcd
+opt_map: start to read oai--211.pcd
+opt_map: start to read oai--22.pcd
+opt_map: start to read oai--221.pcd
+opt_map: start to read oai--222.pcd
+opt_map: start to read oai--31.pcd
+opt_map: start to read oai--32.pcd
+opt_map: start to read oai--33.pcd
+opt_map: start to read or--2.pcd
+opt_map: start to read or--3.pcd
+opt_map: start to read or--4.pcd
+opt_map: start to read or--5.pcd
+opt_map: start to read or--6.pcd
+opt_map: start to read or--7.pcd
+opt_map: start to read or--8.pcd
+opt_map: start to read reg---1.pcd
+opt_map: start to read reg--1.pcd
+opt_map: start to read reg-1.pcd
+opt_map: start to read regr-1.pcd
+opt_map: start to read regs-1.pcd
+opt_map: start to read sreg---1.pcd
+opt_map: start to read sreg--1.pcd
+opt_map: start to read sreg-1.pcd
+opt_map: start to read srgr-1.pcd
+opt_map: start to read srgs-1.pcd
+opt_map: start to read ts_buf-.pcd
+** load library from /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start_ex.dir **
+** load library from /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/cell.dir **
+opt_map: start to read an1_i2.pcd
+opt_map: start to read an1_i3.pcd
+opt_map: start to read an1_i4.pcd
+opt_map: start to read an1_i5.pcd
+opt_map: start to read an1_i6.pcd
+opt_map: start to read an1_i7.pcd
+opt_map: start to read an1_i8.pcd
+opt_map: start to read an3_i2.pcd
+opt_map: start to read an3_i3.pcd
+opt_map: start to read an3_i4.pcd
+opt_map: start to read an3_i5.pcd
+opt_map: start to read an3_i6.pcd
+opt_map: start to read an3_i7.pcd
+opt_map: start to read an3_i8.pcd
+opt_map: start to read ao_i21.pcd
+opt_map: start to read ao_i211.pcd
+opt_map: start to read ao_i22.pcd
+opt_map: start to read ao_i221.pcd
+opt_map: start to read ao_i222.pcd
+opt_map: start to read ao_i31.pcd
+opt_map: start to read ao_i32.pcd
+opt_map: start to read ao_i33.pcd
+opt_map: start to read bf1_i1.pcd
+opt_map: start to read bf2_i1.pcd
+opt_map: start to read bf3_i1.pcd
+opt_map: start to read bgnd1_i2.pcd
+opt_map: start to read bgnd3_i2.pcd
+opt_map: start to read cbf1_i1.pcd
+opt_map: start to read cbf2_i1.pcd
+opt_map: start to read cbf3_i1.pcd
+opt_map: start to read dbf1_i1.pcd
+opt_map: start to read dbf2_i1.pcd
+opt_map: start to read dbf3_i1.pcd
+opt_map: start to read dt_reg.pcd
+opt_map: start to read dt_sreg.pcd
+opt_map: start to read dtr_reg.pcd
+opt_map: start to read dtr_sreg.pcd
+opt_map: start to read dts_reg.pcd
+opt_map: start to read dts_sreg.pcd
+opt_map: start to read high-.pcd
+    skip this (module 'high-.pcd' is already installed)
+opt_map: start to read in1_i1.pcd
+opt_map: start to read in2_i1.pcd
+opt_map: start to read in3_i1.pcd
+opt_map: start to read low-.pcd
+    skip this (module 'low-.pcd' is already installed)
+opt_map: start to read nd1_i2.pcd
+opt_map: start to read nd1_i3.pcd
+opt_map: start to read nd1_i4.pcd
+opt_map: start to read nd1_i5.pcd
+opt_map: start to read nd1_i6.pcd
+opt_map: start to read nd1_i7.pcd
+opt_map: start to read nd1_i8.pcd
+opt_map: start to read nd3_i2.pcd
+opt_map: start to read nd3_i3.pcd
+opt_map: start to read nd3_i4.pcd
+opt_map: start to read nd3_i5.pcd
+opt_map: start to read nd3_i6.pcd
+opt_map: start to read nd3_i7.pcd
+opt_map: start to read nd3_i8.pcd
+opt_map: start to read nr1_i2.pcd
+opt_map: start to read nr1_i3.pcd
+opt_map: start to read nr1_i4.pcd
+opt_map: start to read nr1_i5.pcd
+opt_map: start to read nr1_i6.pcd
+opt_map: start to read nr1_i7.pcd
+opt_map: start to read nr1_i8.pcd
+opt_map: start to read nr3_i2.pcd
+opt_map: start to read nr3_i3.pcd
+opt_map: start to read nr3_i4.pcd
+opt_map: start to read nr3_i5.pcd
+opt_map: start to read nr3_i6.pcd
+opt_map: start to read nr3_i7.pcd
+opt_map: start to read nr3_i8.pcd
+opt_map: start to read oa_i21.pcd
+opt_map: start to read oa_i211.pcd
+opt_map: start to read oa_i22.pcd
+opt_map: start to read oa_i221.pcd
+opt_map: start to read oa_i222.pcd
+opt_map: start to read oa_i31.pcd
+opt_map: start to read oa_i32.pcd
+opt_map: start to read oa_i33.pcd
+opt_map: start to read or1_i2.pcd
+opt_map: start to read or1_i3.pcd
+opt_map: start to read or1_i4.pcd
+opt_map: start to read or1_i5.pcd
+opt_map: start to read or1_i6.pcd
+opt_map: start to read or1_i7.pcd
+opt_map: start to read or1_i8.pcd
+opt_map: start to read or3_i2.pcd
+opt_map: start to read or3_i3.pcd
+opt_map: start to read or3_i4.pcd
+opt_map: start to read or3_i5.pcd
+opt_map: start to read or3_i6.pcd
+opt_map: start to read or3_i7.pcd
+opt_map: start to read or3_i8.pcd
+opt_map: start to read sts_reg.pcd
+opt_map: start to read sts_sreg.pcd
+opt_map: start to read tbf1_i2.pcd
+opt_map: start to read tbf2_i2.pcd
+opt_map: start to read tbf3_i2.pcd
+opt_map: start to read tsk_reg.pcd
+opt_map: start to read tsk_sreg.pcd
+opt_map: start to read xn1_i2.pcd
+opt_map: start to read xn3_i2.pcd
+opt_map: start to read xo1_i2.pcd
+opt_map: start to read xo3_i2.pcd
+** load library from /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/cell_ex.dir **
+** install top module (add4) **
+opt_map: start to read add4.3rd/add4.nld
+opt_map: start to read add4.3rd/add4_fulladder.nld
+####### start  ############################
+    all statistics calculated
+--- initial statistics summary ------------
+	position   = /
+	type       = NLD
+	class_name = add4
+	power      = 172.8
+	area       = 17.92
+	gates      = 68
+
+		synthesized gates = 28
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- initial component summary -------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+nld           17             4          173          18           68 add4_fulladder
+-------------------------------------------------------------------------------
+pcd_total                    0            0           0            0
+####### remove ############################
+####### after remove ######################
+    all statistics calculated
+--- statistics summary --------------------
+	position   = /
+	type       = NLD
+	class_name = add4
+	power      = 172.8
+	area       = 17.92
+	gates      = 68
+
+		synthesized gates = 28
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- component summary ---------------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+nld           17             4          173          18           68 add4_fulladder
+-------------------------------------------------------------------------------
+pcd_total                    0            0           0            0
+####### set conditions ####################
+    top module pin initialized
+        normal net     24
+        in calc net     0
+        source net      9
+        inhibit net     0
+        sink net        0
+    no pin found
+    no pin found
+    no pin found
+    no pin found
+??error ext_pin(scan_clock) is not found
+####### initial constraint ################
+    all statistics calculated
+    all load calculated
+    all delay calculated
+
+    --- failure constraint histogram for power up -----------------------
+    6.50000e-01    7 *******
+    5.85000e-01    0 
+    5.20000e-01    0 
+    4.55000e-01    4 ****
+    3.90000e-01    0 
+    3.25000e-01    0 
+    2.60000e-01    8 ********
+    1.95000e-01    0 
+    1.30000e-01    5 *****
+    6.50000e-02    0 
+    ---------------------------------------------------------------------
+    total         24
+    maximum difference  6.50000e-01
+    minimum difference  1.00000e-01
+    average difference  3.50833e-01
+
+    --- no failure constraint for speed up -----
+
+    --- no failure constraint for speed down ---
+
+    --- no failure constraint for power down ---
+
+####### optimize ##########################
+   [power up]    replaced to /fa0/nor--2_10(nr1_i2) from (nor--2)
+   [power up]    replaced to /fa1/nor--2_10(nr1_i2) from (nor--2)
+   [power up]    replaced to /fa2/nor--2_10(nr1_i2) from (nor--2)
+   [power up]    replaced to /fa3/nor--2_10(nr1_i2) from (nor--2)
+   [power up]    replaced to /fa0/nor--2_11(nr1_i2) from (nor--2)
+   [power up]    replaced to /fa1/nor--2_11(nr1_i2) from (nor--2)
+   [power up]    replaced to /fa2/nor--2_11(nr1_i2) from (nor--2)
+   [power up]    replaced to /fa0/oai--33_13(oa_i33) from (oai--33)
+   [power up]    replaced to /fa1/oai--33_13(oa_i33) from (oai--33)
+   [power up]    replaced to /fa2/oai--33_13(oa_i33) from (oai--33)
+   [power up]    replaced to /fa3/oai--33_13(oa_i33) from (oai--33)
+   [power up]    replaced to /fa0/aoi--32_14(ao_i32) from (aoi--32)
+   [power up]    replaced to /fa1/aoi--32_14(ao_i32) from (aoi--32)
+   [power up]    replaced to /fa2/aoi--32_14(ao_i32) from (aoi--32)
+   [power up]    replaced to /fa3/aoi--32_14(ao_i32) from (aoi--32)
+   [power up]    replaced to /fa0/inv-_15(in1_i1) from (inv-)
+   [power up]    replaced to /fa1/inv-_15(in1_i1) from (inv-)
+   [power up]    replaced to /fa2/inv-_15(in1_i1) from (inv-)
+   [power up]    replaced to /fa3/inv-_15(in1_i1) from (inv-)
+   [power up]    replaced to /fa3/nor--2_11(nr1_i2) from (nor--2)
+   [power up]    replaced to /fa0/nand--2_12(nd1_i2) from (nand--2)
+   [power up]    replaced to /fa1/nand--2_12(nd1_i2) from (nand--2)
+   [power up]    replaced to /fa2/nand--2_12(nd1_i2) from (nand--2)
+   [power up]    replaced to /fa3/nand--2_12(nd1_i2) from (nand--2)
+####### flat ############################
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+pcd            5             4           52           5           20 ao_i32
+pcd            1             4            6           1            4 in1_i1
+pcd            2             4           14           2            8 nd1_i2
+pcd            2             8           38           5           16 nr1_i2
+pcd            5             4           64           5           20 oa_i33
+-------------------------------------------------------------------------------
+pcd_total                   24          173          18           68
+    maximum rise delay path 1
+        src  0  max 2.00000e+01  
+        nml  1  max 2.14300e+01  (/a1      ) to (/zn      )  /fa0_nor--2_10(nr1_i2)
+        nml  2  max 2.35374e+01  (/a3      ) to (/zn      )  /fa0_oai--33_13(oa_i33)
+        nml  3  max 2.48954e+01  (/a2      ) to (/zn      )  /fa0_nor--2_11(nr1_i2)
+        nml  4  max 2.68028e+01  (/a1      ) to (/zn      )  /fa1_oai--33_13(oa_i33)
+        nml  5  max 2.81608e+01  (/a2      ) to (/zn      )  /fa1_nor--2_11(nr1_i2)
+        nml  6  max 3.00682e+01  (/a1      ) to (/zn      )  /fa2_oai--33_13(oa_i33)
+        nml  7  max 3.14262e+01  (/a2      ) to (/zn      )  /fa2_nor--2_11(nr1_i2)
+        nml  8  max 3.33336e+01  (/a1      ) to (/zn      )  /fa3_oai--33_13(oa_i33)
+        nml  9  max 3.38896e+01  (/i       ) to (/zn      )  /fa3_inv-_15(in1_i1)
+        snk 10  max 3.42196e+01  (/a1      ) to (/zn      )  /fa3_nand--2_12(nd1_i2)
+OK!
+####### ONSET CPB iteration 1 #######
+####### critical path break ##################
+created a new sub_module. class: add4_subc-1, name: add4_subm-1
+ nof_pcds: 24, nof_inputs: 9, nof_outputs: 5
+    all statistics calculated
+opt_map: start to read add4._dr/add4_subc-1.nld
+   [/add4_subm-1]
+	change power   172.800000 to 224.000000
+	change area    17.920000 to 25.180000
+	change gates   68.000000 to 95.000000
+	net_num is 44
+	dot_num is 145
+sub_module(add4_subm-1) was disclosed.
+    all statistics calculated
+    all load calculated
+    all delay calculated
+   [power up]    replaced to /nand--2_51(nd1_i2) from (nand--2)
+   [power up]    replaced to /inv-_66(in1_i1) from (inv-)
+   [power up]    replaced to /nor--2_18(nr1_i2) from (nor--2)
+   [power up]    replaced to /nor--2_32(nr1_i2) from (nor--2)
+   [power up]    replaced to /inv-_64(in1_i1) from (inv-)
+   [power up]    replaced to /inv-_67(in1_i1) from (inv-)
+   [power up]    replaced to /inv-_68(in1_i1) from (inv-)
+   [power up]    replaced to /nor--2_29(nr1_i2) from (nor--2)
+   [power up]    replaced to /nor--3_33(nr1_i3) from (nor--3)
+   [power up]    replaced to /nor--2_36(nr1_i2) from (nor--2)
+   [power up]    replaced to /inv-_65(in1_i1) from (inv-)
+   [power up]    replaced to /oai--33_48(oa_i33) from (oai--33)
+   [power up]    replaced to /oai--33_54(oa_i33) from (oai--33)
+   [power up]    replaced to /aoi--33_49(ao_i33) from (aoi--33)
+   [power up]    replaced to /inv-_63(in1_i1) from (inv-)
+   [power up]    replaced to /nor--2_50(nr1_i2) from (nor--2)
+   [power up]    replaced to /nand--2_37(nd1_i2) from (nand--2)
+   [power up]    replaced to /nand--2_52(nd1_i2) from (nand--2)
+   [power up]    replaced to /nand--2_53(nd1_i2) from (nand--2)
+   [power up]    replaced to /nor--2_27(nr1_i2) from (nor--2)
+   [power up]    replaced to /nor--2_58(nr1_i2) from (nor--2)
+   [power up]    replaced to /nor--3_28(nr1_i3) from (nor--3)
+   [power up]    replaced to /aoi--32_55(ao_i32) from (aoi--32)
+   [power up]    replaced to /aoi--32_57(ao_i32) from (aoi--32)
+   [power up]    replaced to /inv-_62(in1_i1) from (inv-)
+   [power up]    replaced to /inv-_69(in1_i1) from (inv-)
+   [power up]    replaced to /nand--2_60(nd1_i2) from (nand--2)
+   [power up]    replaced to /aoi--222_56(ao_i222) from (aoi--222)
+   [power up]    replaced to /oai--222_59(oa_i222) from (oai--222)
+   [power up]    replaced to /oai--222_61(oa_i222) from (oai--222)
+   [power up]    replaced to /nor--2_47(nr1_i2) from (nor--2)
+   [power up]    replaced to /nand--2_20(nd1_i2) from (nand--2)
+   [power up]    replaced to /nand--2_26(nd1_i2) from (nand--2)
+   [power up]    replaced to /nand--2_46(nd1_i2) from (nand--2)
+   [power up]    replaced to /oai--31_23(oa_i31) from (oai--31)
+	position   = /
+	type       = NLD
+	class_name = add4
+	power      = 224
+	area       = 25.18
+	gates      = 95
+
+		synthesized gates = 0
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+    maximum rise delay path 1
+        src  0  max 2.00000e+01  
+        nml  1  max 2.13560e+01  (/i       ) to (/zn      )  /inv-_68(in1_i1)
+        nml  2  max 2.29280e+01  (/a1      ) to (/zn      )  /nand--2_51(nd1_i2)
+        nml  3  max 2.47790e+01  (/a2      ) to (/zn      )  /oai--222_59(oa_i222)
+        nml  4  max 2.70230e+01  (/a3      ) to (/zn      )  /nor--3_33(nr1_i3)
+        nml  5  max 2.89304e+01  (/a1      ) to (/zn      )  /oai--33_48(oa_i33)
+        nml  6  max 3.02884e+01  (/a2      ) to (/zn      )  /nor--2_29(nr1_i2)
+        nml  7  max 3.21958e+01  (/a1      ) to (/zn      )  /oai--33_54(oa_i33)
+        nml  8  max 3.27518e+01  (/i       ) to (/zn      )  /inv-_69(in1_i1)
+        snk  9  max 3.30818e+01  (/a1      ) to (/zn      )  /nand--2_46(nd1_i2)
+####### ONSET CPB iteration 2 #######
+####### critical path break ##################
+created a new sub_module. class: add4_subc-1, name: add4_subm-1
+ nof_pcds: 35, nof_inputs: 9, nof_outputs: 5
+    all statistics calculated
+opt_map: start to read add4._dr/add4_subc-1.nld
+   [/add4_subm-1]
+	net_num is 44
+	dot_num is 145
+sub_module(add4_subm-1) was disclosed.
+    all statistics calculated
+    all load calculated
+    all delay calculated
+   [power up]    replaced to /nand--2_51(nd1_i2) from (nand--2)
+   [power up]    replaced to /inv-_66(in1_i1) from (inv-)
+   [power up]    replaced to /nor--2_24(nr1_i2) from (nor--2)
+   [power up]    replaced to /nor--2_32(nr1_i2) from (nor--2)
+   [power up]    replaced to /inv-_64(in1_i1) from (inv-)
+   [power up]    replaced to /inv-_67(in1_i1) from (inv-)
+   [power up]    replaced to /inv-_68(in1_i1) from (inv-)
+   [power up]    replaced to /nor--2_29(nr1_i2) from (nor--2)
+   [power up]    replaced to /nor--3_33(nr1_i3) from (nor--3)
+   [power up]    replaced to /nor--2_47(nr1_i2) from (nor--2)
+   [power up]    replaced to /inv-_65(in1_i1) from (inv-)
+   [power up]    replaced to /oai--33_49(oa_i33) from (oai--33)
+   [power up]    replaced to /oai--33_54(oa_i33) from (oai--33)
+   [power up]    replaced to /aoi--33_48(ao_i33) from (aoi--33)
+   [power up]    replaced to /inv-_62(in1_i1) from (inv-)
+   [power up]    replaced to /nor--2_50(nr1_i2) from (nor--2)
+   [power up]    replaced to /nand--2_46(nd1_i2) from (nand--2)
+   [power up]    replaced to /nand--2_52(nd1_i2) from (nand--2)
+   [power up]    replaced to /nand--2_53(nd1_i2) from (nand--2)
+   [power up]    replaced to /nor--2_28(nr1_i2) from (nor--2)
+   [power up]    replaced to /nor--2_58(nr1_i2) from (nor--2)
+   [power up]    replaced to /nor--3_27(nr1_i3) from (nor--3)
+   [power up]    replaced to /aoi--32_55(ao_i32) from (aoi--32)
+   [power up]    replaced to /aoi--32_57(ao_i32) from (aoi--32)
+   [power up]    replaced to /inv-_63(in1_i1) from (inv-)
+   [power up]    replaced to /inv-_69(in1_i1) from (inv-)
+   [power up]    replaced to /nand--2_60(nd1_i2) from (nand--2)
+   [power up]    replaced to /aoi--222_56(ao_i222) from (aoi--222)
+   [power up]    replaced to /oai--222_59(oa_i222) from (oai--222)
+   [power up]    replaced to /oai--222_61(oa_i222) from (oai--222)
+   [power up]    replaced to /nor--2_45(nr1_i2) from (nor--2)
+   [power up]    replaced to /nand--2_17(nd1_i2) from (nand--2)
+   [power up]    replaced to /nand--2_18(nd1_i2) from (nand--2)
+   [power up]    replaced to /nand--2_44(nd1_i2) from (nand--2)
+   [power up]    replaced to /oai--31_15(oa_i31) from (oai--31)
+	position   = /
+	type       = NLD
+	class_name = add4
+	power      = 224
+	area       = 25.18
+	gates      = 95
+
+		synthesized gates = 0
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+    maximum rise delay path 1
+        src  0  max 2.00000e+01  
+        nml  1  max 2.13560e+01  (/i       ) to (/zn      )  /inv-_68(in1_i1)
+        nml  2  max 2.29280e+01  (/a1      ) to (/zn      )  /nand--2_51(nd1_i2)
+        nml  3  max 2.47790e+01  (/a2      ) to (/zn      )  /oai--222_59(oa_i222)
+        nml  4  max 2.70230e+01  (/a3      ) to (/zn      )  /nor--3_33(nr1_i3)
+        nml  5  max 2.89304e+01  (/a1      ) to (/zn      )  /oai--33_49(oa_i33)
+        nml  6  max 3.02884e+01  (/a2      ) to (/zn      )  /nor--2_29(nr1_i2)
+        nml  7  max 3.21958e+01  (/a1      ) to (/zn      )  /oai--33_54(oa_i33)
+        nml  8  max 3.27518e+01  (/i       ) to (/zn      )  /inv-_69(in1_i1)
+        snk  9  max 3.30818e+01  (/a1      ) to (/zn      )  /nand--2_44(nd1_i2)
+####### remained constraint ###############
+    --- no failure constraint for power up -----
+
+    --- no failure constraint for speed up -----
+
+    --- no failure constraint for speed down ---
+
+    --- no failure constraint for power down ---
+
+####### summary ###########################
+
+    --- maximum rise delay path histogram -------------------------------
+    3.30818e+01    3 ***
+    2.97736e+01    1 *
+    2.64654e+01    1 *
+    2.31573e+01    0 
+    1.98491e+01    0 
+    1.65409e+01    0 
+    1.32327e+01    0 
+    9.92454e+00    0 
+    6.61636e+00    0 
+    3.30818e+00    0 
+    ---------------------------------------------------------------------
+    total          5
+    delay path maximum  3.30818e+01
+    delay path minimum  2.49227e+01
+    delay path average  3.00475e+01
+
+    --- minimum rise delay path histogram -------------------------------
+    2.33507e+01    5 *****
+    2.10156e+01    0 
+    1.86806e+01    0 
+    1.63455e+01    0 
+    1.40104e+01    0 
+    1.16753e+01    0 
+    9.34028e+00    0 
+    7.00521e+00    0 
+    4.67014e+00    0 
+    2.33507e+00    0 
+    ---------------------------------------------------------------------
+    total          5
+    delay path maximum  2.33507e+01
+    delay path minimum  2.15282e+01
+    delay path average  2.22465e+01
+
+        no path found
+        no path found
+        no path found
+        no path found
+
+    --- net load histogram ----------------------------------------------
+    7.90000e-01    2 **
+    7.11000e-01    2 **
+    6.32000e-01    5 *****
+    5.53000e-01    1 *
+    4.74000e-01    6 ******
+    3.95000e-01   11 ***********
+    3.16000e-01    6 ******
+    2.37000e-01    6 ******
+    1.58000e-01    4 ****
+    7.90000e-02    1 *
+    ---------------------------------------------------------------------
+    total         44
+    maximum  7.90000e-01
+    minimum  6.40000e-02
+    average  3.71136e-01
+
+    maximum rise delay path 1
+        src  0  max 2.00000e+01  
+        nml  1  max 2.13560e+01  (/i       ) to (/zn      )  /inv-_68(in1_i1)
+        nml  2  max 2.29280e+01  (/a1      ) to (/zn      )  /nand--2_51(nd1_i2)
+        nml  3  max 2.47790e+01  (/a2      ) to (/zn      )  /oai--222_59(oa_i222)
+        nml  4  max 2.70230e+01  (/a3      ) to (/zn      )  /nor--3_33(nr1_i3)
+        nml  5  max 2.89304e+01  (/a1      ) to (/zn      )  /oai--33_49(oa_i33)
+        nml  6  max 3.02884e+01  (/a2      ) to (/zn      )  /nor--2_29(nr1_i2)
+        nml  7  max 3.21958e+01  (/a1      ) to (/zn      )  /oai--33_54(oa_i33)
+        nml  8  max 3.27518e+01  (/i       ) to (/zn      )  /inv-_69(in1_i1)
+        snk  9  max 3.30818e+01  (/a1      ) to (/zn      )  /nand--2_44(nd1_i2)
+        no path found
+        no path found
+
+    all statistics calculated
+--- statistics summary --------------------
+	position   = /
+	type       = NLD
+	class_name = add4
+	power      = 224
+	area       = 25.18
+	gates      = 95
+
+		synthesized gates = 0
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- component summary ---------------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates (nof_include_nld) class_name
+-------------------------------------------------------------------------------------------------
+nld           95             1          224          25           95 (0) add4
+pcd            6             1           17           2            6 ao_i222
+pcd            5             2           26           2           10 ao_i32
+pcd            5             1           14           1            5 ao_i33
+pcd            1             8           11           3            8 in1_i1
+pcd            2             8           27           4           16 nd1_i2
+pcd            2             8           38           5           16 nr1_i2
+pcd            4             2           20           2            8 nr1_i3
+pcd            6             2           28           3           12 oa_i222
+pcd            4             1           11           1            4 oa_i31
+pcd            5             2           32           2           10 oa_i33
+-------------------------------------------------------------------------------------------------
+pcd_total                   35          224          25           95
+--- pin summary ---------------------------
+p typ c pin_load     net_load      dot drive_power  max_load     pin_name
+-------------------------------------------------------------------------
+P OUT - 0.000000e+00 1.000000e-01    2 9.999999e+30 9.999999e+30 sum[3]
+P OUT - 0.000000e+00 1.000000e-01    2 9.999999e+30 9.999999e+30 sum[2]
+P OUT - 0.000000e+00 6.400000e-02    2 9.999999e+30 9.999999e+30 sum[1]
+P OUT - 0.000000e+00 1.000000e-01    2 9.999999e+30 9.999999e+30 sum[0]
+  UNU - 0.000000e+00 ------------ ---- 9.999999e+30 9.999999e+30 s_clock
+  UNU - 0.000000e+00 ------------ ---- 9.999999e+30 1.000000e+00 p_reset
+  UNU - 0.000000e+00 ------------ ---- 9.999999e+30 1.000000e+00 m_clock
+  UNU - 0.000000e+00 ------------ ---- 9.999999e+30 9.999999e+30 do
+P OUT - 0.000000e+00 1.100000e-01    2 9.999999e+30 9.999999e+30 cout
+P INP - 0.000000e+00 3.700000e-01    4 9.999999e+30 9.999999e+30 cin
+  UNU - 0.000000e+00 ------------ ---- 9.999999e+30 9.999999e+30 b_clock
+P INP - 0.000000e+00 4.300000e-01    4 9.999999e+30 9.999999e+30 b[3]
+P INP - 0.000000e+00 4.300000e-01    4 9.999999e+30 9.999999e+30 b[2]
+P INP - 0.000000e+00 4.400000e-01    4 9.999999e+30 9.999999e+30 b[1]
+P INP - 0.000000e+00 2.500000e-01    3 9.999999e+30 9.999999e+30 b[0]
+P INP - 0.000000e+00 4.300000e-01    4 9.999999e+30 9.999999e+30 a[3]
+P INP - 0.000000e+00 4.300000e-01    4 9.999999e+30 9.999999e+30 a[2]
+P INP - 0.000000e+00 3.200000e-01    3 9.999999e+30 9.999999e+30 a[1]
+P INP - 0.000000e+00 3.600000e-01    4 9.999999e+30 9.999999e+30 a[0]
+####### output ############################
+** check level 1 **
+** check level 1 **
+rm -f add4._tp
+touch add4.4off

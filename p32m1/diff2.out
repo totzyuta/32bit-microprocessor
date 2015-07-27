@@ -1,0 +1,22 @@
+3,13d2
+< ==REF== fulladder.sfl
+< 
+< Module: fulladder definition start.
+< All facilities of module: fulladder defined.
+< Instructs arguments and stages tasks of module: fulladder defined.
+< Instructs behavior of module: fulladder defined.
+< sfl area 99% remained.
+< atom area 73% remained.
+< !! local stack 0% used, global stack 0% used, trail stack 0% used !!
+< image load completed.
+< This prolog image is designed and programmed by Kiyoshi Oguri.
+15,17d3
+< ==REF== ./fulladder.h
+< ** include ./fulladder.h. **
+< Submod_class: fulladder defined.
+20d5
+< Submod_class: fulladder defined.
+143c128
+< !! gc free 82416 words !!
+---
+> !! gc free 82308 words !!

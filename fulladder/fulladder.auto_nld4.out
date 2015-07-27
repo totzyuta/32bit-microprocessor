@@ -1,0 +1,950 @@
+rm -f fulladder.0on
+sflexp fulladder.sfl fulladder.hsl -mem lll  || (rm -f *.cube fulladder.hsl; false)
+
++-------------------------------------------------------------+
+| SFLEXP        3.0 2002/08/31 (i686-Linux-2.6.27-10-generic) |
+|             This program is a part of the PARTHENON system. |
+|                                 Copyright (C) 1989-2002 NTT |
++-------------------------------------------------------------+
+
+Memory LLL size
+Mem alloc start address 0xeb6f3020 end 0xf76f301f
+image load completed.
+This prolog image is designed and programmed by Kiyoshi Oguri.
+==REF== fulladder.sfl
+
+Module: fulladder definition start.
+All facilities of module: fulladder defined.
+Instructs arguments and stages tasks of module: fulladder defined.
+Instructs behavior of module: fulladder defined.
+sfl area 99% remained.
+atom area 95% remained.
+** translate completion **
+** expantion start **
+** expand parameters are as follow **
+	mode_flg---------------exp
+	tmp_value--------------sel_org
+	post_opt---------------single
+	time_limit-------------v100
+	change_to_nand_nor-----8
+	nld_out_mode-----------yes
+	pcd_out_mode-----------no
+	circuit_pcd_out_mode---no
+	sel_type---------------hie
+	exp_mode_flg-----------group
+	multi_level_opt--------yes
+	dont_care_opt----------yes
+	level_factor-----------0
+	to_other_tool----------no
+	machine----------------sun
+	partial_demo-----------partial
+	file_name--------------fulladder.sfl
+	out_file_name----------fulladder.hsl
+
+#### module: fulladder ####
+** start checking exclusively constant assign **
+** end checking exclusively constant assign **
+** flatten end **
+
+#### start logic expand which appear in data transfer source ####
+** state encode done **
+** bool op done **
+** enter mini_divide ** level=1, size=7 **
+** condition elements sort done **
+** actions sort done **
+** destinations sort done **
+** sources sort done **
+** Nof inputs = 3, Nof outputs = 2, Nof cubes = 7 **
+** start logic compaction **
+** Nof cubes = 7 **
+** logic compaction done **
+** nots(3) extraction done **
+** ands(7) extraction done **
+** ors(2) extraction done **
+** selectors(2) extraction done **
+
+#### start expand behavior in stage or instruct: do ####
+** state encode done **
+** bool op done **
+** enter mini_divide ** level=1, size=2 **
+** condition elements sort done **
+** actions sort done **
+** destinations sort done **
+** sources sort done **
+** Nof inputs = 1, Nof outputs = 2, Nof cubes = 2 **
+** start logic compaction **
+** Nof cubes = 1 **
+** logic compaction done **
+** nots(0) extraction done **
+** ands(0) extraction done **
+** ors(0) extraction done **
+** selectors(2) extraction done **
+
+#### into merge phase ####
+** selecter(2) merge done **
+** ors(0) added **
+
+#### into multi-level logic optimization ####
+** used gate extract done **
+** used gate sort done **
+** used pin extract and sort done **
+** nof_nots = 3, nof_ands = 7, nof_ors = 2 **
+** nots_fin = 3, ands_fin = 18, ors_fin = 7 **
+** input pins: pin(type,width,name) **
+	1	pin(const,1,1)
+	2	pin(input,1,cin)
+	3	pin(input,1,b)
+	4	pin(input,1,a)
+** nots: not(fin) **
+	1	not(pin(2))
+	2	not(pin(3))
+	3	not(pin(4))
+** ands: and(fin,...) **
+	1	and(pin(4),pin(3),pin(2))
+	2	and(pin(3),pin(2))
+	3	and(pin(4),pin(2))
+	4	and(not(3),not(2),pin(2))
+	5	and(pin(4),pin(3))
+	6	and(not(3),pin(3),not(1))
+	7	and(pin(4),not(2),not(1))
+** ors: or(fin,...) **
+	1	or(and(2),and(3),and(5))
+	2	or(and(1),and(7),and(6),and(4))
+** actions: action(destination,source,type,target) **
+	1	action(pin(output,1,sum),or(2),data,or(2))
+	2	action(pin(output,1,cout),or(1),data,or(1))
+** into interface to c-program **
+** make comp done **
+** nots link done **
+** ands link done **
+** ors link done **
+** sels link done **
+** dont_cares link done **
+** into post opt **
+** time limit is v100 **
+** Action_id = 1 *****************************
+True (nof_products = 4)
+Dont_care (nof_products = 1)
+Result (nof_products = 4)
+** Action_id = 2 *****************************
+True (nof_products = 3)
+Dont_care (nof_products = 1)
+Result (nof_products = 3)
+** into interface to multi **
+** nof_nots = 3, nof_ands = 7, nof_ors = 2 **
+** input     3 **
+** output    2 **
+                               ** fin   28 **  ** gate   12 **  ** level  2 **
+** start weak division **
+                               ** fin   27 **  ** gate   12 **  ** level  3 **
+** start factorization <1> **
+                               ** fin   26 **  ** gate   12 **  ** level  3 **
+** start factorization <2> **
+                               ** fin   26 **  ** gate   12 **  ** level  3 **
+** start and extraction <1> **
+                               ** fin   26 **  ** gate   12 **  ** level  3 **
+** start or extraction <1> **
+                               ** fin   26 **  ** gate   12 **  ** level  3 **
+** start gate reshaping **
+                               ** fin   26 **  ** gate   12 **  ** level  3 **
+P003<O001>   P002<A001>   A001<O002>   O003         
+P004         O001         A003         O002         
+P003<A003>   N004<A006>   A002<O003>                
+P004         N003         A004                      
+             P002         A005                      
+             N004<A005>   A006                      
+             P003                                   
+             N002                                   
+             P004<A004>                             
+             N003                                   
+             N002                                   
+             P002<A002>                             
+             A003                                   
+                                                    
+** nots extract done **
+** ands extract done **
+** ors extract done **
+** sels extract done **
+
+#### start and-or to nand-nor exchange and limit fin ####
+** make comp done **
+** sels link done **
+** pins link done **
+** nots link done **
+** ands link done **
+** ors link done **
+** fin limit done **
+** insert or replace not gate **
+** insert or replace not gate **
+** insert or replace not gate **
+** insert or replace not gate **
+** and-or to nand-nor done **
+
+#### generating net list in HSL ####
+** out one HSL module(fulladder) **
+
+	There are 0 errors.
+
+!! local stack 0% used, global stack 0% used, trail stack 0% used !!
+rm -f *.cube
+touch fulladder.0off
+rm -rf fulladder.1st fulladder.1on fulladder.1off
+mkdir fulladder.1st
+hsl_nld fulladder.hsl fulladder.1st
+touch fulladder.1off
+cat /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/opt_scr.op1 | sed 's/TargeT/fulladder/' > fulladder.op1
+cat /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/opt_scr.lv2 | sed 's/TargeT/fulladder/' \
+	| sed 's/InputpiN/12/' > fulladder.tmp
+echo "echo OK!" > fulladder.ons
+ITR_TIMES=1 ;\
+	while (test $ITR_TIMES -le 2) \
+	do \
+	   echo "making script file for ONSET iteration $ITR_TIMES" ;\
+	   echo "echo ####### ONSET iteration $ITR_TIMES #######" >> fulladder.ons ;\
+	   cat fulladder.tmp >> fulladder.ons ;\
+	   ITR_TIMES=`expr $ITR_TIMES + 1` ;\
+	done
+making script file for ONSET iteration 1
+making script file for ONSET iteration 2
+rm -f fulladder.tmp
+rm -rf fulladder.2nd fulladder.2on fulladder.2off
+mkdir fulladder.2nd
+echo fulladder.op1 | opt_map fulladder fulladder.1st /home/users/ecs/nobuya/opt/parthenon/sfl_lib.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start_ex.dir
+
++-------------------------------------------------------------+
+| OPT_MAP       3.0 2002/08/31 (i686-Linux-2.6.27-10-generic) |
+|             This program is a part of the PARTHENON system. |
+|                                 Copyright (C) 1989-2002 NTT |
++-------------------------------------------------------------+
+
+** load library from fulladder.1st **
+** load library from /home/users/ecs/nobuya/opt/parthenon/sfl_lib.dir **
+opt_map: start to read r1024_8.pcd
+opt_map: start to read r256_8.pcd
+opt_map: start to read r64_8.pcd
+** load library from /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start.dir **
+opt_map: start to read and--2.pcd
+opt_map: start to read and--3.pcd
+opt_map: start to read and--4.pcd
+opt_map: start to read and--5.pcd
+opt_map: start to read and--6.pcd
+opt_map: start to read and--7.pcd
+opt_map: start to read and--8.pcd
+opt_map: start to read aoi--21.pcd
+opt_map: start to read aoi--211.pcd
+opt_map: start to read aoi--22.pcd
+opt_map: start to read aoi--221.pcd
+opt_map: start to read aoi--222.pcd
+opt_map: start to read aoi--31.pcd
+opt_map: start to read aoi--32.pcd
+opt_map: start to read aoi--33.pcd
+opt_map: start to read bgate--2.pcd
+opt_map: start to read enor--2.pcd
+opt_map: start to read eor--2.pcd
+opt_map: start to read high-.pcd
+opt_map: start to read inv-.pcd
+opt_map: start to read low-.pcd
+opt_map: start to read nand--2.pcd
+opt_map: start to read nand--3.pcd
+opt_map: start to read nand--4.pcd
+opt_map: start to read nand--5.pcd
+opt_map: start to read nand--6.pcd
+opt_map: start to read nand--7.pcd
+opt_map: start to read nand--8.pcd
+opt_map: start to read ninv-.pcd
+opt_map: start to read nor--2.pcd
+opt_map: start to read nor--3.pcd
+opt_map: start to read nor--4.pcd
+opt_map: start to read nor--5.pcd
+opt_map: start to read nor--6.pcd
+opt_map: start to read nor--7.pcd
+opt_map: start to read nor--8.pcd
+opt_map: start to read oai--21.pcd
+opt_map: start to read oai--211.pcd
+opt_map: start to read oai--22.pcd
+opt_map: start to read oai--221.pcd
+opt_map: start to read oai--222.pcd
+opt_map: start to read oai--31.pcd
+opt_map: start to read oai--32.pcd
+opt_map: start to read oai--33.pcd
+opt_map: start to read or--2.pcd
+opt_map: start to read or--3.pcd
+opt_map: start to read or--4.pcd
+opt_map: start to read or--5.pcd
+opt_map: start to read or--6.pcd
+opt_map: start to read or--7.pcd
+opt_map: start to read or--8.pcd
+opt_map: start to read reg---1.pcd
+opt_map: start to read reg--1.pcd
+opt_map: start to read reg-1.pcd
+opt_map: start to read regr-1.pcd
+opt_map: start to read regs-1.pcd
+opt_map: start to read sreg---1.pcd
+opt_map: start to read sreg--1.pcd
+opt_map: start to read sreg-1.pcd
+opt_map: start to read srgr-1.pcd
+opt_map: start to read srgs-1.pcd
+opt_map: start to read ts_buf-.pcd
+** load library from /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start_ex.dir **
+** install top module (fulladder) **
+opt_map: start to read fulladder.1st/fulladder.nld
+####### start #############################
+    all statistics calculated
+--- initial statistics summary ------------
+	position   = /
+	type       = NLD
+	class_name = fulladder
+	power      = 45
+	area       = 7.25
+	gates      = 27
+
+		synthesized gates = 27
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- initial component summary -------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+pcd            0             1            0           0            0 high-
+pcd            1             4            6           1            4 inv-
+pcd            0             1            0           0            0 low-
+pcd            2             4           14           2            8 nand--2
+pcd            3             3           15           2            9 nand--3
+pcd            4             1            6           1            4 nand--4
+pcd            2             1            5           1            2 nor--2
+------------------------------------------ submodule fulladder_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+--------- submodule fulladder_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/area.scr) ####
+----------------------------------------------
+pcd_total                   15           45           7           27
+####### remove ############################
+####### after remove ######################
+    all statistics calculated
+--- statistics summary --------------------
+	position   = /
+	type       = NLD
+	class_name = fulladder
+	power      = 45
+	area       = 7.25
+	gates      = 27
+
+		synthesized gates = 27
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- component summary ---------------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+pcd            1             4            6           1            4 inv-
+pcd            2             4           14           2            8 nand--2
+pcd            3             3           15           2            9 nand--3
+pcd            4             1            6           1            4 nand--4
+pcd            2             1            5           1            2 nor--2
+-------------------------------------------------------------------------------
+pcd_total                   13           45           7           27
+OK!
+####### ONSET iteration 1 #######
+####### apply ONSET on each flatten submodule ########
+--- flat & enclose at each nld in the top-module -------
+created a new sub_module. class: fulladder_subc-1, name: fulladder_subm-1
+ nof_pcds: 13, nof_inputs: 3, nof_outputs: 2
+    all statistics calculated
+opt_map: start to read fulladder._dr/fulladder_subc-1.nld
+   [/fulladder_subm-1]
+	change power   45.000000 to 43.200000
+	change area    7.250000 to 4.480000
+	change gates   27.000000 to 17.000000
+	net_num is 9
+	dot_num is 29
+--- disclose -------------------------------
+sub_module(fulladder_subm-1) was disclosed.
+####### after ONSET ###################
+    all statistics calculated
+--- statistics summary --------------------
+	position   = /
+	type       = NLD
+	class_name = fulladder
+	power      = 43.2
+	area       = 4.48
+	gates      = 17
+
+		synthesized gates = 7
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- component summary ---------------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+pcd            5             1           13           1            5 aoi--32
+pcd            1             1            1           0            1 inv-
+pcd            2             1            3           0            2 nand--2
+pcd            2             2            9           1            4 nor--2
+pcd            5             1           16           1            5 oai--33
+-------------------------------------------------------------------------------
+pcd_total                    6           43           4           17
+####### ONSET iteration 2 #######
+####### apply ONSET on each flatten submodule ########
+--- flat & enclose at each nld in the top-module -------
+created a new sub_module. class: fulladder_subc-1, name: fulladder_subm-1
+ nof_pcds: 6, nof_inputs: 3, nof_outputs: 2
+    all statistics calculated
+opt_map: start to read fulladder._dr/fulladder_subc-1.nld
+  replacement was cancelled!
+   [/fulladder_subm-1]
+	net_num is 9
+	dot_num is 29
+--- disclose -------------------------------
+sub_module(fulladder_subm-1) was disclosed.
+####### after ONSET ###################
+    all statistics calculated
+--- statistics summary --------------------
+	position   = /
+	type       = NLD
+	class_name = fulladder
+	power      = 43.2
+	area       = 4.48
+	gates      = 17
+
+		synthesized gates = 7
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- component summary ---------------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+pcd            5             1           13           1            5 aoi--32
+pcd            1             1            1           0            1 inv-
+pcd            2             1            3           0            2 nand--2
+pcd            2             2            9           1            4 nor--2
+pcd            5             1           16           1            5 oai--33
+-------------------------------------------------------------------------------
+pcd_total                    6           43           4           17
+####### output ############################
+** check level 1 **
+rm -f fulladder._tp
+touch fulladder.2off
+rm -rf fulladder.3rd fulladder.3on fulladder.3off
+mkdir fulladder.3rd
+rinv fulladder fulladder.2nd /home/users/ecs/nobuya/opt/parthenon/sfl_lib.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start_ex.dir -w fulladder.3rd
+touch fulladder.3off
+cat /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/opt_scr.op2 | sed 's/TargeT/fulladder/' > fulladder.op2
+cat /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/opt_scr.cpb | sed 's/TargeT/fulladder/' \
+	| sed 's/InputpiN/12/' > fulladder.tmp
+echo "echo OK!" > fulladder.cpb
+ITR_TIMES=1 ;\
+	while (test $ITR_TIMES -le 2) \
+	do \
+	   echo "making script file for ONSET CPB iteration $ITR_TIMES" ;\
+	   echo "echo ####### ONSET CPB iteration $ITR_TIMES #######" >> fulladder.cpb ;\
+	   cat fulladder.tmp >> fulladder.cpb ;\
+	   ITR_TIMES=`expr $ITR_TIMES + 1` ;\
+	done
+making script file for ONSET CPB iteration 1
+making script file for ONSET CPB iteration 2
+rm -f fulladder.tmp
+rm -rf fulladder.4th fulladder.4on fulladder.4off
+mkdir fulladder.4th
+echo fulladder.op2 | opt_map fulladder fulladder.3rd /home/users/ecs/nobuya/opt/parthenon/sfl_lib.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start_ex.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/cell.dir /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/cell_ex.dir 
+
++-------------------------------------------------------------+
+| OPT_MAP       3.0 2002/08/31 (i686-Linux-2.6.27-10-generic) |
+|             This program is a part of the PARTHENON system. |
+|                                 Copyright (C) 1989-2002 NTT |
++-------------------------------------------------------------+
+
+** load library from fulladder.3rd **
+** load library from /home/users/ecs/nobuya/opt/parthenon/sfl_lib.dir **
+opt_map: start to read r1024_8.pcd
+opt_map: start to read r256_8.pcd
+opt_map: start to read r64_8.pcd
+** load library from /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start.dir **
+opt_map: start to read and--2.pcd
+opt_map: start to read and--3.pcd
+opt_map: start to read and--4.pcd
+opt_map: start to read and--5.pcd
+opt_map: start to read and--6.pcd
+opt_map: start to read and--7.pcd
+opt_map: start to read and--8.pcd
+opt_map: start to read aoi--21.pcd
+opt_map: start to read aoi--211.pcd
+opt_map: start to read aoi--22.pcd
+opt_map: start to read aoi--221.pcd
+opt_map: start to read aoi--222.pcd
+opt_map: start to read aoi--31.pcd
+opt_map: start to read aoi--32.pcd
+opt_map: start to read aoi--33.pcd
+opt_map: start to read bgate--2.pcd
+opt_map: start to read enor--2.pcd
+opt_map: start to read eor--2.pcd
+opt_map: start to read high-.pcd
+opt_map: start to read inv-.pcd
+opt_map: start to read low-.pcd
+opt_map: start to read nand--2.pcd
+opt_map: start to read nand--3.pcd
+opt_map: start to read nand--4.pcd
+opt_map: start to read nand--5.pcd
+opt_map: start to read nand--6.pcd
+opt_map: start to read nand--7.pcd
+opt_map: start to read nand--8.pcd
+opt_map: start to read ninv-.pcd
+opt_map: start to read nor--2.pcd
+opt_map: start to read nor--3.pcd
+opt_map: start to read nor--4.pcd
+opt_map: start to read nor--5.pcd
+opt_map: start to read nor--6.pcd
+opt_map: start to read nor--7.pcd
+opt_map: start to read nor--8.pcd
+opt_map: start to read oai--21.pcd
+opt_map: start to read oai--211.pcd
+opt_map: start to read oai--22.pcd
+opt_map: start to read oai--221.pcd
+opt_map: start to read oai--222.pcd
+opt_map: start to read oai--31.pcd
+opt_map: start to read oai--32.pcd
+opt_map: start to read oai--33.pcd
+opt_map: start to read or--2.pcd
+opt_map: start to read or--3.pcd
+opt_map: start to read or--4.pcd
+opt_map: start to read or--5.pcd
+opt_map: start to read or--6.pcd
+opt_map: start to read or--7.pcd
+opt_map: start to read or--8.pcd
+opt_map: start to read reg---1.pcd
+opt_map: start to read reg--1.pcd
+opt_map: start to read reg-1.pcd
+opt_map: start to read regr-1.pcd
+opt_map: start to read regs-1.pcd
+opt_map: start to read sreg---1.pcd
+opt_map: start to read sreg--1.pcd
+opt_map: start to read sreg-1.pcd
+opt_map: start to read srgr-1.pcd
+opt_map: start to read srgs-1.pcd
+opt_map: start to read ts_buf-.pcd
+** load library from /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/start_ex.dir **
+** load library from /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/cell.dir **
+opt_map: start to read an1_i2.pcd
+opt_map: start to read an1_i3.pcd
+opt_map: start to read an1_i4.pcd
+opt_map: start to read an1_i5.pcd
+opt_map: start to read an1_i6.pcd
+opt_map: start to read an1_i7.pcd
+opt_map: start to read an1_i8.pcd
+opt_map: start to read an3_i2.pcd
+opt_map: start to read an3_i3.pcd
+opt_map: start to read an3_i4.pcd
+opt_map: start to read an3_i5.pcd
+opt_map: start to read an3_i6.pcd
+opt_map: start to read an3_i7.pcd
+opt_map: start to read an3_i8.pcd
+opt_map: start to read ao_i21.pcd
+opt_map: start to read ao_i211.pcd
+opt_map: start to read ao_i22.pcd
+opt_map: start to read ao_i221.pcd
+opt_map: start to read ao_i222.pcd
+opt_map: start to read ao_i31.pcd
+opt_map: start to read ao_i32.pcd
+opt_map: start to read ao_i33.pcd
+opt_map: start to read bf1_i1.pcd
+opt_map: start to read bf2_i1.pcd
+opt_map: start to read bf3_i1.pcd
+opt_map: start to read bgnd1_i2.pcd
+opt_map: start to read bgnd3_i2.pcd
+opt_map: start to read cbf1_i1.pcd
+opt_map: start to read cbf2_i1.pcd
+opt_map: start to read cbf3_i1.pcd
+opt_map: start to read dbf1_i1.pcd
+opt_map: start to read dbf2_i1.pcd
+opt_map: start to read dbf3_i1.pcd
+opt_map: start to read dt_reg.pcd
+opt_map: start to read dt_sreg.pcd
+opt_map: start to read dtr_reg.pcd
+opt_map: start to read dtr_sreg.pcd
+opt_map: start to read dts_reg.pcd
+opt_map: start to read dts_sreg.pcd
+opt_map: start to read high-.pcd
+    skip this (module 'high-.pcd' is already installed)
+opt_map: start to read in1_i1.pcd
+opt_map: start to read in2_i1.pcd
+opt_map: start to read in3_i1.pcd
+opt_map: start to read low-.pcd
+    skip this (module 'low-.pcd' is already installed)
+opt_map: start to read nd1_i2.pcd
+opt_map: start to read nd1_i3.pcd
+opt_map: start to read nd1_i4.pcd
+opt_map: start to read nd1_i5.pcd
+opt_map: start to read nd1_i6.pcd
+opt_map: start to read nd1_i7.pcd
+opt_map: start to read nd1_i8.pcd
+opt_map: start to read nd3_i2.pcd
+opt_map: start to read nd3_i3.pcd
+opt_map: start to read nd3_i4.pcd
+opt_map: start to read nd3_i5.pcd
+opt_map: start to read nd3_i6.pcd
+opt_map: start to read nd3_i7.pcd
+opt_map: start to read nd3_i8.pcd
+opt_map: start to read nr1_i2.pcd
+opt_map: start to read nr1_i3.pcd
+opt_map: start to read nr1_i4.pcd
+opt_map: start to read nr1_i5.pcd
+opt_map: start to read nr1_i6.pcd
+opt_map: start to read nr1_i7.pcd
+opt_map: start to read nr1_i8.pcd
+opt_map: start to read nr3_i2.pcd
+opt_map: start to read nr3_i3.pcd
+opt_map: start to read nr3_i4.pcd
+opt_map: start to read nr3_i5.pcd
+opt_map: start to read nr3_i6.pcd
+opt_map: start to read nr3_i7.pcd
+opt_map: start to read nr3_i8.pcd
+opt_map: start to read oa_i21.pcd
+opt_map: start to read oa_i211.pcd
+opt_map: start to read oa_i22.pcd
+opt_map: start to read oa_i221.pcd
+opt_map: start to read oa_i222.pcd
+opt_map: start to read oa_i31.pcd
+opt_map: start to read oa_i32.pcd
+opt_map: start to read oa_i33.pcd
+opt_map: start to read or1_i2.pcd
+opt_map: start to read or1_i3.pcd
+opt_map: start to read or1_i4.pcd
+opt_map: start to read or1_i5.pcd
+opt_map: start to read or1_i6.pcd
+opt_map: start to read or1_i7.pcd
+opt_map: start to read or1_i8.pcd
+opt_map: start to read or3_i2.pcd
+opt_map: start to read or3_i3.pcd
+opt_map: start to read or3_i4.pcd
+opt_map: start to read or3_i5.pcd
+opt_map: start to read or3_i6.pcd
+opt_map: start to read or3_i7.pcd
+opt_map: start to read or3_i8.pcd
+opt_map: start to read sts_reg.pcd
+opt_map: start to read sts_sreg.pcd
+opt_map: start to read tbf1_i2.pcd
+opt_map: start to read tbf2_i2.pcd
+opt_map: start to read tbf3_i2.pcd
+opt_map: start to read tsk_reg.pcd
+opt_map: start to read tsk_sreg.pcd
+opt_map: start to read xn1_i2.pcd
+opt_map: start to read xn3_i2.pcd
+opt_map: start to read xo1_i2.pcd
+opt_map: start to read xo3_i2.pcd
+** load library from /home/users/ecs/nobuya/opt/parthenon/cell_lib.dir/DEMO/demo/cell_ex.dir **
+** install top module (fulladder) **
+opt_map: start to read fulladder.3rd/fulladder.nld
+####### start  ############################
+    all statistics calculated
+--- initial statistics summary ------------
+	position   = /
+	type       = NLD
+	class_name = fulladder
+	power      = 43.2
+	area       = 4.48
+	gates      = 17
+
+		synthesized gates = 7
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- initial component summary -------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+pcd            5             1           13           1            5 aoi--32
+pcd            1             1            1           0            1 inv-
+pcd            2             1            3           0            2 nand--2
+pcd            2             2            9           1            4 nor--2
+pcd            5             1           16           1            5 oai--33
+-------------------------------------------------------------------------------
+pcd_total                    6           43           4           17
+####### remove ############################
+####### after remove ######################
+    all statistics calculated
+--- statistics summary --------------------
+	position   = /
+	type       = NLD
+	class_name = fulladder
+	power   --------- submodule fulladder_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/delay.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/delay.scr) ####
+   = 43.2
+	area       = 4.48
+	gates      = 17
+
+		synthesized gates = 7
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- component summary ---------------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+pcd            5             1           13           1            5 aoi--32
+pcd            1             1            1           0            1 inv-
+pcd            2             1            3           0            2 nand--2
+pcd            2             2            9           1            4 nor--2
+pcd            5             1           16           1            5 oai--33
+-------------------------------------------------------------------------------
+pcd_total                    6           43           4           17
+####### set conditions ####################
+    top module pin initialized
+        normal net      6
+        in calc net     0
+        source net      3
+        inhibit net     0
+        sink net        0
+    no pin found
+    no pin found
+    no pin found
+    no pin found
+??error ext_pin(scan_clock) is not found
+####### initial constraint ################
+    all statistics calculated
+    all load calculated
+    all delay calculated
+
+    --- failure constraint histogram for power up -----------------------
+    6.50000e-01    1 *
+    5.85000e-01    0 
+    5.20000e-01    0 
+    4.55000e-01    1 *
+    3.90000e-01    0 
+    3.25000e-01    0 
+    2.60000e-01    2 **
+    1.95000e-01    0 
+    1.30000e-01    2 **
+    6.50000e-02    0 
+    ---------------------------------------------------------------------
+    total          6
+    maximum difference  6.50000e-01
+    minimum difference  1.00000e-01
+    average difference  2.88333e-01
+
+    --- no failure constraint for speed up -----
+
+    --- no failure constraint for speed down ---
+
+    --- no failure constraint for power down ---
+
+####### optimize ##########################
+   [power up]    replaced to /nor--2_10(nr1_i2) from (nor--2)
+   [power up]    replaced to /oai--33_13(oa_i33) from (oai--33)
+   [power up]    replaced to /aoi--32_14(ao_i32) from (aoi--32)
+   [power up]    replaced to /inv-_15(in1_i1) from (inv-)
+   [power up]    replaced to /nor--2_12(nr1_i2) from (nor--2)
+   [power up]    replaced to /nand--2_11(nd1_i2) from (nand--2)
+####### flat ############################
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates class_name
+-------------------------------------------------------------------------------
+pcd            5             1           13           1            5 ao_i32
+pcd            1             1            1           0            1 in1_i1
+pcd            2             1            3           0            2 nd1_i2
+pcd            2             2            9           1            4 nr1_i2
+pcd            5             1           16           1            5 oa_i33
+-------------------------------------------------------------------------------
+pcd_total                    6           43           4           17
+    maximum rise delay path 1
+        src  0  max 2.00000e+01  
+        nml  1  max 2.14300e+01  (/a1      ) to (/zn      )  /nor--2_10(nr1_i2)
+        nml  2  max 2.35374e+01  (/a3      ) to (/zn      )  /oai--33_13(oa_i33)
+        nml  3  max 2.40934e+01  (/i       ) to (/zn      )  /inv-_15(in1_i1)
+        snk  4  max 2.44234e+01  (/a1      ) to (/zn      )  /nand--2_11(nd1_i2)
+OK!
+####### ONSET CPB iteration 1 #######
+####### critical path break ##################
+created a new sub_module. class: fulladder_subc-1, name: fulladder_subm-1
+ nof_pcds: 6, nof_inputs: 3, nof_outputs: 2
+    all statistics calculated
+opt_map: start to read fulladder._dr/fulladder_subc-1.nld
+   [/fulladder_subm-1]
+	net_num is 9
+	dot_num is 29
+sub_module(fulladder_subm-1) was disclosed.
+    all statistics calculated
+    all load calculated
+    all delay calculated
+   [power up]    replaced to /nor--2_9(nr1_i2) from (nor--2)
+   [po--------- submodule fulladder_subm-1 ------------
+-*- enter ONSET Version 3.0 -*-
+#### enter script file (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/delay.scr) ####
+#### exit (/home/users/ecs/nobuya/opt/parthenon/com/onset.dir/delay.scr) ####
+wer up]    replaced to /oai--33_13(oa_i33) from (oai--33)
+   [power up]    replaced to /aoi--32_14(ao_i32) from (aoi--32)
+   [power up]    replaced to /inv-_15(in1_i1) from (inv-)
+   [power up]    replaced to /nor--2_12(nr1_i2) from (nor--2)
+   [power up]    replaced to /nand--2_11(nd1_i2) from (nand--2)
+	position   = /
+	type       = NLD
+	class_name = fulladder
+	power      = 43.2
+	area       = 4.48
+	gates      = 17
+
+		synthesized gates = 0
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+    maximum rise delay path 1
+        src  0  max 2.00000e+01  
+        nml  1  max 2.14300e+01  (/a1      ) to (/zn      )  /nor--2_9(nr1_i2)
+        nml  2  max 2.35374e+01  (/a3      ) to (/zn      )  /oai--33_13(oa_i33)
+        nml  3  max 2.40934e+01  (/i       ) to (/zn      )  /inv-_15(in1_i1)
+        snk  4  max 2.44234e+01  (/a1      ) to (/zn      )  /nand--2_11(nd1_i2)
+####### ONSET CPB iteration 2 #######
+####### critical path break ##################
+created a new sub_module. class: fulladder_subc-1, name: fulladder_subm-1
+ nof_pcds: 6, nof_inputs: 3, nof_outputs: 2
+    all statistics calculated
+opt_map: start to read fulladder._dr/fulladder_subc-1.nld
+   [/fulladder_subm-1]
+	net_num is 9
+	dot_num is 29
+sub_module(fulladder_subm-1) was disclosed.
+    all statistics calculated
+    all load calculated
+    all delay calculated
+   [power up]    replaced to /nor--2_9(nr1_i2) from (nor--2)
+   [power up]    replaced to /oai--33_13(oa_i33) from (oai--33)
+   [power up]    replaced to /aoi--32_14(ao_i32) from (aoi--32)
+   [power up]    replaced to /inv-_15(in1_i1) from (inv-)
+   [power up]    replaced to /nor--2_12(nr1_i2) from (nor--2)
+   [power up]    replaced to /nand--2_11(nd1_i2) from (nand--2)
+	position   = /
+	type       = NLD
+	class_name = fulladder
+	power      = 43.2
+	area       = 4.48
+	gates      = 17
+
+		synthesized gates = 0
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+    maximum rise delay path 1
+        src  0  max 2.00000e+01  
+        nml  1  max 2.14300e+01  (/a1      ) to (/zn      )  /nor--2_9(nr1_i2)
+        nml  2  max 2.35374e+01  (/a3      ) to (/zn      )  /oai--33_13(oa_i33)
+        nml  3  max 2.40934e+01  (/i       ) to (/zn      )  /inv-_15(in1_i1)
+        snk  4  max 2.44234e+01  (/a1      ) to (/zn      )  /nand--2_11(nd1_i2)
+####### remained constraint ###############
+    --- no failure constraint for power up -----
+
+    --- no failure constraint for speed up -----
+
+    --- no failure constraint for speed down ---
+
+    --- no failure constraint for power down ---
+
+####### summary ###########################
+
+    --- maximum rise delay path histogram -------------------------------
+    2.44234e+01    2 **
+    2.19811e+01    0 
+    1.95387e+01    0 
+    1.70964e+01    0 
+    1.46540e+01    0 
+    1.22117e+01    0 
+    9.76936e+00    0 
+    7.32702e+00    0 
+    4.88468e+00    0 
+    2.44234e+00    0 
+    ---------------------------------------------------------------------
+    total          2
+    delay path maximum  2.44234e+01
+    delay path minimum  2.39954e+01
+    delay path average  2.42094e+01
+
+    --- minimum rise delay path histogram -------------------------------
+    2.18880e+01    2 **
+    1.96992e+01    0 
+    1.75104e+01    0 
+    1.53216e+01    0 
+    1.31328e+01    0 
+    1.09440e+01    0 
+    8.75520e+00    0 
+    6.56640e+00    0 
+    4.37760e+00    0 
+    2.18880e+00    0 
+    ---------------------------------------------------------------------
+    total          2
+    delay path maximum  2.18880e+01
+    delay path minimum  2.15182e+01
+    delay path average  2.17031e+01
+
+        no path found
+        no path found
+        no path found
+        no path found
+
+    --- net load histogram ----------------------------------------------
+    6.50000e-01    1 *
+    5.85000e-01    0 
+    5.20000e-01    1 *
+    4.55000e-01    3 ***
+    3.90000e-01    0 
+    3.25000e-01    0 
+    2.60000e-01    2 **
+    1.95000e-01    0 
+    1.30000e-01    2 **
+    6.50000e-02    0 
+    ---------------------------------------------------------------------
+    total          9
+    maximum  6.50000e-01
+    minimum  1.00000e-01
+    average  3.43333e-01
+
+    maximum rise delay path 1
+        src  0  max 2.00000e+01  
+        nml  1  max 2.14300e+01  (/a1      ) to (/zn      )  /nor--2_9(nr1_i2)
+        nml  2  max 2.35374e+01  (/a3      ) to (/zn      )  /oai--33_13(oa_i33)
+        nml  3  max 2.40934e+01  (/i       ) to (/zn      )  /inv-_15(in1_i1)
+        snk  4  max 2.44234e+01  (/a1      ) to (/zn      )  /nand--2_11(nd1_i2)
+        no path found
+        no path found
+
+    all statistics calculated
+--- statistics summary --------------------
+	position   = /
+	type       = NLD
+	class_name = fulladder
+	power      = 43.2
+	area       = 4.48
+	gates      = 17
+
+		synthesized gates = 0
+		sum of inv- [n]and--M [n]or--M eor--2 of SFL module
+		here M is 2 to 8
+		this is valid for the netlist just produced by sflexp
+--- component summary ---------------------
+type class_gates nof_instances sum_of_power sum_of_area sum_of_gates (nof_include_nld) class_name
+-------------------------------------------------------------------------------------------------
+nld           17             1           43           4           17 (0) fulladder
+pcd            5             1           13           1            5 ao_i32
+pcd            1             1            1           0            1 in1_i1
+pcd            2             1            3           0            2 nd1_i2
+pcd            2             2            9           1            4 nr1_i2
+pcd            5             1           16           1            5 oa_i33
+-------------------------------------------------------------------------------------------------
+pcd_total                    6           43           4           17
+--- pin summary ---------------------------
+p typ c pin_load     net_load      dot drive_power  max_load     pin_name
+-------------------------------------------------------------------------
+P OUT - 0.000000e+00 1.000000e-01    2 9.999999e+30 9.999999e+30 sum
+  UNU - 0.000000e+00 ------------ ---- 9.999999e+30 9.999999e+30 s_clock
+  UNU - 0.000000e+00 ------------ ---- 9.999999e+30 1.000000e+00 p_reset
+  UNU - 0.000000e+00 ------------ ---- 9.999999e+30 1.000000e+00 m_clock
+  UNU - 0.000000e+00 ------------ ---- 9.999999e+30 9.999999e+30 do
+P OUT - 0.000000e+00 1.100000e-01    2 9.999999e+30 9.999999e+30 cout
+P INP - 0.000000e+00 5.000000e-01    5 9.999999e+30 9.999999e+30 cin
+  UNU - 0.000000e+00 ------------ ---- 9.999999e+30 9.999999e+30 b_clock
+P INP - 0.000000e+00 4.300000e-01    4 9.999999e+30 9.999999e+30 b
+P INP - 0.000000e+00 4.300000e-01    4 9.999999e+30 9.999999e+30 a
+####### output ############################
+** check level 1 **
+** check level 1 **
+rm -f fulladder._tp
+touch fulladder.4off

@@ -1,0 +1,5 @@
+(def-module	inst-dum
+	(def-pin	out	type output)
+	(def-pin	in	type input)
+	(def-net	out	in)
+)
